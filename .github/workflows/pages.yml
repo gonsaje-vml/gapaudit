@@ -1,0 +1,63 @@
+name: Deploy audit guide to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Verify audit measurements and report reproduction
+        run: python3 -m unittest discover -s tools -p 'test_gap_audit.py' -v
+      - name: Verify guide downloads and exclusion of previous results
+        run: python3 -m unittest discover -s tools -p 'test_build_ui.py' -v
+      - name: Verify local practice sites and offline reproduction
+        run: python3 -m unittest discover -s tools -p 'test_practice_kit.py' -v
+      - name: Install pinned PDF validation dependencies
+        run: python3 -m pip install -r skills/pdf-gap-audit/requirements.txt pdfplumber==0.11.10
+      - name: Verify PDF reproduction and evidence integrity
+        run: python3 -m unittest discover -s tools -p 'test_pdf_skill.py' -v
+      - name: Verify readiness reports and chart counts
+        run: python3 -m unittest discover -s tools -p 'test_readiness_pdf.py' -v
+      - name: Build the static method guide
+        run: python3 tools/build_ui.py
+      - name: Configure Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - name: Upload the site only
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

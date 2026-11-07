@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A repeatable website migration gap audit: Python evidence collection, browser review and an AI skill for PDF reports.">
+  <meta name="theme-color" content="#0d2264">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Mind the Gap — Repeatable website migration audits</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./guide.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the guide</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Mind the Gap home">
+      <img src="./mind-the-gap.png" alt="" width="92" height="69">
+      <span>Mind the Gap<small>Website migration audits</small></span>
+    </a>
+    <a class="repo-link" href="https://github.com/gonsaje-vml/gapaudit">View on GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">The method, from start to finish</p>
+      <h1 id="title">Understand the gap.<br>Reproduce the audit.</h1>
+      <p class="lede">Compare a source website with its migrated version. Python collects the evidence, browser review verifies the differences, and an AI skill turns supported findings into a PDF audit.</p>
+      <div class="actions">
+        <a class="button" href="./practice.html">Try the practice audit <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="./downloads/gap-audit-kit.zip" download>Download the audit kit <span aria-hidden="true">↓</span></a>
+        <a class="text-link" href="#reproduce">Follow the steps <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="intro-note">Python 3.10+ · Standard library collector · No API key needed for collection</p>
+    </section>
+
+    <nav class="section-nav" aria-label="Guide sections">
+      <a href="#practice"><span>00</span> Try a practice audit</a>
+      <a href="#python"><span>01</span> Python &amp; its results</a>
+      <a href="#reproduce"><span>02</span> Reproduce an audit</a>
+      <a href="#pdf-skill"><span>03</span> AI skill &amp; PDF report</a>
+    </nav>
+
+    <section id="practice" class="guide-section" aria-labelledby="practice-title">
+      <div class="section-heading"><p class="eyebrow">00 / Learn by doing</p><h2 id="practice-title">Run your first audit on sample sites</h2></div>
+      <p>Download a complete practice kit with two fictional local websites, four scoped pages and deliberate content, download and mobile-layout defects. One Python command starts both sites and runs the real collector. No API key or extra Python packages are needed for the initial exercise.</p>
+      <pre><code>python3 practice/run_demo.py start --out runs/practice-01</code></pre>
+      <p>Run that command from the extracted practice kit. The <a href="./practice.html">illustrated walkthrough</a> explains each step with workflow diagrams and expected-result charts, then follows <a href="./practice.html#files">every input and output file</a> and <a href="./practice.html#skill">every file in the audit skill</a>. Continue into browser review, an optional readiness PDF and a repair/retest exercise before switching to your own websites.</p>
+      <div class="actions"><a class="button" href="./downloads/gap-audit-practice-kit.zip" download>Download the practice kit <span aria-hidden="true">↓</span></a><a class="text-link" href="./practice.html">Open the visual walkthrough →</a></div>
+      <p class="intro-note">Includes an offline START-HERE.html guide, sample sites, answer key, agent prompt and complete audit skill. All practice content is fictional.</p>
+    </section>
+
+    <section id="python" class="guide-section" aria-labelledby="python-title">
+      <div class="section-heading"><p class="eyebrow">01 / Evidence collection</p><h2 id="python-title">What the Python script does</h2></div>
+      <p><a href="./downloads/gap_audit.py" download><code>tools/gap_audit.py</code></a> reads a source sitemap or URL list, maps each route to the target, and collects both pages. It extracts static HTML, compares content signals, checks unique internal destinations, and saves the evidence with a generated report.</p>
+      <ol class="process">
+        <li><strong>Freeze the scope.</strong> Deduplicate the inventory, apply inclusions and exclusions, and use explicit mappings for moved routes.</li>
+        <li><strong>Capture both sites.</strong> Save response status, redirects, timestamps and raw snapshots, plus titles, metadata, headings, text, links and image-alt signals.</li>
+        <li><strong>Compare and report.</strong> Calculate text similarity and heading/link-label coverage, check target links, and generate JSON plus a Markdown report.</li>
+      </ol>
+
+      <h3>The files you get</h3>
+      <div class="table-scroll" role="region" aria-label="Python output files" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Output</th><th scope="col">What it tells you</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><code>evidence.json</code></th><td>The captured observations, effective configuration, inventory and page responses. Preserve this unchanged.</td></tr>
+            <tr><th scope="row"><code>snapshots/</code></th><td>Raw response bodies and inventory inputs, named by their SHA-256 hashes.</td></tr>
+            <tr><th scope="row"><code>analysis.json</code></th><td>Computed totals, denominators, per-page metrics, review flags, findings and evidence/review hashes.</td></tr>
+            <tr><th scope="row"><code>reviews.json</code></th><td>A finding register, initially empty, that a reviewer fills with supported findings tied to this evidence.</td></tr>
+            <tr><th scope="row"><code>report.md</code></th><td>The report generated from the saved evidence and any recorded review findings.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>How to read the results</h3>
+      <div class="explanations">
+        <div><h4>Content signals</h4><p>Text similarity uses token-frequency cosine similarity. Heading and link-label coverage measure retained distinct labels. Scores below <strong>90%, 90% and 95%</strong>, respectively, flag a difference for review.</p></div>
+        <div><h4>Availability &amp; counts</h4><p>404/410 means unavailable at capture time. Timeouts, access blocks and other unsuccessful responses remain unverified. A unique failed link and the pages that reference it are counted separately.</p></div>
+      </div>
+      <p><strong>Good</strong> means no automated content flags; <strong>Review</strong> means a difference needs checking; <strong>Critical</strong> requires a confirmed P0 content or functional finding; <strong>Unverified</strong> means the pair could not be compared. Always read the denominator: inventoried pages, usable pages and measurable pairs can differ.</p>
+      <aside class="note"><strong>Measurements guide the review.</strong><p>The script does not execute JavaScript or test visual layout, interactions or keyboard behavior. HTTP 200 and high similarity do not prove a successful migration. Linked documents are checked for HTTP availability, not their content or integrity.</p></aside>
+    </section>
+
+    <section id="reproduce" class="guide-section" aria-labelledby="reproduce-title">
+      <div class="section-heading"><p class="eyebrow">02 / Run it yourself</p><h2 id="reproduce-title">Steps to reproduce the process</h2></div>
+      <p>Download and extract the kit, then run these commands from its top-level folder. You need Python 3.10 or later and network access to the two websites for collection.</p>
+      <ol class="steps">
+        <li>
+          <h3>Set the websites and inventory</h3>
+          <p>Copy the neutral examples, replace the placeholder origins with your source and target, and list the full source URLs in <code>urls.txt</code>. Inventory file paths resolve beside the configuration.</p>
+          <pre><code>cp config.example.json config.json
+cp urls.example.txt urls.txt</code></pre>
+          <pre><code>{
+  "name": "My website migration",
+  "sourceOrigin": "https://source.example",
+  "targetOrigin": "https://target.example",
+  "inventories": [{"kind": "urls", "location": "urls.txt"}],
+  "includePrefixes": ["/"],
+  "excludePrefixes": [],
+  "routeMap": {}
+}</code></pre>
+          <p>For sitemap discovery, use <code>{"kind": "sitemap", "location": "https://your-source.example/sitemap.xml"}</code> instead. Add exact route mappings when target paths differ, such as <code>"/old-page": "/new-page"</code>. Record critical journeys and exclusions in <code>scope.md</code>.</p>
+        </li>
+        <li>
+          <h3>Collect a fresh run</h3>
+          <pre><code>python3 tools/gap_audit.py collect --config config.json --out audit-run-01</code></pre>
+          <p>Use a new output directory for each collection. The collector refuses to overwrite an existing run. Open <code>audit-run-01/report.md</code> and <code>analysis.json</code> to inspect the automated baseline.</p>
+        </li>
+        <li>
+          <h3>Verify the differences</h3>
+          <p>Compare source and target in the browser at matching viewports. Review shared navigation, representative templates, content outliers and required journeys. Record actions, expected and actual results, screenshots, reviewer and time in the <a href="./downloads/review-checklist.md" download>review checklist</a>.</p>
+          <p>Add supported findings to <code>audit-run-01/reviews.json</code> while keeping its <code>evidenceSha256</code>. Each finding records the affected pages, observation, impact, priority, corrective action, owner or TBD, acceptance test and evidence references. The <a href="./downloads/SKILL.md" download>AI skill</a> includes the finding schema.</p>
+        </li>
+        <li>
+          <h3>Render from the saved evidence</h3>
+          <pre><code>python3 tools/gap_audit.py render --evidence audit-run-01/evidence.json --reviews audit-run-01/reviews.json --out audit-run-01</code></pre>
+          <p>This updates <code>analysis.json</code> and <code>report.md</code> offline. The same saved evidence, review file and toolkit version produce the same report bytes. Preserve those inputs; a fresh crawl or new AI wording may produce different output.</p>
+        </li>
+      </ol>
+      <p class="resource-link"><a href="./downloads/reproduce-audit.md" download>Download the full reproduction guide <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section id="pdf-skill" class="guide-section" aria-labelledby="skill-title">
+      <div class="section-heading"><p class="eyebrow">03 / Review &amp; presentation</p><h2 id="skill-title">The AI skill for a PDF audit</h2></div>
+      <p>The custom skill is <strong>pdf-gap-audit</strong>, version 1.4.0. Its <a href="./downloads/SKILL.md" download>SKILL.md instructions</a> and supporting files are available as a <a href="./downloads/pdf-gap-audit-skill.zip" download>complete skill package</a>. The full audit kit includes the same skill.</p>
+      <p>Use it with any capable agent that can read local files, run Python, access the websites, operate a browser and save screenshots. The workflow uses portable files and commands. Your agent does not need a particular vendor's skill system: ask it to read <code>SKILL.md</code> and follow the referenced protocol.</p>
+      <h3>What the actual skill contains</h3>
+      <div class="table-scroll" role="region" aria-label="Skill package contents" tabindex="0">
+        <table><thead><tr><th scope="col">File</th><th scope="col">Purpose</th></tr></thead><tbody>
+          <tr><th scope="row"><code>SKILL.md</code></th><td>The complete collection → browser review → findings → PDF → verification workflow.</td></tr>
+          <tr><th scope="row"><code>references/</code></th><td>A fixed <a href="./downloads/review-protocol.md" download>review protocol</a> and the browser evidence schema: coverage, viewports, states, priorities and screenshot records.</td></tr>
+          <tr><th scope="row"><code>scripts/</code></th><td>The readiness PDF builder, legacy measured builder and verification helper. The standalone package also includes the Python collector here.</td></tr>
+          <tr><th scope="row"><code>assets/</code></th><td>A blank browser manifest; the standalone package also includes configuration, URL and review-checklist starters.</td></tr>
+          <tr><th scope="row"><code>requirements.txt</code></th><td>Pinned ReportLab, Pillow and pypdf versions for PDF generation and checks.</td></tr>
+        </tbody></table>
+      </div>
+      <h3>Give the extracted kit to your agent</h3>
+      <p>Replace the three bracketed inputs and use this complete request. The agent performs the browser checks and creates the evidence; you do not need to supply a previous audit.</p>
+      <pre class="prompt"><code>Read skills/pdf-gap-audit/SKILL.md in this audit kit
+and follow its referenced review protocol and schema.
+Run a complete fresh migration gap audit.
+
+Source: [source origin]
+Target: [target origin and environment]
+Inventory: [source sitemap or approved source URL list]
+
+Record scope, assumptions and critical journeys.
+Configure the collector and collect into a new run.
+Perform the protocol's browser and component checks,
+using matched viewports and states. Save screenshots,
+review findings and the browser evidence manifest.
+
+Regenerate the measured report. Prepare readiness.json
+from the reviewed page/block census using the readiness
+contract. Use the bundled readiness PDF builder and pinned
+dependencies, then render and inspect every PDF page. Deliver the PDF, JSON and
+Markdown outputs, screenshots, review records and
+build record. Keep unavailable checks unverified.
+Use only this run's evidence and supported findings.</code></pre>
+      <p>If business acceptance criteria or known critical journeys are available, add them to the request. The skill records assumptions when they are missing. An agent without browser tools can produce a clearly labeled static-only report; it cannot complete the visual and journey review.</p>
+      <h3>Build the main readiness PDF after review</h3>
+      <pre><code>python3 -m venv .venv
+.venv/bin/python -m pip install -r skills/pdf-gap-audit/requirements.txt
+.venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment audit-run-01/readiness.json --validate-only
+.venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment audit-run-01/readiness.json --out audit-run-01/readiness-audit.pdf</code></pre>
+      <p>Prepare the reviewed readiness assessment using the skill’s contract before running these commands. The builder reconciles page/block/variant counts, checks screenshot hashes and crop bounds, embeds supplied records, and writes a PDF plus a build record. The legacy build_pdf.py remains available for measured supporting reports and frozen reproduction. The skill also includes the command to extract text, check page and finding IDs, and render every page with Poppler for inspection. See the <a href="./downloads/reproduce-audit.md" download>full guide</a> for setup and reproduction commands.</p>
+      <aside class="note"><strong>What another agent can reproduce</strong><p>With frozen evidence, reviews, browser records, screenshots, fonts and the same pinned environment, the scripts reproduce the measured report and PDF. A fresh audit repeats the same process and report structure; live site changes, access differences and independent reviewer judgments can change findings. Preserve the selected routes, states and actions so another agent can repeat those checks.</p></aside>
+      <div class="actions"><a class="button" href="./downloads/pdf-gap-audit-skill.zip" download>Download the complete skill <span aria-hidden="true">↓</span></a><a class="text-link" href="./downloads/SKILL.md" download>Read the skill instructions <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><p>Mind the Gap <span aria-hidden="true">/</span> A repeatable method for website migration audits.</p><a href="https://github.com/gonsaje-vml/gapaudit">GitHub repository <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

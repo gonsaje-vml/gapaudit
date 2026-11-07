@@ -1,51 +1,71 @@
 # Gap audit
 
-Reusable website migration audits: Python evidence collection, a fixed SOP and prompt, browser verification, and consistent report generation.
+A repeatable way to compare a source website with its migrated version: Python collects evidence, browser review verifies differences, and a reusable AI skill produces a PDF audit.
 
-## Start here
+## Try the practice audit
 
-- [Python output walkthrough — completed provider audit](migration-work/gap-audits/2026-09-28/python-output-walkthrough.md)
-- [Reviewed provider audit — Adobe develop](migration-work/gap-audits/2026-09-28/client-report.md)
-- [Untouched Python report](migration-work/gap-audits/2026-09-28/audit/report-automated.md)
-- [Exact prompt used for the provider run](migration-work/gap-audits/2026-09-28/audit-prompt.md)
-
-## Reuse the method
-
-- [Toolkit instructions and commands](docs/gap-audit/README.md)
-- [SOP](docs/gap-audit/SOP.md)
-- [Reusable prompt](docs/gap-audit/prompt.md)
-- [Browser review checklist](docs/gap-audit/review-checklist.md)
-- [Python collector and renderer](tools/gap_audit.py)
-- [Synthetic example report](docs/gap-audit/examples/report.md)
-
-Run commands from this directory (`/Users/jaesong/src/vml/gapaudit`). The Python toolkit uses Python 3.10 or later and the standard library; no API key or third-party Python packages are required.
-
-To verify the completed run offline:
+The guide includes a downloadable practice kit with two fictional local websites,
+four scoped routes, deliberate migration defects and an offline visual walkthrough.
+After extracting `gap-audit-practice-kit.zip`, open `START-HERE.html`, then run:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 migration-work/gap-audits/2026-09-28/validate-deliverables.py
+python3 practice/run_demo.py start --out runs/practice-01
 ```
 
-To verify the toolkit:
+Leave the terminal open for browser review. The same command works from this
+checkout. See [the practice instructions](practice/README.md) and
+[answer key](practice/expected-results.md). The illustrated guide explains every
+input/output and skill file, evidence flow, chart units, browser review, optional
+readiness PDF generation, retesting and switching to your own sites.
+
+## The GitHub Pages guide
+
+The site explains the method, Python outputs, reproduction commands and PDF workflow. Its build publishes only the guide and a neutral starter kit. Previous audit results, client configurations, screenshots and reports are excluded from the page and downloads.
+
+Build and preview from this project directory:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools -p 'test_gap_audit.py' -v
+python3 tools/build_ui.py
+python3 -m http.server 8847 --bind 127.0.0.1 --directory dist
 ```
 
-## Package layout
+Open [the local guide](http://127.0.0.1:8847/). The static page works without JavaScript. See [GitHub Pages deployment](docs/github-pages.md) for publishing and validation.
 
-| Folder | Contents |
-|---|---|
-| `docs/gap-audit/` | SOP, prompt, checklist, configuration, inventory and synthetic example |
-| `tools/` | Current Python toolkit/tests and the original Node audit reference |
-| `migration-work/gap-audits/2026-09-28/` | Complete develop audit, reports, configuration, review records, scripts, raw evidence and browser captures |
+## Reproduce an audit
 
-The [original September 16 report](docs/adobe-nc-provider-gap-report.md) and [original Node audit script](tools/audit-nc-migration.mjs) are historical references. The original Node script retains its old defaults, including its temporary inventory path and main-branch target; use the Python toolkit and the completed run's develop configuration for new work.
+- [Reproduction guide](docs/reproduce-audit.md): configuration, collection, review and offline rendering.
+- [Python collector and renderer](tools/gap_audit.py): Python 3.10+, standard library, no API key.
+- [Neutral configuration](docs/gap-audit/config.example.json) and [URL list](docs/gap-audit/urls.example.txt): replace the placeholder domains and routes.
+- [Browser review checklist](docs/gap-audit/review-checklist.md): record real coverage and evidence.
+- [PDF audit AI skill](skills/pdf-gap-audit/SKILL.md): versioned review protocol, evidence schema, fixed PDF builder, pinned dependencies and visual verification. The build includes both a standalone skill ZIP and the complete audit kit.
 
-## Relocation and evidence provenance
+From a repository checkout:
 
-This package was moved from `/Users/jaesong/src/vml/elevance` on September 28, 2026. The internal layout is preserved so relative paths and commands still work. Presentation links were regenerated for this directory.
+```bash
+cp docs/gap-audit/config.example.json config.json
+cp docs/gap-audit/urls.example.txt urls.txt
+# Edit the origins, URLs, exclusions and mappings before collection.
+python3 tools/gap_audit.py collect --config config.json --out audit-run-01
+```
 
-Frozen evidence, snapshots, the original Python output and recorded review decisions are preserved. `audit/evidence.json` intentionally retains the original absolute inventory location as a historical collection record; its saved inventory snapshot and the relocated `urls.txt` are available here. Do not rewrite that provenance field to update links: it would change the evidence hash. Repository commit references describe the original collection environment.
+Review the baseline, verify the browser behavior, record findings in the run's `reviews.json`, then regenerate:
 
-See [relocation manifest](relocation-manifest.json) for file hashes at the move and [run validation](migration-work/gap-audits/2026-09-28/validation.json) for current integrity and reproducibility results.
+```bash
+python3 tools/gap_audit.py render \
+  --evidence audit-run-01/evidence.json \
+  --reviews audit-run-01/reviews.json \
+  --out audit-run-01
+```
+
+Python writes JSON and Markdown. Any capable agent with file, Python and browser access can follow the packaged skill to perform the review and run its supplied PDF builder. Preserve all inputs and the issued PDF. Static similarity and HTTP availability are review signals; they do not establish functional equivalence or launch readiness.
+
+## Validation
+
+```bash
+python3 -m unittest discover -s tools -p 'test_gap_audit.py' -v
+python3 -m unittest discover -s tools -p 'test_build_ui.py' -v
+python3 -m unittest discover -s tools -p 'test_practice_kit.py' -v
+python3 tools/build_ui.py
+```
+
+The checks cover toolkit decisions, offline reproducibility and the published build's exclusion of prior audit data. Historical packages remain under `migration-work/` and `output/` for provenance; the Pages builder does not read or publish them.

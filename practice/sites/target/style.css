@@ -1,0 +1,78 @@
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  color:#253047;
+  background:#fbfcff;
+  font:18px/1.65 system-ui,sans-serif
+}
+header,main,footer {
+  max-width:1000px;
+  margin:auto;
+  padding:28px
+}
+header {
+  border-bottom:2px solid #0d2264
+}
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px
+}
+a {
+  color:#0d2264;
+  text-underline-offset:4px
+}
+a:focus-visible,summary:focus-visible {
+  outline:3px solid #d50023;
+  outline-offset:5px
+}
+h1,h2 {
+  color:#0d2264;
+  line-height:1.2
+}
+.notice {
+  background:#fff3d5;
+  padding:12px 20px;
+  font-size:14px
+}
+.hero {
+  padding:28px;
+  background:#e9eefc;
+  border-left:5px solid #d50023
+}
+.contact-panel {
+  width:100%;
+  padding:24px;
+  background:#e9eefc
+}
+details {
+  padding:16px 0;
+  border-bottom:1px solid #ccd4e5
+}
+summary {
+  cursor:pointer
+}
+footer {
+  font-size:14px;
+  border-top:1px solid #ccd4e5
+}
+@media(max-width:600px) {
+  header,main,footer {
+  padding:20px
+}
+h1 {
+  font-size:32px
+}
+
+}
+
+
+/* Deliberate practice defect: compare contact at a narrow viewport. */
+@media(max-width:600px) {
+  .contact-panel {
+  width:760px
+}
+
+}

@@ -1,0 +1,270 @@
+{
+  "config": {
+    "documentPrefixes": [
+      "/docs/"
+    ],
+    "name": "Example provider migration",
+    "sourceOrigin": "https://source.example",
+    "targetOrigin": "https://preview.example"
+  },
+  "configHash": "e0579d903fb1b494acbee440ad7217f813f9256959a6f5dd850c27d204a652d1",
+  "generatedAt": "2026-09-28T12:00:00+00:00",
+  "inventory": {
+    "candidateCount": 4,
+    "excluded": [],
+    "inputs": []
+  },
+  "linkChecks": [
+    {
+      "error": "",
+      "finalUrl": "https://preview.example/docs/form.pdf",
+      "status": 404,
+      "url": "https://preview.example/docs/form.pdf"
+    },
+    {
+      "error": "",
+      "finalUrl": "https://preview.example/docs/restricted.pdf",
+      "status": 403,
+      "url": "https://preview.example/docs/restricted.pdf"
+    }
+  ],
+  "methodVersion": "1.0.0",
+  "pages": [
+    {
+      "id": "PAGE-example-home",
+      "route": "/home",
+      "source": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://source.example/home",
+        "html": {
+          "canonical": "https://source.example/home",
+          "description": "Resources",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Provider resources"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Provider resources"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Form",
+              "url": "https://source.example/docs/form.pdf"
+            }
+          ],
+          "mainText": "Provider resources Find forms and provider guidance. Form",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://source.example/home"
+      },
+      "target": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://preview.example/home",
+        "html": {
+          "canonical": "https://preview.example/home",
+          "description": "Resources",
+          "emptyAltCount": 1,
+          "h1s": [
+            "Provider resources"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Provider resources"
+          ],
+          "imageCount": 1,
+          "lang": "",
+          "links": [
+            {
+              "text": "Form",
+              "url": "https://preview.example/docs/form.pdf"
+            }
+          ],
+          "mainText": "Provider resources Find forms and provider guidance. Form",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://preview.example/home"
+      }
+    },
+    {
+      "id": "PAGE-example-lookup",
+      "route": "/lookup",
+      "source": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://source.example/lookup",
+        "html": {
+          "canonical": "https://source.example/home",
+          "description": "Resources",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Code lookup"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Code lookup"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Code lookup Read eligibility guidance before using this tool.",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://source.example/lookup"
+      },
+      "target": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://preview.example/lookup",
+        "html": {
+          "canonical": "https://preview.example/home",
+          "description": "Resources",
+          "emptyAltCount": 0,
+          "h1s": [],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Code lookup",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://preview.example/lookup"
+      }
+    },
+    {
+      "id": "PAGE-example-forms",
+      "route": "/forms",
+      "source": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://source.example/forms",
+        "html": {
+          "canonical": "https://source.example/home",
+          "description": "Resources",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Provider resources"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Provider resources"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Form",
+              "url": "https://source.example/docs/form.pdf"
+            }
+          ],
+          "mainText": "Provider resources Find forms and provider guidance. Form",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://source.example/forms"
+      },
+      "target": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://preview.example/forms",
+        "html": {
+          "canonical": "https://preview.example/home",
+          "description": "Resources",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Provider resources"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Provider resources"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Form",
+              "url": "https://preview.example/docs/form.pdf"
+            },
+            {
+              "text": "Restricted resource",
+              "url": "https://preview.example/docs/restricted.pdf"
+            }
+          ],
+          "mainText": "Provider resources Find forms and provider guidance. Form Restricted resource",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://preview.example/forms"
+      }
+    },
+    {
+      "id": "PAGE-example-contact",
+      "route": "/contact",
+      "source": {
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "https://source.example/contact",
+        "html": {
+          "canonical": "https://source.example/home",
+          "description": "Resources",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Contact"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Contact"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Contact Contact the provider team for assistance.",
+          "missingAltCount": 0,
+          "title": "Provider resources"
+        },
+        "redirects": [],
+        "status": 200,
+        "url": "https://source.example/contact"
+      },
+      "target": {
+        "contentType": "text/html",
+        "error": "Synthetic timeout",
+        "finalUrl": "https://preview.example/contact",
+        "html": {},
+        "redirects": [],
+        "status": 0,
+        "url": "https://preview.example/contact"
+      }
+    }
+  ],
+  "schemaVersion": 1,
+  "synthetic": true
+}

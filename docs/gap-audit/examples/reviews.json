@@ -1,0 +1,50 @@
+{
+  "evidenceSha256": "baaa841dd4b4458cf2fe59e9cf00110b6bbd61e23d98d216f644aa02c01f61ed",
+  "findings": [
+    {
+      "acceptance": "Open the form from both pages and confirm a successful response and the correct approved document.",
+      "category": "functional",
+      "contentFidelity": null,
+      "disposition": "confirmed",
+      "evidence": [
+        "evidence.json: linkChecks for https://preview.example/docs/form.pdf",
+        "review-notes.md: scenario F-001"
+      ],
+      "id": "F-001",
+      "impact": "The assumed launch requirement includes downloading this form; no alternative is accepted in this example.",
+      "observation": "Synthetic scenario: the required form target returns 404 from both affected pages.",
+      "owner": "TBD",
+      "pageIds": [
+        "PAGE-example-home",
+        "PAGE-example-forms"
+      ],
+      "priority": "P0",
+      "recommendation": "Publish the approved form or update both links to the approved destination.",
+      "reviewedAt": "2026-09-28T12:15:00+00:00",
+      "reviewer": "Synthetic reviewer (example only)",
+      "title": "Required form document unavailable"
+    },
+    {
+      "acceptance": "Confirm a meaningful H1 and the approved guidance appear before the lookup input at all required viewports.",
+      "category": "content",
+      "contentFidelity": "Review",
+      "disposition": "confirmed",
+      "evidence": [
+        "evidence.json: PAGE-example-lookup source.html and target.html",
+        "review-notes.md: scenario F-002"
+      ],
+      "id": "F-002",
+      "impact": "Users lose context before using the tool. Functional service behavior has not been tested in this example.",
+      "observation": "Synthetic scenario: the target lookup page omits the source H1 and the instruction to read eligibility guidance.",
+      "owner": "TBD",
+      "pageIds": [
+        "PAGE-example-lookup"
+      ],
+      "priority": "P1",
+      "recommendation": "Restore the heading and approved eligibility guidance.",
+      "reviewedAt": "2026-09-28T12:15:00+00:00",
+      "reviewer": "Synthetic reviewer (example only)",
+      "title": "Lookup guidance omitted"
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Run a fictional website migration audit locally. A visual, file-by-file walkthrough of collection, browser review, the PDF skill and reproducible results.">
+  <meta name="theme-color" content="#0d2264">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Your first audit — Mind the Gap practice lab</title>
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./guide.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to the walkthrough</a>
+<header class="site-header wrap">
+  <a class="brand" href="./index.html"><img src="./mind-the-gap.png" alt="" width="92" height="69"><span>Mind the Gap<small>The practice lab</small></span></a>
+  <a class="repo-link" href="./index.html">Back to the method guide <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main" class="wrap lab">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">Learn by running a real example</p>
+    <h1 id="title">Your first audit.<br>Every step explained.</h1>
+    <p class="lede">Two fictional websites. Four pages. A few deliberate migration defects. Collect the evidence yourself, see what the numbers mean, and follow the files all the way to a reviewed PDF.</p>
+    <div class="actions"><a class="button practice-download" href="./downloads/gap-audit-practice-kit.zip" download>Download the practice kit <span aria-hidden="true">↓</span></a><a class="text-link" href="#start">Start the exercise →</a></div>
+    <p class="intro-note">Python 3.10+ · No API key or extra packages for the initial audit · Runs locally · PDF review is an optional extension</p>
+  </section>
+
+  <nav class="lab-nav" aria-label="Walkthrough chapters">
+    <a href="#overview">01 / See the whole journey</a><a href="#start">02 / Run the sample sites</a>
+    <a href="#results">03 / Read the results</a><a href="#browser">04 / Verify in the browser</a>
+    <a href="#files">05 / Follow every file</a><a href="#skill">06 / Open the skill</a>
+    <a href="#review">07 / Record your findings</a><a href="#pdf">08 / Build the PDF</a>
+    <a href="#charts">09 / Understand the charts</a><a href="#retest">10 / Fix and retest</a>
+    <a href="#own-sites">11 / Use your own sites</a><a href="#troubleshooting">12 / Troubleshooting</a>
+  </nav>
+
+  <section id="overview" class="guide-section" aria-labelledby="overview-title">
+    <div class="section-heading"><p class="eyebrow">01 / The big picture</p><h2 id="overview-title">One journey, three kinds of work</h2></div>
+    <p><strong>Python collects.</strong> It requests pages, compares their static content and records linked-resource availability. <strong>A reviewer verifies.</strong> A person or browser-capable agent checks the rendered experience and required actions. <strong>The skill guides reporting.</strong> It tells an agent how to preserve evidence, assess readiness, build a PDF and verify the result.</p>
+    <figure class="diagram"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Audit journey diagram; scroll horizontally on small screens"><img src="./diagrams/audit-journey.svg" alt="Scope leads to Python collection, browser review, recorded judgments, then the verified PDF. Collection produces observations; browser review supplies evidence for judgments."></div><figcaption>Read left to right. The collector starts the audit; the browser review establishes what actually happens.</figcaption></figure>
+    <div class="learning-grid"><div><h3>The first stopping point</h3><p>Run the sample collector and understand <code>report.md</code>. This needs only Python and a browser. You can stop with a useful, clearly bounded static baseline.</p></div><div><h3>The complete learning path</h3><p>Perform the browser exercises, record findings, then give the run to an agent with the bundled skill. PDF generation needs the pinned packages; visual PDF verification also needs Poppler.</p></div></div>
+    <aside class="note"><strong>Everything here is fictional.</strong><p>The files deliberately contain teaching defects. The runner makes real HTTP requests to these local files; the answer key describes expected results, not browser checks already performed on your behalf.</p></aside>
+  </section>
+
+  <section id="start" class="guide-section" aria-labelledby="start-title">
+    <div class="section-heading"><p class="eyebrow">02 / Your first run</p><h2 id="start-title">Download, extract, start</h2></div>
+    <ol class="steps">
+      <li><h3>Open the kit folder in a terminal</h3><p>Extract the entire practice ZIP. Keep its folders together. Open a terminal in the extracted top-level folder, where <code>START-HERE.html</code>, <code>tools/</code>, <code>practice/</code> and <code>skills/</code> sit side by side. You can also open <code>START-HERE.html</code> directly to read this walkthrough offline.</p><pre><code>python3 --version</code></pre><p>You need Python 3.10 or later. On Windows, use <code>py -3</code> instead of <code>python3</code> if that is your launcher. Enter these commands in a terminal, not in Python’s <code>&gt;&gt;&gt;</code> prompt.</p></li>
+      <li><h3>Start both websites and collect</h3><pre><code>python3 practice/run_demo.py start --out runs/practice-01</code></pre><p>This starts two servers bound to <code>127.0.0.1</code>, prepares the four-route inventory and route mapping, calls the real collector, then keeps the websites open. The terminal prints both addresses and the report location. <strong>Leave it running while you compare the websites.</strong></p><div class="site-pair"><div><span class="mini-label">Original / source</span><strong>Northstar Learning Hub</strong><code>http://127.0.0.1:8851/</code></div><div><span class="mini-label">Migrated / target</span><strong>The version to assess</strong><code>http://127.0.0.1:8852/</code></div></div><p>Open those addresses in your browser. If you selected custom ports, use the addresses printed by your run. These are local sample sites, not public URLs.</p></li>
+      <li><h3>Open the saved report</h3><p>In your editor or Markdown viewer, open <code>runs/practice-01/report.md</code>. Open <code>analysis.json</code> beside it to connect each headline number to its structured value. The runner also saves <code>demo-inputs/config.json</code>, <code>demo-inputs/urls.txt</code> and the exercise’s <code>scope.md</code>.</p><p>The report is a file; the sample website server does not serve the run directory. Use your file browser/editor to open it.</p></li>
+    </ol>
+    <details class="explain"><summary>What the runner does behind the scenes</summary><p><code>practice/run_demo.py</code> locates the kit relative to its own file, starts one server per sample tree, creates temporary collector inputs, and imports <code>tools/gap_audit.py</code>. After collection, it saves copies of those inputs inside the new run. Raw inventory inputs and page bodies are already preserved by the collector. No AI call, package installation or browser testing happens automatically.</p><p>Use <code>start --once</code> to collect and stop immediately, or <code>serve</code> to open the same fixtures without collecting. The default ports are 8851 and 8852; <code>--source-port</code> and <code>--target-port</code> change them. Existing audit folders are refused.</p></details>
+  </section>
+
+  <section id="results" class="guide-section" aria-labelledby="results-title">
+    <div class="section-heading"><p class="eyebrow">03 / Read your baseline</p><h2 id="results-title">Know what you should find</h2></div>
+    <p>The sample has four inventoried routes. All four source/target HTML pairs can be compared. One target download is missing; two pages link to that same URL. Resources loses its heading and preparation guidance. Contact keeps its text but contains a narrow-screen CSS defect.</p>
+    <figure class="diagram"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Expected practice measurements chart"><img src="./diagrams/expected-results.svg" alt="Expected baseline: four of four page pairs comparable, two of four pages link to the missing download, and one of four pages has the planted content regression. There is one distinct unavailable download URL."></div><figcaption>Expected measurements from the fictional fixtures. Page bars share a four-page denominator; the unavailable URL is a separate count.</figcaption></figure>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Practice page answer key"><table><thead><tr><th scope="col">Source → target</th><th scope="col">Static content result</th><th scope="col">What to investigate</th></tr></thead><tbody>
+      <tr><th scope="row"><code>/ → /</code></th><td>Good</td><td>The checklist link returns 404 on target. Content and resource availability are separate.</td></tr>
+      <tr><th scope="row"><code>/resources/ → /resources/</code></th><td>Review</td><td>Missing H1 and guidance; the same broken checklist link appears here too.</td></tr>
+      <tr><th scope="row"><code>/contact/ → /contact/</code></th><td>Good</td><td>At 390px, target’s contact panel is 760px wide. Static text comparison cannot detect this layout problem.</td></tr>
+      <tr><th scope="row"><code>/guide/ → /help/</code></th><td>Good</td><td>An intentional move handled by <code>routeMap</code>. Test the disclosures rather than treating the new path as missing.</td></tr>
+    </tbody></table></div>
+    <p><strong>The initial confirmed finding count is zero.</strong> Automated flags are review candidates. A reviewer still needs to establish the defect, impact, priority and acceptance test. The answer key is also included as <code>practice/expected-results.md</code>.</p>
+    <h3>Read the labels carefully</h3><p><strong>Good:</strong> no automated content flags. <strong>Review:</strong> a content difference or comparison limitation needs checking. <strong>Critical:</strong> an explicit content-fidelity override supported by a confirmed P0 content or functional finding. <strong>Unverified:</strong> no usable source/target comparison. Resource failures remain independent of those content labels.</p>
+    <p>404/410 means unavailable at capture time. A timeout, access block or other unsuccessful response remains unverified. HTTP 200 may still be a wrong page or soft error. Text similarity below 90%, heading coverage below 90% and link-label coverage below 95% trigger review; they are not visual or completion scores.</p>
+  </section>
+
+  <section id="browser" class="guide-section" aria-labelledby="browser-title">
+    <div class="section-heading"><p class="eyebrow">04 / Check the rendered experience</p><h2 id="browser-title">Turn a signal into an observation</h2></div>
+    <p>Open source and target side by side. Match viewport, scroll position and interaction state before comparing. The exercise asks for <strong>1440×900</strong> and <strong>390×844</strong>. Enter these in your browser’s responsive controls where available; record the actual dimensions if you use another size.</p>
+    <ol class="process">
+      <li><strong>Home:</strong> follow the checklist link on source and target. Source should return the sample checklist; target should return 404. Save what you actually observe.</li>
+      <li><strong>Resources:</strong> compare the top heading and introductory guidance. Follow the download link again. It is a second affected page, not a second unique failed URL.</li>
+      <li><strong>Contact:</strong> compare both sizes. At 390px, investigate the target’s horizontal overflow. This is the key lesson: matching text can accompany a visibly broken layout.</li>
+      <li><strong>Guide/help:</strong> open each disclosure with a mouse, then use Tab to focus its summary and Enter/Space to toggle it. Repeat on both sites. Native HTML behavior still needs checking.</li>
+      <li><strong>Shared navigation:</strong> follow the links on both sites and record any remaining checks. Do not send messages to the fictional contact address.</li>
+    </ol>
+    <h3>Capture enough context to repeat the check</h3><p>Keep screenshot originals in <code>runs/practice-01/browser/</code>. For each pair, record URL, viewport, state, capture time and SHA-256. In <code>browser-review.json</code>, record browser/version, reviewer, actual actions, expected result, observed result and evidence references. Use actual page IDs from this run.</p>
+    <p>Hash a saved screenshot with this portable Python command, replacing the filename:</p><pre><code>python3 -c "import hashlib,pathlib; print(hashlib.sha256(pathlib.Path('runs/practice-01/browser/home-source.png').read_bytes()).hexdigest())"</code></pre>
+    <p>The browser-manifest schema defines the fields; the blank asset is a starting point, not completed evidence. Keep unavailable or unperformed checks <strong>Unverified</strong>. Your screenshots establish only their captured states and viewports.</p>
+  </section>
+
+  <section id="files" class="guide-section" aria-labelledby="files-title">
+    <div class="section-heading"><p class="eyebrow">05 / Follow every file</p><h2 id="files-title">The files tell the story</h2></div>
+    <figure class="diagram"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Evidence file dependency diagram"><img src="./diagrams/evidence-files.svg" alt="Config and URL list feed the collector, which writes evidence and raw snapshots. Evidence plus reviewed findings feed analysis and Markdown. Browser evidence and readiness assessment feed the PDF builder, followed by a build record and page-image QA."></div><figcaption>The evidence is preserved. Analysis is recalculated. Review records explain the judgments added to it.</figcaption></figure>
+    <h3>Start here: the kit’s top level</h3>
+    <pre class="file-tree"><code>START-HERE.html              illustrated walkthrough, readable offline
+guide.css + diagrams/         local styling and visual explanations
+README.md                    short entry point to the practice exercise
+config.example.json          neutral configuration for your own sites
+urls.example.txt             neutral inventory for your own sites
+tools/gap_audit.py            the real collector and measured renderer
+practice/                    runner, fixtures, scope, answer key, prompt
+docs/                        reproduction guide and review checklist
+skills/pdf-gap-audit/         the complete audit skill
+runs/practice-01/             created when you run the exercise</code></pre>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Practice kit input files"><table><thead><tr><th scope="col">File</th><th scope="col">Read it for</th><th scope="col">When to change it</th></tr></thead><tbody>
+      <tr><th scope="row"><code>START-HERE.html</code>, <code>guide.css</code>, <code>diagrams/*.svg</code></th><td>This visual guide and its local assets. Diagrams have text alternatives and captions.</td><td>Read-only teaching material; keep the files together for offline use.</td></tr>
+      <tr><th scope="row"><code>README.md</code></th><td>The quickest route from extraction to a running practice audit.</td><td>No changes needed.</td></tr>
+      <tr><th scope="row"><code>config.example.json</code></th><td>Origins, inventory locations, scope prefixes, route mappings, limits and request settings.</td><td>Copy to <code>config.json</code> when switching to real sites. Placeholder domains are not working demo sites.</td></tr>
+      <tr><th scope="row"><code>urls.example.txt</code></th><td>The format: one full source URL per line.</td><td>Copy to <code>urls.txt</code> and replace with your approved source routes.</td></tr>
+      <tr><th scope="row"><code>tools/gap_audit.py</code></th><td><code>collect</code> requests and saves evidence; <code>render</code> recalculates JSON/Markdown offline.</td><td>Use its CLI. Changing formulas or schemas changes the method and requires regression checks/version control.</td></tr>
+      <tr><th scope="row"><code>docs/reproduce-audit.md</code></th><td>The full fresh-audit and frozen-reproduction process, including PDF setup.</td><td>Keep as the reference for real work.</td></tr>
+      <tr><th scope="row"><code>docs/gap-audit/review-checklist.md</code></th><td>Browser coverage, journeys and evidence to record.</td><td>Copy into each run; fill with actual observations.</td></tr>
+    </tbody></table></div>
+    <h3>Inside <code>practice/</code></h3>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Practice files explained"><table><thead><tr><th scope="col">File</th><th scope="col">Its exact job</th></tr></thead><tbody>
+      <tr><th scope="row"><code>run_demo.py</code></th><td>Starts/stops only the two fixture servers, builds the practice configuration, calls the real collector and preserves the exercise inputs. <code>start</code> collects; <code>serve</code> only serves.</td></tr>
+      <tr><th scope="row"><code>README.md</code></th><td>The terminal-first version of the walkthrough, including Windows launcher notes, commands and troubleshooting.</td></tr>
+      <tr><th scope="row"><code>scope.md</code></th><td>Four routes, intentional mapping, required download journey, viewports, browser checks and fictional priority assumptions. Copied into the run.</td></tr>
+      <tr><th scope="row"><code>expected-results.md</code></th><td>The answer key and optional repair exercise. Expectations are not recorded observations.</td></tr>
+      <tr><th scope="row"><code>agent-prompt.txt</code></th><td>A complete request for a capable agent to review this existing local run and produce a readiness report.</td></tr>
+      <tr><th scope="row"><code>sites/source/index.html</code><br><code>sites/target/index.html</code></th><td>Matching home-page body content. Both link to resources and the checklist.</td></tr>
+      <tr><th scope="row"><code>sites/source/resources/index.html</code><br><code>sites/target/resources/index.html</code></th><td>The source’s H1 and preparation paragraph are deliberately absent from target. Both still link to the same checklist path.</td></tr>
+      <tr><th scope="row"><code>sites/source/contact/index.html</code><br><code>sites/target/contact/index.html</code></th><td>Matching contact text. The layout difference comes from CSS, demonstrating the limit of static content comparison.</td></tr>
+      <tr><th scope="row"><code>sites/source/guide/index.html</code><br><code>sites/target/help/index.html</code></th><td>The intentionally moved session guide, with two native disclosure controls to test.</td></tr>
+      <tr><th scope="row"><code>sites/source/style.css</code><br><code>sites/target/style.css</code></th><td>Shared appearance; target adds a deliberate <code>760px</code> contact-panel width below a <code>600px</code> viewport.</td></tr>
+      <tr><th scope="row"><code>sites/source/downloads/checklist.txt</code></th><td>The approved fictional checklist. There is intentionally no matching target file.</td></tr>
+    </tbody></table></div>
+    <h3>Inside your generated run</h3>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Generated audit files explained"><table><thead><tr><th scope="col">File / folder</th><th scope="col">What it means</th><th scope="col">Preserve or edit?</th></tr></thead><tbody>
+      <tr><th scope="row"><code>demo-inputs/config.json</code>, <code>urls.txt</code></th><td>The actual local origins, explicit guide→help mapping and four source routes used by this exercise. Ports are part of these URLs.</td><td>Preserve with the run. A real-site run uses its own separately prepared inputs.</td></tr>
+      <tr><th scope="row"><code>scope.md</code></th><td>The agreed fictional boundaries and acceptance criteria for this run.</td><td>Retain its history if scope changes.</td></tr>
+      <tr><th scope="row"><code>evidence.json</code></th><td>Captured responses, effective configuration, inventory provenance, page summaries and link checks. Stable page IDs identify rows.</td><td>Preserve unchanged. New collection gets a new run.</td></tr>
+      <tr><th scope="row"><code>snapshots/</code></th><td>Raw page bodies and original inventory inputs, named by SHA-256.</td><td>Preserve originals; these support what was actually captured.</td></tr>
+      <tr><th scope="row"><code>analysis.json</code></th><td>Recomputed counts, denominators, page flags, findings and evidence/review hashes.</td><td>Regenerate with <code>render</code>; do not hand-edit measurements.</td></tr>
+      <tr><th scope="row"><code>report.md</code></th><td>The fixed measured report, combining analysis with supported review findings.</td><td>Regenerate; optional narrative must not replace its measurements or limits.</td></tr>
+      <tr><th scope="row"><code>reviews.json</code></th><td>The finding register, bound to this evidence hash. Initially empty.</td><td>Add actual reviewed findings, then render again. Freeze accepted versions.</td></tr>
+      <tr><th scope="row"><code>browser-review.json</code>, <code>browser/</code></th><td>Created during review: coverage, component observations and matched screenshot originals.</td><td>Record real actions and captures. Preserve originals and hashes.</td></tr>
+      <tr><th scope="row"><code>readiness.json</code></th><td>Created after review: page/block/variant/use census, separate visual/function/readiness judgments, capabilities, quality and work items.</td><td>Validate against contract 2. Do not infer it from text scores.</td></tr>
+      <tr><th scope="row"><code>readiness-audit.pdf</code>, <code>readiness-audit.build.json</code></th><td>The main readiness report and reproducibility record containing hashes, counts and build details.</td><td>Keep issued versions with their exact inputs.</td></tr>
+      <tr><th scope="row"><code>pdf-qa/</code></th><td>Text checks and rendered images from the verification helper.</td><td>Inspect every page image before sharing the PDF.</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section id="skill" class="guide-section" aria-labelledby="skill-title">
+    <div class="section-heading"><p class="eyebrow">06 / Skill by skill, file by file</p><h2 id="skill-title">One audit skill, with clear responsibilities</h2></div>
+    <p>This kit ships <strong>one</strong> custom skill: <strong>pdf-gap-audit, version 1.4.0</strong>. The full-kit and standalone-skill downloads contain the same workflow. They are two packaging options, not two agents or competing audit methods. You do not need the skills used to develop this repository.</p>
+    <figure class="diagram"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Audit skill anatomy diagram"><img src="./diagrams/skill-map.svg" alt="SKILL.md orchestrates the audit. Protocol, checklist and schemas define review and data. The collector, readiness builder and verification helper execute different stages. A browser-capable reviewer supplies the observations."></div><figcaption>A skill is instructions plus supporting files. It does not supply a browser, Python runtime or completed judgments.</figcaption></figure>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Every bundled skill file"><table><thead><tr><th scope="col">File in <code>skills/pdf-gap-audit/</code></th><th scope="col">Read / run it when</th><th scope="col">What it controls</th></tr></thead><tbody>
+      <tr><th scope="row"><code>SKILL.md</code></th><td>First, before starting or continuing the audit.</td><td>Chooses fresh audit, reassessment, frozen reproduction or retest. Sets required outputs, evidence rules, readiness workflow and final verification.</td></tr>
+      <tr><th scope="row"><code>references/review-protocol.md</code></th><td>Before choosing routes, viewports or journeys.</td><td>Review coverage, matched states, evidence standards, finding fields and classification. Use the exercise scope’s explicit four-page coverage and required sizes.</td></tr>
+      <tr><th scope="row"><code>references/browser-review-schema.md</code></th><td>While recording browser checks.</td><td>The observation contract: checks, component observations, screenshot pairs and limitations. Requires actual page IDs and evidence for observed results.</td></tr>
+      <tr><th scope="row"><code>references/readiness-report-schema.md</code></th><td>Before preparing <code>readiness.json</code>.</td><td>Contract 2: page breakdowns, block types, exact variants, uses, readiness gates, chart units, work board and supporting records.</td></tr>
+      <tr><th scope="row"><code>assets/audit-checklist.md</code></th><td>Copy into your run at the start of review.</td><td>The comprehensive audit checklist. Maintain an evidence-backed outcome or justified exclusion for each applicable area.</td></tr>
+      <tr><th scope="row"><code>assets/browser-review.example.json</code></th><td>Copy as your run’s <code>browser-review.json</code>.</td><td>Blank arrays and an unperformed-review limitation. Set the current evidence hash; populate only actual observations.</td></tr>
+      <tr><th scope="row"><code>requirements.txt</code></th><td>Before either PDF builder.</td><td>Pinned ReportLab, Pillow and pypdf versions. The collector itself has no third-party dependency.</td></tr>
+      <tr><th scope="row"><code>scripts/build_readiness_pdf.py</code></th><td>For the main PDF of a new audit or reassessment.</td><td>Validates readiness data, reconciles counts, checks captures, renders charts/page/block analysis and embeds supplied original records.</td></tr>
+      <tr><th scope="row"><code>scripts/build_pdf.py</code></th><td>For the legacy measured supporting report or exact frozen reproduction.</td><td>Recalculates the measured report, checks evidence/review/browser bindings and builds the fixed technical PDF. This alone is not a complete new readiness assessment.</td></tr>
+      <tr><th scope="row"><code>scripts/verify_pdf.py</code></th><td>After building either PDF.</td><td>Checks text/references/build integrity and renders every page for inspection. Rendering does not replace looking at the images.</td></tr>
+    </tbody></table></div>
+    <details class="explain"><summary>Full-kit paths versus standalone-skill paths</summary><p>In this practice kit, use <code>tools/gap_audit.py</code> and <code>skills/pdf-gap-audit/scripts/…</code>. In the separate standalone skill ZIP, the root is <code>pdf-gap-audit/</code>; the collector is <code>scripts/gap_audit.py</code>, and starter config, URL list and review checklist are under <code>assets/</code>. Read that package’s <code>SKILL.md</code> for those paths. Do not mix command paths from the two layouts.</p></details>
+    <h3>Four modes, four different promises</h3><div class="table-scroll" tabindex="0" role="region" aria-label="Audit skill modes"><table><thead><tr><th scope="col">Mode</th><th scope="col">What changes</th><th scope="col">What you may claim</th></tr></thead><tbody><tr><th scope="row">Fresh audit</th><td>New collection and scoped browser review.</td><td>What this run actually captured and verified.</td></tr><tr><th scope="row">Reassessment</th><td>New judgments from preserved evidence, with separately identified supplements.</td><td>A new assessment of that evidence; old checks were not automatically rerun.</td></tr><tr><th scope="row">Frozen reproduction</th><td>Rebuild the issued output from preserved inputs and runtime.</td><td>Reproduction of a saved report, not a fresh site test.</td></tr><tr><th scope="row">Retest</th><td>New collection and repeated actions after repairs.</td><td>Fixed, still-open, new and unverified items supported by fresh evidence.</td></tr></tbody></table></div>
+  </section>
+
+  <section id="review" class="guide-section" aria-labelledby="review-title">
+    <div class="section-heading"><p class="eyebrow">07 / Make judgments traceable</p><h2 id="review-title">From a broken link to a useful finding</h2></div>
+    <p>First open <code>analysis.json</code> and find its <code>evidenceSha256</code> and the page IDs for home and resources. Preserve that hash in <code>reviews.json</code>. Add a finding only after performing the check. The following is a <strong>template</strong>; replace every bracketed value with this run’s actual evidence and reviewer details.</p>
+    <pre><code>{
+  "evidenceSha256": "[this run's evidence hash]",
+  "findings": [{
+    "id": "F-001",
+    "title": "Required session checklist unavailable",
+    "category": "functional",
+    "priority": "P0",
+    "disposition": "confirmed",
+    "pageIds": ["[home page ID]", "[resources page ID]"],
+    "observation": "[actual source and target download results]",
+    "impact": "The required preparation download cannot be completed.",
+    "recommendation": "Publish the approved checklist at the linked target path.",
+    "owner": "TBD",
+    "acceptance": "Open the checklist from home and resources; both return the approved file.",
+    "evidence": ["[actual response reference]", "[actual browser evidence reference]"],
+    "reviewer": "[actual reviewer]",
+    "reviewedAt": "[actual ISO timestamp]"
+  }]
+}</code></pre>
+    <p>P0 is justified here by the fictional scope’s required download journey. Real projects need their own criteria. The resources content and mobile layout problems need their own supported findings; a layout issue is a visual finding, not a deduction from text similarity. A P0 download finding can coexist with Good static content: priority and content fidelity are separate. The optional <code>contentFidelity: "Critical"</code> override changes the page label only when supported by a confirmed P0 content/functional finding. Do not add that override merely because a resource is unavailable. See the review protocol for the complete category/field rules.</p>
+    <h3>Regenerate without collecting again</h3><p>Open a second terminal in the kit folder. After editing supported findings, run:</p><pre><code>python3 tools/gap_audit.py render --evidence runs/practice-01/evidence.json --reviews runs/practice-01/reviews.json --out runs/practice-01</code></pre><p>This updates <code>analysis.json</code> and <code>report.md</code> using saved files only. A mismatched evidence hash is rejected. Do not “fix” the mismatch by substituting a hash from a different audit; review the actual evidence and use the correct run.</p>
+    <p><code>reviews.json</code> answers “what are the actionable findings?” <code>browser-review.json</code> answers “what did we check and capture?” <code>readiness.json</code> answers “what works, what remains, and how close is each page/block?” Keep these responsibilities separate.</p>
+  </section>
+
+  <section id="pdf" class="guide-section" aria-labelledby="pdf-title">
+    <div class="section-heading"><p class="eyebrow">08 / Optional reviewed extension</p><h2 id="pdf-title">Go from evidence to a verified PDF</h2></div>
+    <p>The starter run does not automatically create a PDF. For a complete readiness report, the reviewer must prepare the actual page/block/variant census, record browser evidence and build <code>readiness.json</code> using the skill’s contract. Give a capable agent the kit and <code>practice/agent-prompt.txt</code>; keep the fixture servers running.</p>
+    <h3>Prepare the PDF tools</h3><pre><code>python3 -m venv .venv
+.venv/bin/python -m pip install -r skills/pdf-gap-audit/requirements.txt</code></pre><p>On Windows, use <code>py -3 -m venv .venv</code> and <code>.venv\Scripts\python.exe</code> in place of <code>.venv/bin/python</code>. The installed packages are pinned in the shipped requirements file. Keep the same versions when reproducing an issued report.</p>
+    <h3>Validate, build, verify</h3><pre><code>.venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment runs/practice-01/readiness.json --validate-only
+
+.venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment runs/practice-01/readiness.json --out runs/practice-01/readiness-audit.pdf
+
+.venv/bin/python skills/pdf-gap-audit/scripts/verify_pdf.py --pdf runs/practice-01/readiness-audit.pdf --assessment runs/practice-01/readiness.json --out runs/practice-01/pdf-qa</code></pre>
+    <p>The verification helper needs Poppler’s <code>pdftoppm</code> to render pages. The full reproduction guide documents installation. Inspect every rendered page for clipping, crowded tables, readable screenshot crops, correct chart units and honest limitations. The build record stores hashes; preserve it with the PDF and all source records.</p>
+    <aside class="note"><strong>There is no shortcut from a high text score to Ready.</strong><p>Complete and Ready have explicit required-state, viewport and quality-coverage gates. If the agent lacks browser tools or required coverage is missing, retain Unverified results and describe the audit as partial.</p></aside>
+    <details class="explain"><summary>When would I use the other PDF builder?</summary><p><code>scripts/build_pdf.py --run … --browser-review … --out …</code> produces the legacy measured technical report and supports frozen reproduction. Without a browser manifest it explicitly labels browser coverage unverified. New main reports use <code>build_readiness_pdf.py</code>; the older builder is still useful for the measured supporting record.</p></details>
+  </section>
+
+  <section id="charts" class="guide-section" aria-labelledby="charts-title">
+    <div class="section-heading"><p class="eyebrow">09 / Read visuals honestly</p><h2 id="charts-title">A page, a block type and a use are different units</h2></div>
+    <p>A hero is a <strong>block type</strong>. Hero video is a <strong>variant</strong>. Each authored placement is one <strong>use</strong>. A block with six cards is still one use. Shared header/footer uses stay separate from body-block totals.</p>
+    <figure class="diagram"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Block type, variant and use counting example"><img src="./diagrams/chart-units.svg" alt="Illustrative example, not this audit: one hero block type has two variants. A standard hero appears twice and a video hero appears once, making three uses. Distinct types, variants and uses must not be combined into one denominator."></div><figcaption>Illustration only, not findings or readiness judgments for the Northstar practice site.</figcaption></figure>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Readiness chart reading guide"><table><thead><tr><th scope="col">Visual in the readiness PDF</th><th scope="col">Counted unit</th><th scope="col">How to interpret it</th></tr></thead><tbody>
+      <tr><th scope="row">Overall readiness chart</th><td>Distinct body block types from <code>components[]</code></td><td>Partitions the inventory into Ready, Minor work, Substantial work, Capability missing and Unverified. Zero categories stay visible.</td></tr>
+      <tr><th scope="row">Per-page stacked bars</th><td>Body uses on each page from <code>pages[].components[].count</code></td><td>Shows remaining work across placements. The row’s separate visual status describes the rendered comparison.</td></tr>
+      <tr><th scope="row">Block-type matrix</th><td>Uses of each block type, by page</td><td>Shows frequency plus separate Visual, Function and Readiness columns.</td></tr>
+      <tr><th scope="row">Exact-variant matrix</th><td>Uses of each exact authored variant</td><td>Keeps exceptions visible. A working variant must not conceal a broken one.</td></tr>
+    </tbody></table></div>
+    <p>The PDF’s global chart and exact-count table derive from the same records. Page use totals reconcile with type and variant usage. Readiness is a recorded assessment of remaining work; it is not a measured percentage of visual similarity. A single dated snapshot cannot establish progress over time.</p>
+  </section>
+
+  <section id="retest" class="guide-section" aria-labelledby="retest-title">
+    <div class="section-heading"><p class="eyebrow">10 / Learn the repair loop</p><h2 id="retest-title">Fix a copy, keep the first run</h2></div>
+    <p>Copy the extracted kit before editing the fixtures. In that copy, restore the resources H1/guidance, add the approved sample checklist to target’s missing download path, and remove the 760px mobile rule from target CSS. The answer key identifies the exact files.</p><pre><code>python3 practice/run_demo.py start --out runs/practice-fixed-01</code></pre><p>Stop an existing fixture server before starting another on the same ports. Repeat the original routes, sizes, states and acceptance tests. You should now expect no unavailable target download and no resources content regression; browser behavior still needs fresh verification.</p>
+    <p>Preserve both runs. Record fixed, still-open, new and unverified items against the new evidence. Do not overwrite the baseline or relabel an old screenshot as a fresh retest.</p>
+  </section>
+
+  <section id="own-sites" class="guide-section" aria-labelledby="own-title">
+    <div class="section-heading"><p class="eyebrow">11 / Take it to your project</p><h2 id="own-title">Change the inputs, keep the method</h2></div>
+    <p>The practice runner always uses the fictional local websites. To audit your project, prepare your own configuration and inventory, then use the collector directly. Copy <code>config.example.json</code> to <code>config.json</code> and <code>urls.example.txt</code> to <code>urls.txt</code> in the extracted kit’s top level.</p><pre><code>{
+  "name": "My website migration",
+  "sourceOrigin": "https://source.example",
+  "targetOrigin": "https://target.example",
+  "inventories": [{"kind": "urls", "location": "urls.txt"}],
+  "includePrefixes": ["/"],
+  "excludePrefixes": [],
+  "routeMap": {"/old-guide/": "/help/"}
+}</code></pre>
+    <p>Replace the placeholder origins and URLs before collection. Origins contain only scheme and host/port, without paths, queries or credentials. Local inventory paths resolve relative to the config file. Route mappings are exact; case, queries and trailing slashes matter. Record approved scope, exclusions and critical journeys separately.</p><pre><code>python3 tools/gap_audit.py collect --config config.json --out runs/my-project-01</code></pre>
+    <p>For sitemap discovery, replace the inventory entry with <code>{"kind":"sitemap","location":"https://your-source.example/sitemap.xml"}</code>. Confirm the real inventory and limits; do not mistake a small sample for complete coverage. Follow <code>docs/reproduce-audit.md</code> and the same skill for review and reporting.</p>
+    <h3>How this guide gets published</h3><p>In the repository, <code>site/index.html</code> is the main guide, <code>site/practice.html</code> is this lab, and <code>site/diagrams/</code> contains the visual explanations. <code>tools/build_ui.py</code> builds only an explicit allowlist into <code>dist/</code> and creates the three download packages. <code>.github/workflows/pages.yml</code> runs the checks and publishes only <code>dist/</code>.</p><p>Your locally generated <code>runs/</code> directory is not part of the download or Pages build. Historical audit packages are also excluded. GitHub Pages serves instructions and downloads; it does not run Python or collect your audit in the browser.</p>
+  </section>
+
+  <section id="troubleshooting" class="guide-section" aria-labelledby="help-title">
+    <div class="section-heading"><p class="eyebrow">12 / Keep moving</p><h2 id="help-title">When something does not work</h2></div>
+    <details class="explain"><summary>“python3” is not found, or I see a Python prompt</summary><p>Install/use Python 3.10 or later. Windows commonly uses <code>py -3</code>. Check the version first. If you see <code>&gt;&gt;&gt;</code>, exit Python and enter the command in your normal terminal. No Node installation is needed for this exercise.</p></details>
+    <details class="explain"><summary>“Output already exists”</summary><p>Use a new name such as <code>--out runs/practice-02</code>. To browse the old run’s fixtures without collecting, use <code>python3 practice/run_demo.py serve</code>. Preserve the old evidence instead of deleting it to make the command work.</p></details>
+    <details class="explain"><summary>A port is busy or the browser says connection refused</summary><p>A running demo may already own ports 8851/8852. Stop it with Ctrl+C, or add <code>--source-port 8861 --target-port 8862</code>. Use the printed URLs. If the server has stopped, reopen it with <code>serve</code>; match the original run’s ports when repeating its browser checks.</p></details>
+    <details class="explain"><summary>The folder path contains spaces</summary><p>Keep the entire extracted folder intact, and quote paths containing spaces: <code>--out "runs/my first audit"</code>. The runner finds the collector and fixtures relative to its own location.</p></details>
+    <details class="explain"><summary>I cannot view the report at the sample website URL</summary><p>The sample server serves only sample website files. Open <code>runs/practice-01/report.md</code> in a local editor/Markdown viewer. Generated evidence and screenshots remain outside the served trees.</p></details>
+    <details class="explain"><summary>The agent has no browser tools, or PDF verification tools are missing</summary><p>Keep visual/journey coverage Unverified and describe the audit as partial. Preserve measured outputs. PDF builders need the pinned Python packages; page-image rendering needs Poppler. Do not claim a reviewed PDF when you have not inspected its rendered pages.</p></details>
+    <details class="explain"><summary>Can I close the terminal?</summary><p>Ctrl+C stops both sample servers and leaves the saved run untouched. Offline <code>render</code> still works. Use <code>serve</code> when you want to browse the sample sites again.</p></details>
+    <div class="actions"><a class="button practice-download" href="./downloads/gap-audit-practice-kit.zip" download>Download the practice kit <span aria-hidden="true">↓</span></a><a class="text-link" href="./index.html">Return to the method guide →</a></div>
+  </section>
+</main>
+<footer class="site-footer wrap"><p>Mind the Gap <span>·</span> Practice with fictional sites. Preserve real evidence.</p><a href="#title">Back to top ↑</a></footer>
+</body>
+</html>
