@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact the learning team | Northstar practice site</title>
+<meta name="description" content="Fictional Northstar migration practice page: Contact the learning team.">
+<link rel="canonical" href="/contact/">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="notice">Fictional practice website · Target · Deliberate migration differences</div>
+<header>
+<strong>Northstar Learning Hub</strong>
+<nav aria-label="Main navigation">
+<a href="/">Home</a>
+<a href="/resources/">Resources</a>
+<a href="/contact/">Contact</a>
+<a href="/help/">Session guide</a>
+</nav>
+</header>
+<main>
+<h1>Contact the learning team</h1>
+<p>Have questions about the learning programme? Here is how to reach our fictional team.</p>
+<section class="contact-panel">
+<h2>We can help you prepare</h2>
+<p>Our learning team can explain session formats and help you choose a suitable starting point.</p>
+<p>Fictional address: <span>team@example.test</span>
+</p>
+<p>Practice only. No messages are sent from this sample website.</p>
+</section>
+</main>
+<footer>Practice content only. This is a local teaching fixture.</footer>
+</body>
+</html>

@@ -32,6 +32,10 @@ jobs:
         run: python3 -m unittest discover -s tools -p 'test_practice_kit.py' -v
       - name: Verify frozen example files, snippets and downloads
         run: python3 -m unittest discover -s tools -p 'test_worked_example.py' -v
+      - name: Verify repaired sample copy and frozen before-after retest
+        run: |
+          python3 -m unittest discover -s tools -p 'test_practice_retest.py' -v
+          python3 -m unittest discover -s tools -p 'test_retest_example.py' -v
       - name: Install pinned PDF validation dependencies
         run: python3 -m pip install -r skills/pdf-gap-audit/requirements.txt pdfplumber==0.11.10
       - name: Verify PDF reproduction and evidence integrity

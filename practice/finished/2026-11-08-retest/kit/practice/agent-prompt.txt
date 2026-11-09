@@ -1,0 +1,33 @@
+Read practice/README.md, practice/scope.md and skills/pdf-gap-audit/SKILL.md.
+Follow the skill's review protocol, browser schema and readiness report contract.
+This is a fictional local teaching exercise, not a client audit.
+
+Use the existing run at runs/practice-01. The user has started the local sample
+servers. Read demo-inputs/config.json for the actual source/target origins and
+route mapping; do not assume the default ports. If servers are unavailable,
+explain how to reopen them with practice/run_demo.py serve and the same ports.
+
+Explain the evidence files before changing any review records. Copy the skill's
+audit-checklist.md into the run and maintain it with supported outcomes. Inspect
+the static baseline, then compare every scoped page at 1440x900 and 390x844.
+Test navigation, the checklist download from home and resources, resources
+context, contact overflow and both help disclosures with mouse/keyboard.
+Record actual actions, expected/actual results, reviewer, browser and times.
+Save original matched screenshots inside the run and hash them. Keep unperformed
+or unavailable checks Unverified. Do not claim observations from the answer key.
+
+Record supported findings in reviews.json, bound to this run's evidenceSha256,
+and browser coverage in browser-review.json. Regenerate the measured report.
+Build readiness.json from the actual block/variant/use census and review, keeping
+visual, functional and readiness judgments separate. Preserve all measured
+records as supporting evidence. Do not infer readiness percentages from text
+similarity. Do not label records Ready when required coverage remains unverified.
+
+Use pinned requirements and build_readiness_pdf.py to validate and build the
+readiness PDF. Use verify_pdf.py and inspect every rendered PDF page, including
+chart counts/units and screenshot legibility. If a dependency or tool is missing,
+state what remains incomplete and preserve the source records.
+
+Deliver the PDF (if verified), measured JSON/Markdown, scope, audit checklist,
+browser manifest, original screenshots, readiness assessment, build record and
+material limitations. Explain which output supports each conclusion.

@@ -16,6 +16,7 @@ import zipfile
 
 import build_ui
 import worked_example
+import retest_example
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -64,6 +65,7 @@ class GuideBuildTests(unittest.TestCase):
         self.assertFalse((output / 'output').exists())
         forbidden = {'.pdf', '.json', '.js', '.mjs', '.pyc'}
         example_files = worked_example.public_files()
+        example_files.update(worked_example.public_files(retest_example.RUN, prefix='retest-output/'))
         for path in output.rglob('*'):
             if path.suffix in forbidden and path.relative_to(output).as_posix() not in example_files:
                 self.assertIn(path.name, ('config.example.json', 'browser-review.example.json'), str(path))
@@ -74,7 +76,7 @@ class GuideBuildTests(unittest.TestCase):
 
     def test_guide_links_and_anchors_work_without_javascript(self):
         output = ROOT / 'dist'
-        for filename in ('index.html', 'practice.html', 'worked-example.html'):
+        for filename in ('index.html', 'practice.html', 'worked-example.html', 'retest.html'):
             page = PageLinks()
             page.feed((output / filename).read_text())
             self.assertEqual(page.scripts, [])

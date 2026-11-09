@@ -1,0 +1,26 @@
+{
+  "name": "Northstar repaired practice retest \u2014 fictional local sites",
+  "sourceOrigin": "http://127.0.0.1:8861",
+  "targetOrigin": "http://127.0.0.1:8862",
+  "inventories": [
+    {
+      "kind": "urls",
+      "location": "urls.txt"
+    }
+  ],
+  "includePrefixes": [
+    "/"
+  ],
+  "excludePrefixes": [],
+  "routeMap": {
+    "/guide/": "/help/"
+  },
+  "documentPrefixes": [
+    "/downloads/"
+  ],
+  "maxPages": 10,
+  "maxLinks": 30,
+  "maxSitemaps": 5,
+  "timeoutSeconds": 5,
+  "requestDelaySeconds": 0
+}

@@ -12,16 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / 'practice/finished/2026-11-08'
 
 
-def read(name):
-    return json.loads((RUN / name).read_text(encoding='utf-8'))
+def read(name, run=None):
+    return json.loads(((run or RUN) / name).read_text(encoding='utf-8'))
 
 
-def approved_files():
-    manifest = read('public-example.json')
+def approved_files(run=None):
+    run = run or RUN
+    manifest = read('public-example.json', run)
     files = {}
     for relative, expected in manifest['files'].items():
-        source = (RUN / relative).resolve()
-        if not source.is_relative_to(RUN.resolve()) or not source.is_file():
+        source = (run / relative).resolve()
+        if not source.is_relative_to(run.resolve()) or not source.is_file():
             raise ValueError('Worked-example file escapes or is missing: ' + relative)
         if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
             raise ValueError('Frozen worked-example hash mismatch: ' + relative)
@@ -29,10 +30,11 @@ def approved_files():
     return files
 
 
-def public_files():
-    files = approved_files()
-    return {'practice-output/' + relative: files[relative]
-            for relative in read('public-example.json')['publicFiles']}
+def public_files(run=None, prefix='practice-output/'):
+    run = run or RUN
+    files = approved_files(run)
+    return {prefix + relative: files[relative]
+            for relative in read('public-example.json', run)['publicFiles']}
 
 
 def snippets():

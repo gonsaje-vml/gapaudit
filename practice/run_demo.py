@@ -26,12 +26,15 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 
 @contextmanager
-def local_sites(source_port, target_port):
+def local_sites(source_port, target_port, sites='original'):
     """Serve only the two fixture trees; release every port on all exit paths."""
     with ExitStack() as cleanup:
         servers = []
+        tree = ROOT / 'practice' / ('sites-repaired' if sites == 'repaired' else 'sites')
         for side, port in (('source', source_port), ('target', target_port)):
-            handler = partial(QuietHandler, directory=str(ROOT / 'practice/sites' / side))
+            if not (tree / side).is_dir():
+                raise ValueError(f'Missing sample site folder: {tree / side}. Extract the complete kit.')
+            handler = partial(QuietHandler, directory=str(tree / side))
             try:
                 server = ThreadingHTTPServer(('127.0.0.1', port), handler)
             except OSError as error:
@@ -47,7 +50,7 @@ def local_sites(source_port, target_port):
         yield tuple(f'http://127.0.0.1:{server.server_port}' for server in servers)
 
 
-def collect_practice(source, target, output):
+def collect_practice(source, target, output, sites='original'):
     config = {
         'name': 'Northstar practice migration — fictional local sites',
         'sourceOrigin': source, 'targetOrigin': target,
@@ -57,6 +60,8 @@ def collect_practice(source, target, output):
         'maxPages': 10, 'maxLinks': 30, 'maxSitemaps': 5,
         'timeoutSeconds': 5, 'requestDelaySeconds': 0,
     }
+    if sites == 'repaired':
+        config['name'] = 'Northstar repaired practice retest — fictional local sites'
     with tempfile.TemporaryDirectory(prefix='gap-practice-inputs-') as temp:
         inputs = Path(temp)
         (inputs / 'config.json').write_text(json.dumps(config, indent=2) + '\n', encoding='utf-8')
@@ -75,9 +80,15 @@ def main():
     start.add_argument('--once', action='store_true', help='Collect then stop both sites')
     serve = commands.add_parser('serve', help='Open sample sites without collecting')
     for command in (start, serve):
-        command.add_argument('--source-port', type=int, default=8851)
-        command.add_argument('--target-port', type=int, default=8852)
+        command.add_argument('--sites', choices=('original', 'repaired'), default='original',
+                             help='Original flawed lesson or its separate repaired copy')
+        command.add_argument('--source-port', type=int)
+        command.add_argument('--target-port', type=int)
     args = parser.parse_args()
+    if args.source_port is None:
+        args.source_port = 8861 if args.sites == 'repaired' else 8851
+    if args.target_port is None:
+        args.target_port = 8862 if args.sites == 'repaired' else 8852
     for port in (args.source_port, args.target_port):
         if not 0 <= port <= 65535:
             parser.error('Ports must be between 0 and 65535 (0 chooses an available port).')
@@ -86,10 +97,10 @@ def main():
         parser.exit(1, f'Practice demo failed: output already exists: {output}. '
                        'Use a new --out name, or use serve to reopen the sites.\n')
     try:
-        with local_sites(args.source_port, args.target_port) as (source, target):
+        with local_sites(args.source_port, args.target_port, args.sites) as (source, target):
             print(f'Source: {source}/\nTarget: {target}/', flush=True)
             if output is not None:
-                collect_practice(source, target, output)
+                collect_practice(source, target, output, args.sites)
                 print(f'\nOpen report: {output / "report.md"}\n'
                       'Next: compare the sites using practice/README.md.\n'
                       'This is fictional practice data; browser checks are not performed automatically.', flush=True)

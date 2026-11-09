@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-11-09T02:54:58.605126+00:00",
+  "responses": [
+    {
+      "side": "source",
+      "url": "http://127.0.0.1:8861/style.css",
+      "status": 200,
+      "sha256": "d46dac05e33bcd45adcb292edc94ea9f36ea7c633e04ac22847d020fc5fb9e2f",
+      "matchesFixtureBytes": true
+    },
+    {
+      "side": "source",
+      "url": "http://127.0.0.1:8861/downloads/checklist.txt",
+      "status": 200,
+      "sha256": "0b8330c532d2dd22ed150cf6516ce6bf9ec2d0f89d32137716c33cc93cb6bb48",
+      "matchesFixtureBytes": true
+    },
+    {
+      "side": "target",
+      "url": "http://127.0.0.1:8862/style.css",
+      "status": 200,
+      "sha256": "d46dac05e33bcd45adcb292edc94ea9f36ea7c633e04ac22847d020fc5fb9e2f",
+      "matchesFixtureBytes": true
+    },
+    {
+      "side": "target",
+      "url": "http://127.0.0.1:8862/downloads/checklist.txt",
+      "status": 200,
+      "sha256": "0b8330c532d2dd22ed150cf6516ce6bf9ec2d0f89d32137716c33cc93cb6bb48",
+      "matchesFixtureBytes": true
+    }
+  ],
+  "contrastPairs": [
+    {
+      "foreground": "#253047",
+      "background": "#fbfcff",
+      "ratio": 12.85,
+      "basis": "Recomputed authored CSS color pair; loaded CSS bytes verified. Not formal accessibility conformance."
+    },
+    {
+      "foreground": "#253047",
+      "background": "#e9eefc",
+      "ratio": 11.37,
+      "basis": "Recomputed authored CSS color pair; loaded CSS bytes verified. Not formal accessibility conformance."
+    },
+    {
+      "foreground": "#253047",
+      "background": "#fff3d5",
+      "ratio": 11.95,
+      "basis": "Recomputed authored CSS color pair; loaded CSS bytes verified. Not formal accessibility conformance."
+    },
+    {
+      "foreground": "#0d2264",
+      "background": "#fbfcff",
+      "ratio": 14.32,
+      "basis": "Recomputed authored CSS color pair; loaded CSS bytes verified. Not formal accessibility conformance."
+    },
+    {
+      "foreground": "#0d2264",
+      "background": "#e9eefc",
+      "ratio": 12.66,
+      "basis": "Recomputed authored CSS color pair; loaded CSS bytes verified. Not formal accessibility conformance."
+    },
+    {
+      "foreground": "#d50023",
+      "background": "#fbfcff",
+      "ratio": 5.31,
+      "basis": "Recomputed authored CSS color pair; loaded CSS bytes verified. Not formal accessibility conformance."
+    }
+  ]
+}

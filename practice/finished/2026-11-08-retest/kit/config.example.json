@@ -1,0 +1,15 @@
+{
+  "name": "My website migration",
+  "sourceOrigin": "https://source.example",
+  "targetOrigin": "https://target.example",
+  "inventories": [{"kind": "urls", "location": "urls.txt"}],
+  "includePrefixes": ["/"],
+  "excludePrefixes": [],
+  "routeMap": {},
+  "documentPrefixes": ["/docs/"],
+  "maxPages": 1000,
+  "maxLinks": 10000,
+  "maxSitemaps": 100,
+  "timeoutSeconds": 20,
+  "requestDelaySeconds": 0.2
+}

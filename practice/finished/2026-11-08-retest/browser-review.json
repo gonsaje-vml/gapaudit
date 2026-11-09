@@ -1,0 +1,934 @@
+{
+  "schemaVersion": 1,
+  "evidenceSha256": "d17e5dff0f762699c4cf8ddb18cdf62e2b81570db2f6179a3370cb470fad7788",
+  "checks": [
+    {
+      "id": "V01-desktop",
+      "name": "Home visual/content comparison",
+      "pageIds": [
+        "PAGE-97936578beed"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "home-desktop",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V01-mobile",
+      "name": "Home visual/content comparison",
+      "pageIds": [
+        "PAGE-97936578beed"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "home-mobile",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V02-desktop",
+      "name": "Resources visual/content comparison",
+      "pageIds": [
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "resources-desktop",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V02-mobile",
+      "name": "Resources visual/content comparison",
+      "pageIds": [
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "resources-mobile",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V03-desktop",
+      "name": "Contact visual/content comparison",
+      "pageIds": [
+        "PAGE-0d789dec6881"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "contact-desktop",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V03-mobile",
+      "name": "Contact visual/content comparison",
+      "pageIds": [
+        "PAGE-0d789dec6881"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Panel width 335 CSS pixels; document width 375 within a 390 CSS pixel viewport. Source also measures 335/375. Text wraps and fits.",
+      "evidence": [
+        "contact-mobile",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V04-desktop",
+      "name": "Guide visual/content comparison",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "guide-desktop",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "V04-mobile",
+      "name": "Guide visual/content comparison",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Open both routes at the same viewport",
+        "Compare top content, heading, spacing and reflow",
+        "Inspect lower content and navigation; preserve matched captures"
+      ],
+      "expected": "Retain scoped source content and fit the required viewport.",
+      "actualSource": "Fresh matching source content and heading at the stated viewport; no horizontal overflow.",
+      "actualTarget": "Approved heading/content retained; matched viewport comparison passes with no horizontal overflow.",
+      "evidence": [
+        "guide-mobile",
+        "browser-observations.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "N-desktop",
+      "name": "Shared navigation",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Follow Resources, Contact, Session guide and Home on each site"
+      ],
+      "expected": "Every navigation link resolves to its intended scoped page.",
+      "actualSource": "Fresh retest: All four destinations opened; guide route is /guide/.",
+      "actualTarget": "Fresh retest: All four destinations opened; guide route is /help/.",
+      "evidence": [
+        "browser-actions.json: navigation"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "D-desktop",
+      "name": "Required checklist from both referring pages",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Follow checklist from home on source and target",
+        "Repeat from resources",
+        "Read the resulting content/error and compare the source checklist bytes"
+      ],
+      "expected": "Both target entry points open the approved checklist.",
+      "actualSource": "Both entry points open the correct four-line checklist; response bytes match the approved fixture.",
+      "actualTarget": "Both entry points now open the same correct checklist at both sizes; HTTP 200 and exact file bytes confirmed.",
+      "evidence": [
+        "download-mobile",
+        "browser-actions.json: download",
+        "asset-checks.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "I-desktop",
+      "name": "Both guide disclosures with mouse and keyboard",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Tab from last navigation link to the first summary",
+        "Press Enter then Space on each summary",
+        "Click both summaries open, inspect answers, then close both"
+      ],
+      "expected": "Each native disclosure opens/closes and retains its answer using pointer and keyboard.",
+      "actualSource": "Fresh retest: Both answers retained; recorded closed/open state sequences succeeded.",
+      "actualTarget": "Fresh retest: Same answers and state sequences succeeded at mapped /help/.",
+      "evidence": [
+        "guide-mobile-open",
+        "browser-actions.json: disclosures"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "A-desktop",
+      "name": "Keyboard order and visible focus",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Tab from Home, Resources, Contact, then Session guide",
+        "Verify next focused label",
+        "Inspect visible focus on the first summary"
+      ],
+      "expected": "Navigation order is logical and the disclosure has a visible focus indicator.",
+      "actualSource": "Fresh retest: Resources > Contact > Session guide > first summary; visible red focus outline.",
+      "actualTarget": "Fresh retest: Same order and focus outline.",
+      "evidence": [
+        "browser-actions.json: focus-order",
+        "browser/guide-source-desktop-focus.jpg",
+        "browser/guide-target-desktop-focus.jpg"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "N-mobile",
+      "name": "Shared navigation",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Follow Resources, Contact, Session guide and Home on each site"
+      ],
+      "expected": "Every navigation link resolves to its intended scoped page.",
+      "actualSource": "Fresh retest: All four destinations opened; guide route is /guide/.",
+      "actualTarget": "Fresh retest: All four destinations opened; guide route is /help/.",
+      "evidence": [
+        "browser-actions.json: navigation"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "D-mobile",
+      "name": "Required checklist from both referring pages",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Follow checklist from home on source and target",
+        "Repeat from resources",
+        "Read the resulting content/error and compare the source checklist bytes"
+      ],
+      "expected": "Both target entry points open the approved checklist.",
+      "actualSource": "Both entry points open the correct four-line checklist; response bytes match the approved fixture.",
+      "actualTarget": "Both entry points now open the same correct checklist at both sizes; HTTP 200 and exact file bytes confirmed.",
+      "evidence": [
+        "download-mobile",
+        "browser-actions.json: download",
+        "asset-checks.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "I-mobile",
+      "name": "Both guide disclosures with mouse and keyboard",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Tab from last navigation link to the first summary",
+        "Press Enter then Space on each summary",
+        "Click both summaries open, inspect answers, then close both"
+      ],
+      "expected": "Each native disclosure opens/closes and retains its answer using pointer and keyboard.",
+      "actualSource": "Fresh retest: Both answers retained; recorded closed/open state sequences succeeded.",
+      "actualTarget": "Fresh retest: Same answers and state sequences succeeded at mapped /help/.",
+      "evidence": [
+        "guide-mobile-open",
+        "browser-actions.json: disclosures"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "A-mobile",
+      "name": "Keyboard order and visible focus",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "390x844",
+      "outcome": "pass",
+      "actions": [
+        "Tab from Home, Resources, Contact, then Session guide",
+        "Verify next focused label",
+        "Inspect visible focus on the first summary"
+      ],
+      "expected": "Navigation order is logical and the disclosure has a visible focus indicator.",
+      "actualSource": "Fresh retest: Resources > Contact > Session guide > first summary; visible red focus outline.",
+      "actualTarget": "Fresh retest: Same order and focus outline.",
+      "evidence": [
+        "browser-actions.json: focus-order",
+        "browser/guide-source-mobile-focus.jpg",
+        "browser/guide-target-mobile-focus.jpg"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "id": "SEO",
+      "name": "Local metadata and environment",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "viewport": "1440x900",
+      "outcome": "pass",
+      "actions": [
+        "Inspect actual DOM titles, descriptions, language and canonical paths",
+        "Resolve guide mapping",
+        "Verify served stylesheet bytes against fixture source"
+      ],
+      "expected": "Scoped local metadata identifies the correct page; required CSS loads.",
+      "actualSource": "Fresh DOM metadata/language/canonical checks pass; loaded stylesheet/checklist bytes match fixture.",
+      "actualTarget": "Fresh target metadata matches; resources H1 restored; /help/ canonical retained; stylesheet and checklist HTTP 200 and bytes match.",
+      "evidence": [
+        "quality-observations.json",
+        "asset-checks.json"
+      ],
+      "browser": "Google Chrome 156.0.8078.81; fresh repaired-copy retest",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:54:58.605126+00:00"
+    }
+  ],
+  "components": [
+    {
+      "id": "B01",
+      "name": "hero",
+      "pageIds": [
+        "PAGE-97936578beed"
+      ],
+      "source": "Retain the static hero heading, paragraph, navy/red treatment and responsive layout.",
+      "target": "Hero content and presentation still match at both viewports.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "B02",
+      "name": "home preparation",
+      "pageIds": [
+        "PAGE-97936578beed"
+      ],
+      "source": "Retain the preparation content and both resource/download entry points.",
+      "target": "Preparation copy/resources navigation retained. Checklist now opens the approved content.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "B03",
+      "name": "introductory content",
+      "pageIds": [
+        "PAGE-6571b0f11fa5",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64"
+      ],
+      "source": "Retain each page main heading and its introductory guidance.",
+      "target": "All three introductions now match, including restored resources H1 and guidance.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "B04",
+      "name": "preparation kit",
+      "pageIds": [
+        "PAGE-6571b0f11fa5"
+      ],
+      "source": "Retain the preparation list and working checklist download.",
+      "target": "Preparation list retained; required checklist now opens correctly.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "B05",
+      "name": "contact-panel",
+      "pageIds": [
+        "PAGE-0d789dec6881"
+      ],
+      "source": "Fit all fictional contact content to its container without horizontal scrolling.",
+      "target": "All panel copy retained and fits both viewports; no form/service exists.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "B06",
+      "name": "disclosure",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "source": "Retain both native details/summary controls, answers and keyboard behavior.",
+      "target": "Both native disclosures and answer content retain all tested mouse/keyboard states.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "S01",
+      "name": "header",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "source": "Preserve the shared header and its scoped behavior.",
+      "target": "Matched presentation and content; all four links and route mapping work.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    },
+    {
+      "id": "S02",
+      "name": "footer",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-0d789dec6881",
+        "PAGE-bd88fd8fbd64",
+        "PAGE-6571b0f11fa5"
+      ],
+      "source": "Preserve the shared footer and its scoped behavior.",
+      "target": "Matched presentation and content; lower-page copy retained.",
+      "status": "retained",
+      "evidence": [
+        "retest-results.json",
+        "browser-review.json",
+        "browser-observations.json"
+      ],
+      "recommendation": "Preserve freshly verified behavior."
+    }
+  ],
+  "screenshotPairs": [
+    {
+      "id": "home-desktop",
+      "title": "Home / desktop",
+      "pageIds": [
+        "PAGE-97936578beed"
+      ],
+      "caption": "Fresh matched comparison at 1440x900: hero and preparation content retained. The checklist journey is separately verified in D-desktop and D-mobile.",
+      "source": {
+        "path": "browser/home-source-desktop.jpg",
+        "url": "http://127.0.0.1:8861/",
+        "sha256": "e32745906f3643957b40d6becb34f12174208285959a7a06e15e17a3e8ec684b",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:29.074Z",
+        "crop": [
+          245,
+          210,
+          935,
+          390
+        ]
+      },
+      "target": {
+        "path": "browser/home-target-desktop.jpg",
+        "url": "http://127.0.0.1:8862/",
+        "sha256": "b8849192c6bcbcc460265bbbcd6cc72e2ef34da5d0afd14cc3562e787a0b2583",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:35.122Z",
+        "crop": [
+          245,
+          210,
+          935,
+          390
+        ]
+      }
+    },
+    {
+      "id": "home-mobile",
+      "title": "Home / mobile",
+      "pageIds": [
+        "PAGE-97936578beed"
+      ],
+      "caption": "Fresh matched comparison at 390x844: hero and preparation content retained. The checklist journey is separately verified in D-desktop and D-mobile.",
+      "source": {
+        "path": "browser/home-source-mobile.jpg",
+        "url": "http://127.0.0.1:8861/",
+        "sha256": "671df25f4c7bade2645ab480da75b918f1d2ad92ecd75ac375615006c9f14e9a",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:37.149Z",
+        "crop": [
+          15,
+          235,
+          360,
+          500
+        ]
+      },
+      "target": {
+        "path": "browser/home-target-mobile.jpg",
+        "url": "http://127.0.0.1:8862/",
+        "sha256": "7a1b005342dcb90c2f4d8ab9a703f26053da633071d7342cd8f92a0a1043215b",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:39.030Z",
+        "crop": [
+          15,
+          235,
+          360,
+          500
+        ]
+      }
+    },
+    {
+      "id": "resources-desktop",
+      "title": "Resources / desktop",
+      "pageIds": [
+        "PAGE-6571b0f11fa5"
+      ],
+      "caption": "Fresh matched retest: the source H1 and approved guidance are restored on target; the kit remains.",
+      "source": {
+        "path": "browser/resources-source-desktop.jpg",
+        "url": "http://127.0.0.1:8861/resources/",
+        "sha256": "5ea9d1590ceee231e48a44d79b291b5cd979ebb973bfddc6870fcec4fb925199",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:29.294Z",
+        "crop": [
+          245,
+          205,
+          920,
+          470
+        ]
+      },
+      "target": {
+        "path": "browser/resources-target-desktop.jpg",
+        "url": "http://127.0.0.1:8862/resources/",
+        "sha256": "b7c596636fd2bcfc65b2354d1874ba7d9714482a33870ae037b991a01a546c80",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:35.313Z",
+        "crop": [
+          245,
+          205,
+          920,
+          470
+        ]
+      }
+    },
+    {
+      "id": "resources-mobile",
+      "title": "Resources / mobile",
+      "pageIds": [
+        "PAGE-6571b0f11fa5"
+      ],
+      "caption": "Fresh matched retest: the source H1 and approved guidance are restored on target; the kit remains.",
+      "source": {
+        "path": "browser/resources-source-mobile.jpg",
+        "url": "http://127.0.0.1:8861/resources/",
+        "sha256": "c780b094d3851bff4abb94481f5fbd19f71a211230eea76c8370b06e5a569166",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:37.309Z",
+        "crop": [
+          15,
+          250,
+          375,
+          475
+        ]
+      },
+      "target": {
+        "path": "browser/resources-target-mobile.jpg",
+        "url": "http://127.0.0.1:8862/resources/",
+        "sha256": "a340b012cb3313390529dee1e053f69b23ac735eb6665265fb9508522aa494a4",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:39.214Z",
+        "crop": [
+          15,
+          250,
+          375,
+          475
+        ]
+      }
+    },
+    {
+      "id": "contact-desktop",
+      "title": "Contact / desktop",
+      "pageIds": [
+        "PAGE-0d789dec6881"
+      ],
+      "caption": "Fresh matched comparison at 1440x900. Both desktop panels retain their content and layout. Mobile reflow is assessed separately below.",
+      "source": {
+        "path": "browser/contact-source-desktop.jpg",
+        "url": "http://127.0.0.1:8861/contact/",
+        "sha256": "e672b8ea4a301a578bc4b44227a8dde08110aa9b078e8c30a1a9bc21982e31c6",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:29.452Z",
+        "crop": [
+          245,
+          205,
+          925,
+          505
+        ]
+      },
+      "target": {
+        "path": "browser/contact-target-desktop.jpg",
+        "url": "http://127.0.0.1:8862/contact/",
+        "sha256": "a023071faecddee94061ad7d1860ae3df5f3f02334ca8b4f41d4c9f2bcb33a39",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:35.566Z",
+        "crop": [
+          245,
+          205,
+          925,
+          505
+        ]
+      }
+    },
+    {
+      "id": "contact-mobile",
+      "title": "Contact / mobile",
+      "pageIds": [
+        "PAGE-0d789dec6881"
+      ],
+      "caption": "Fresh matched comparison at 390x844. Both mobile panels now fit: source and target measure 335 CSS pixels wide; the original target was 760.",
+      "source": {
+        "path": "browser/contact-source-mobile.jpg",
+        "url": "http://127.0.0.1:8861/contact/",
+        "sha256": "cfb5cdb36198c8fd0e609ab9339575bec7b05a6291a02685b3031e2c66e207e2",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:37.451Z",
+        "crop": [
+          15,
+          440,
+          360,
+          690
+        ]
+      },
+      "target": {
+        "path": "browser/contact-target-mobile.jpg",
+        "url": "http://127.0.0.1:8862/contact/",
+        "sha256": "53c9afe515450c0a79e2b9cdfe7d8dfb53c1af831f70b9d1b644ba7f2fc00f86",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:39.428Z",
+        "crop": [
+          15,
+          440,
+          360,
+          690
+        ]
+      }
+    },
+    {
+      "id": "guide-desktop",
+      "title": "Guide / desktop",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "caption": "Fresh matched comparison at 1440x900: both native disclosures and introductory content retained.",
+      "source": {
+        "path": "browser/guide-source-desktop.jpg",
+        "url": "http://127.0.0.1:8861/guide/",
+        "sha256": "2c772126028aa778495711aeadc0d9a716ec88ad8fda07223cc67218f5cde65b",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:29.631Z",
+        "crop": [
+          245,
+          205,
+          925,
+          460
+        ]
+      },
+      "target": {
+        "path": "browser/guide-target-desktop.jpg",
+        "url": "http://127.0.0.1:8862/help/",
+        "sha256": "a9575922b008bcd5b56c18644f9cfb87b3af39cd70f88ff9d59532002ef6e649",
+        "viewport": "1440x900",
+        "state": "Top of page; disclosures closed; matched desktop CSS viewport",
+        "capturedAt": "2026-11-09T02:51:35.750Z",
+        "crop": [
+          245,
+          205,
+          925,
+          460
+        ]
+      }
+    },
+    {
+      "id": "guide-mobile",
+      "title": "Guide / mobile",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "caption": "Fresh matched comparison at 390x844: both native disclosures and introductory content retained.",
+      "source": {
+        "path": "browser/guide-source-mobile.jpg",
+        "url": "http://127.0.0.1:8861/guide/",
+        "sha256": "f14d09d101cc7987937f6263a8270ccc6b203d1574e1ec999fd362810e2c6773",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:37.623Z",
+        "crop": [
+          15,
+          260,
+          375,
+          490
+        ]
+      },
+      "target": {
+        "path": "browser/guide-target-mobile.jpg",
+        "url": "http://127.0.0.1:8862/help/",
+        "sha256": "160b8191c50735a9b5e64807c16d105b68293e3a77be10641dbc9036cacc4d85",
+        "viewport": "390x844",
+        "state": "Top of page; disclosures closed; matched mobile CSS viewport",
+        "capturedAt": "2026-11-09T02:51:39.670Z",
+        "crop": [
+          15,
+          260,
+          375,
+          490
+        ]
+      }
+    },
+    {
+      "id": "guide-mobile-open",
+      "title": "Guide / mobile-open",
+      "pageIds": [
+        "PAGE-bd88fd8fbd64"
+      ],
+      "caption": "Fresh matched comparison at 390x844: both disclosure answers opened by mouse; the action log also records keyboard and closing states.",
+      "source": {
+        "path": "browser/guide-source-mobile-open.jpg",
+        "url": "http://127.0.0.1:8861/guide/",
+        "sha256": "019fd6fba3acc5ced39fe745f6d72757cc67212d80658d51ee5c121594f204a4",
+        "viewport": "390x844",
+        "state": "Both answers opened with mouse; top of page",
+        "capturedAt": "2026-11-09T02:51:38.292Z",
+        "crop": [
+          15,
+          410,
+          375,
+          705
+        ]
+      },
+      "target": {
+        "path": "browser/guide-target-mobile-open.jpg",
+        "url": "http://127.0.0.1:8862/help/",
+        "sha256": "801b854b3ac36c6d8147e85bb3ff38cae9fa42f19d52b9b44050e821dc2b5bf5",
+        "viewport": "390x844",
+        "state": "Both answers opened with mouse; top of page",
+        "capturedAt": "2026-11-09T02:51:40.351Z",
+        "crop": [
+          15,
+          410,
+          375,
+          705
+        ]
+      }
+    },
+    {
+      "id": "download-mobile",
+      "title": "Download / mobile",
+      "pageIds": [
+        "PAGE-97936578beed",
+        "PAGE-6571b0f11fa5"
+      ],
+      "caption": "Fresh journeys from home and resources at both sizes open the approved checklist on both sites.",
+      "source": {
+        "path": "browser/download-source-mobile.jpg",
+        "url": "http://127.0.0.1:8861/downloads/checklist.txt",
+        "sha256": "7b0afaa4d2308f648caf6186992c1a4055fa65ee5f0384a8ac1e3f6d98555ee4",
+        "viewport": "390x844",
+        "state": "Approved checklist opened from home; top of document",
+        "capturedAt": "2026-11-09T02:52:13.695Z",
+        "crop": [
+          0,
+          0,
+          390,
+          265
+        ]
+      },
+      "target": {
+        "path": "browser/download-target-mobile.jpg",
+        "url": "http://127.0.0.1:8862/downloads/checklist.txt",
+        "sha256": "7b0afaa4d2308f648caf6186992c1a4055fa65ee5f0384a8ac1e3f6d98555ee4",
+        "viewport": "390x844",
+        "state": "Approved checklist opened from home; top of document",
+        "capturedAt": "2026-11-09T02:52:15.729Z",
+        "crop": [
+          0,
+          0,
+          390,
+          265
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Retest is limited to the same fictional local practice scope. Production release approval and formal accessibility conformance are not assessed.",
+    "Fresh CSS viewports are 1440x900 and 390x844. Some mobile original JPEGs are 375x812 pixels; hashes/crops use original pixels."
+  ]
+}

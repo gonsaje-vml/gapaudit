@@ -1,9 +1,10 @@
-"""Build the guide, blank starter kits and one reviewed fictional worked example."""
+"""Build the guide, starter kits, reviewed fictional audit and repaired-copy retest."""
 
 from pathlib import Path
 import shutil
 import zipfile
 import worked_example
+import retest_example
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -58,6 +59,11 @@ for side, guide in (('source', 'guide'), ('target', 'help')):
         path = f'practice/sites/{side}/{name}'
         PRACTICE_FILES[path] = path
 PRACTICE_FILES['practice/sites/source/downloads/checklist.txt'] = 'practice/sites/source/downloads/checklist.txt'
+for side, guide in (('source', 'guide'), ('target', 'help')):
+    for name in ('index.html', 'resources/index.html', 'contact/index.html',
+                 f'{guide}/index.html', 'style.css', 'downloads/checklist.txt'):
+        path = f'practice/sites-repaired/{side}/{name}'
+        PRACTICE_FILES[path] = path
 
 
 def build(output=None):
@@ -94,11 +100,14 @@ def build(output=None):
                                           'href="https://gonsaje-vml.github.io/gapaudit/downloads/gap-audit-practice-kit.zip"')
         walkthrough = walkthrough.replace('href="./worked-example.html"',
                                           'href="https://gonsaje-vml.github.io/gapaudit/worked-example.html"')
+        walkthrough = walkthrough.replace('href="./retest.html"',
+                                          'href="https://gonsaje-vml.github.io/gapaudit/retest.html"')
         practice.writestr('START-HERE.html', walkthrough)
     worked_example.build(output)
+    retest_example.build(output)
     (output / '.nojekyll').write_text('', encoding='utf-8')
     print(f'Built {output}: visual practice lab, local demo, Python toolkit and PDF audit skill')
-    return {'downloads': [*DOWNLOADS, 'gap-audit-kit.zip', 'pdf-gap-audit-skill.zip', 'gap-audit-practice-kit.zip', 'gap-audit-worked-example.zip']}
+    return {'downloads': [*DOWNLOADS, 'gap-audit-kit.zip', 'pdf-gap-audit-skill.zip', 'gap-audit-practice-kit.zip', 'gap-audit-worked-example.zip', 'gap-audit-retest-example.zip']}
 
 
 if __name__ == '__main__':

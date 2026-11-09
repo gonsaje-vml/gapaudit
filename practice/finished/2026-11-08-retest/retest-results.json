@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "baselineEvidenceSha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+  "retestEvidenceSha256": "d17e5dff0f762699c4cf8ddb18cdf62e2b81570db2f6179a3370cb470fad7788",
+  "baselineRun": "2026-11-08",
+  "retestRun": "2026-11-08-retest",
+  "scopeComparable": true,
+  "comparisonBasis": "Same source bytes, four logical routes, mapping, acceptance criteria, viewports and browser actions. Ports differ; page IDs are explicitly mapped by route.",
+  "pageMapping": [
+    {
+      "route": "/",
+      "baselinePageId": "PAGE-94d251729fdb",
+      "retestPageId": "PAGE-97936578beed"
+    },
+    {
+      "route": "/contact/",
+      "baselinePageId": "PAGE-3c32be8e5d4f",
+      "retestPageId": "PAGE-0d789dec6881"
+    },
+    {
+      "route": "/guide/",
+      "baselinePageId": "PAGE-eedf4cc7bddc",
+      "retestPageId": "PAGE-bd88fd8fbd64"
+    },
+    {
+      "route": "/resources/",
+      "baselinePageId": "PAGE-8d7d68e3faf1",
+      "retestPageId": "PAGE-6571b0f11fa5"
+    }
+  ],
+  "baselinePreserved": true,
+  "baselineFilesVerified": 112,
+  "counts": {
+    "fixed": 3,
+    "stillOpen": 0,
+    "new": 0,
+    "unverified": 0
+  },
+  "findings": [
+    {
+      "findingId": "F-001",
+      "title": "Required checklist download returns 404",
+      "originalPriority": "P0",
+      "status": "fixed",
+      "baselinePageIds": [
+        "PAGE-94d251729fdb",
+        "PAGE-8d7d68e3faf1"
+      ],
+      "retestPageIds": [
+        "PAGE-97936578beed",
+        "PAGE-6571b0f11fa5"
+      ],
+      "acceptance": "From both pages at both viewports, open the approved checklist and verify its content, not just an HTTP 200.",
+      "result": "Approved checklist returned HTTP 200 and exact expected bytes from home and resources at both viewports.",
+      "evidence": [
+        "D-desktop",
+        "D-mobile",
+        "asset-checks.json"
+      ],
+      "reviewer": "Codex",
+      "retestedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "findingId": "F-002",
+      "title": "Resources heading and preparation guidance omitted",
+      "originalPriority": "P1",
+      "status": "fixed",
+      "baselinePageIds": [
+        "PAGE-8d7d68e3faf1"
+      ],
+      "retestPageIds": [
+        "PAGE-6571b0f11fa5"
+      ],
+      "acceptance": "At desktop and mobile sizes, verify the H1, exact approved guidance and order; retain the kit and download link.",
+      "result": "Resources H1 and approved guidance restored and matched to source at both viewports.",
+      "evidence": [
+        "V02-desktop",
+        "V02-mobile",
+        "resources-mobile"
+      ],
+      "reviewer": "Codex",
+      "retestedAt": "2026-11-09T02:54:58.605126+00:00"
+    },
+    {
+      "findingId": "F-003",
+      "title": "Contact panel overflows the mobile viewport",
+      "originalPriority": "P1",
+      "status": "fixed",
+      "baselinePageIds": [
+        "PAGE-3c32be8e5d4f"
+      ],
+      "retestPageIds": [
+        "PAGE-0d789dec6881"
+      ],
+      "acceptance": "At 390x844 and 1440x900, all panel copy fits without horizontal scrolling and remains matched to source.",
+      "result": "Mobile source/target panels both measure 335 CSS pixels and fit; desktop still matches.",
+      "evidence": [
+        "V03-desktop",
+        "V03-mobile",
+        "contact-mobile"
+      ],
+      "reviewer": "Codex",
+      "retestedAt": "2026-11-09T02:54:58.605126+00:00"
+    }
+  ]
+}

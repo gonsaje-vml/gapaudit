@@ -1,0 +1,79 @@
+{
+  "evidenceSha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+  "findings": [
+    {
+      "id": "F-001",
+      "category": "functional",
+      "title": "Required checklist download returns 404",
+      "priority": "P0",
+      "disposition": "confirmed",
+      "contentFidelity": null,
+      "pageIds": [
+        "PAGE-94d251729fdb",
+        "PAGE-8d7d68e3faf1"
+      ],
+      "observation": "At 1440x900 and 390x844, following the checklist link from home and resources opened the approved text on source and the same 404 URL on target. HTTP capture and byte checks agree.",
+      "impact": "The practice scope requires this preparation download without an accepted alternative. Two pages are affected by one unique unavailable URL.",
+      "recommendation": "Publish the approved sample checklist at /downloads/checklist.txt or update both entry points to an approved destination.",
+      "acceptance": "From both pages at both viewports, open the approved checklist and verify its content, not just an HTTP 200.",
+      "evidence": [
+        "D-desktop",
+        "D-mobile",
+        "download-mobile",
+        "asset-checks.json",
+        "evidence.json: linkChecks"
+      ],
+      "owner": "TBD",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:22:12.341566+00:00"
+    },
+    {
+      "id": "F-002",
+      "category": "content",
+      "title": "Resources heading and preparation guidance omitted",
+      "priority": "P1",
+      "disposition": "confirmed",
+      "contentFidelity": "Review",
+      "pageIds": [
+        "PAGE-8d7d68e3faf1"
+      ],
+      "observation": "The source resources page displays Learning resources as H1 and the preparation paragraph. The target starts with Your preparation kit (H2) and omits both source elements at both viewports.",
+      "impact": "Learners lose preparation instructions and the main page heading; heading structure also regresses.",
+      "recommendation": "Restore the approved H1 and introductory preparation paragraph before the kit.",
+      "acceptance": "At desktop and mobile sizes, verify the H1, exact approved guidance and order; retain the kit and download link.",
+      "evidence": [
+        "V02-desktop",
+        "V02-mobile",
+        "resources-mobile",
+        "quality-observations.json"
+      ],
+      "owner": "TBD",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:22:12.341566+00:00"
+    },
+    {
+      "id": "F-003",
+      "category": "visual",
+      "title": "Contact panel overflows the mobile viewport",
+      "priority": "P1",
+      "disposition": "confirmed",
+      "contentFidelity": null,
+      "pageIds": [
+        "PAGE-3c32be8e5d4f"
+      ],
+      "observation": "At 390x844, target .contact-panel is 760 CSS pixels wide and the document spans 780 pixels, clipping text and requiring horizontal scrolling. Source panel is 335 pixels wide and fits. Desktop content matches.",
+      "impact": "Mobile learners cannot read the panel naturally without horizontal scrolling. Matching static text does not establish responsive parity.",
+      "recommendation": "Remove the target-only fixed mobile width and allow the panel to fit its container.",
+      "acceptance": "At 390x844 and 1440x900, all panel copy fits without horizontal scrolling and remains matched to source.",
+      "evidence": [
+        "V03-mobile",
+        "contact-mobile",
+        "browser-observations.json",
+        "asset-checks.json"
+      ],
+      "owner": "TBD",
+      "reviewer": "Codex",
+      "reviewedAt": "2026-11-09T02:22:12.341566+00:00"
+    }
+  ]
+}

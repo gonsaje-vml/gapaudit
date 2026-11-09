@@ -20,7 +20,7 @@ readiness PDF generation, retesting and switching to your own sites.
 
 ## The GitHub Pages guide
 
-The site explains the method, Python outputs, reproduction commands and PDF workflow. It publishes neutral starter kits and one explicitly approved fictional worked example: the finished practice PDF, actual screenshots, annotated step outputs and a frozen reproduction packet. Historical client audit data remains excluded.
+The site explains the method, Python outputs, reproduction commands and PDF workflow. It publishes neutral starter kits, the finished fictional practice audit and a before-and-after retest of a separately repaired copy. Both issued PDFs, original screenshots, annotated outputs and reproducible downloads are available. Historical client audit data remains excluded.
 
 Build and preview from this project directory:
 

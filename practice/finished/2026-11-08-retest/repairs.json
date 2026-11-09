@@ -1,0 +1,26 @@
+{
+  "scope": "Only three target files changed in the separate copy; every source file is identical.",
+  "changes": [
+    {
+      "file": "target/downloads/checklist.txt",
+      "beforeSha256": null,
+      "afterSha256": "0b8330c532d2dd22ed150cf6516ce6bf9ec2d0f89d32137716c33cc93cb6bb48",
+      "change": "added",
+      "diff": "--- original/target/downloads/checklist.txt\n+++ repaired/target/downloads/checklist.txt\n@@ -0,0 +1,4 @@\n+Northstar practice checklist\n+1. Choose a learning goal.\n+2. Bring a notebook.\n+3. Prepare a quiet workspace.\n"
+    },
+    {
+      "file": "target/resources/index.html",
+      "beforeSha256": "900a23d22444383448adbc9ae3e29ebe794b45c72e84c67e887a9e86e4c51a81",
+      "afterSha256": "a80895f523f8bd6a3580646ea1bdb883be8bf4ceaf3c7053fcf39298d5f4cae1",
+      "change": "modified",
+      "diff": "--- original/target/resources/index.html\n+++ repaired/target/resources/index.html\n@@ -20,6 +20,8 @@\n </nav>\n </header>\n <main>\n+<h1>Learning resources</h1>\n+<p>Before your first session, download the checklist and prepare a quiet workspace. Bring your questions, choose one learning goal, and read the session guidance carefully.</p>\n <h2>Your preparation kit</h2>\n <ul>\n <li>A notebook for your learning goals</li>\n"
+    },
+    {
+      "file": "target/style.css",
+      "beforeSha256": "df872dd31e56124659936a2df4bea78e0400256c02b67bc2d85a5b50d7ade241",
+      "afterSha256": "d46dac05e33bcd45adcb292edc94ea9f36ea7c633e04ac22847d020fc5fb9e2f",
+      "change": "modified",
+      "diff": "--- original/target/style.css\n+++ repaired/target/style.css\n@@ -67,12 +67,3 @@\n }\n \n }\n-\n-\n-/* Deliberate practice defect: compare contact at a narrow viewport. */\n-@media(max-width:600px) {\n-  .contact-panel {\n-  width:760px\n-}\n-\n-}\n"
+    }
+  ]
+}

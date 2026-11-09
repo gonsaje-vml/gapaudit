@@ -1,6 +1,6 @@
 # GitHub Pages method guide
 
-GitHub Pages serves a static method guide, visual practice lab and completed worked-example page. The starter practice download contains fictional sample sites and expectations. A separate completed-example download contains the actual reviewed practice run, PDF and original screenshots. All three pages work without JavaScript; no client audits are published.
+GitHub Pages serves a static method guide, visual practice lab, completed worked example and before/after retest lesson. The practice kit contains original and separately repaired fictional fixtures. Dedicated example downloads preserve both issued runs, PDFs and original screenshots. All four pages work without JavaScript; no client audits are published.
 
 ## Preview locally
 
@@ -17,15 +17,16 @@ Open [the local guide](http://127.0.0.1:8847/). The build is also available as `
 
 `tools/build_ui.py` clears `dist/` and copies an explicit file allowlist:
 
-- `index.html`, `practice.html`, generated `worked-example.html`, `guide.css`, five accessible SVG diagrams, the favicon and the Mind the Gap logo.
+- `index.html`, `practice.html`, generated `worked-example.html` and `retest.html`, `guide.css`, five accessible SVG diagrams, the favicon and the Mind the Gap logo.
 - Downloads for the current Python script, neutral configuration/URL examples, reproduction guide, blank review checklist and PDF audit skill.
 - A full audit-kit ZIP and a standalone skill ZIP containing the collector, PDF builder, verification helper, review protocol/schema, blank templates and pinned dependencies.
 - A separate `gap-audit-practice-kit.zip` with the full toolkit, two local sample sites, standard-library runner, scope, answer key, agent prompt and a portable offline `START-HERE.html` walkthrough.
 - `practice-output/` with an explicit list of approved PDF, preview, screenshot and record assets from `practice/finished/2026-11-08/public-example.json`.
 - `gap-audit-worked-example.zip` with that complete frozen practice run and its exact toolkit copy. Starter kits remain blank.
+- `retest-output/` from the explicit `practice/finished/2026-11-08-retest/public-example.json` allowlist, plus `gap-audit-retest-example.zip` containing both frozen runs, runnable original/repaired fixtures and an offline retest lesson.
 - `.nojekyll` for static hosting.
 
-The build excludes historical client reports/configurations, unrelated findings/screenshots/PDFs/captures, local browser storage and repository metadata. It reads only the explicitly approved fictional run under `practice/finished/2026-11-08/`; every approved file is bound to its recorded SHA-256 and changed bytes fail the build. `tools/worked_example.py` derives the teaching snippets from those actual records. Clearing the output removes stale files left by a previous build.
+The build excludes historical client reports/configurations, unrelated findings/screenshots/PDFs/captures, local browser storage and repository metadata. It reads only the two explicitly approved fictional runs under `practice/finished/2026-11-08/` and `practice/finished/2026-11-08-retest/`; every approved file is bound to its recorded SHA-256 and changed bytes fail the build. `tools/worked_example.py` and `tools/retest_example.py` derive the teaching snippets/counts from those actual records. Clearing the output removes stale files left by a previous build.
 
 The page describes the actual division of work: Python writes JSON and Markdown; browser review validates behavior; an AI assistant with PDF tools uses the skill to produce the PDF. GitHub Pages serves these instructions and downloads.
 

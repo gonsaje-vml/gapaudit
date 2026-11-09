@@ -105,6 +105,24 @@ fictional browser observations.
 - Connection refused: the fixture server has stopped; run `serve` again.
 - Do not serve the whole checkout or point the collector at `.example` domains.
 
+## Retest the separate repaired copy
+
+The kit also contains `practice/sites-repaired/`, with exactly the three target
+repairs. Original fixtures remain under `practice/sites/` and retain their defects.
+
+```bash
+python3 practice/run_demo.py start --sites repaired --out runs/practice-fixed-01
+```
+
+The repaired copy defaults to source port 8861 and target port 8862. Repeat the
+same browser actions and viewports, keeping the first run. To reopen those sites,
+use `python3 practice/run_demo.py serve --sites repaired`.
+
+The published retest lesson compares actual before/after captures and explains
+the separate finding-ID closure record. A new evidence hash must not be substituted
+into the old reviews. The complete retest example download includes both frozen
+audits and an offline START-HERE.html retest lesson.
+
 ## Move to your own sites
 
 Use `config.example.json`, `urls.example.txt` and `docs/reproduce-audit.md`. Set

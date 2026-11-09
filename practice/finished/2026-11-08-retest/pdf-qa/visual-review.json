@@ -1,0 +1,53 @@
+{
+  "reviewer": "Codex",
+  "reviewedAt": "2026-11-09T03:04:57.845056+00:00",
+  "pdfSha256": "2554da4b77612098ad4172025b0d31e910885c5d2f4d9191b81ef3badd1b270b",
+  "pageCount": 31,
+  "renderedPagesInspected": [
+    "page-01.png",
+    "page-02.png",
+    "page-03.png",
+    "page-04.png",
+    "page-05.png",
+    "page-06.png",
+    "page-07.png",
+    "page-08.png",
+    "page-09.png",
+    "page-10.png",
+    "page-11.png",
+    "page-12.png",
+    "page-13.png",
+    "page-14.png",
+    "page-15.png",
+    "page-16.png",
+    "page-17.png",
+    "page-18.png",
+    "page-19.png",
+    "page-20.png",
+    "page-21.png",
+    "page-22.png",
+    "page-23.png",
+    "page-24.png",
+    "page-25.png",
+    "page-26.png",
+    "page-27.png",
+    "page-28.png",
+    "page-29.png",
+    "page-30.png",
+    "page-31.png"
+  ],
+  "inspectionMethod": "All 31 final page images inspected in eight contact sheets; pages 1, 7, 9 and 30 also inspected at full render resolution.",
+  "visualInspection": "passed",
+  "checks": [
+    "Chart/table agree: all 6 scoped body types Ready and 9 required uses retained.",
+    "No clipping, overlapping rows or blank/duplicate page bodies found.",
+    "Fresh screenshot pairs use matched states/viewports and original-pixel crop bounds.",
+    "F-001/F-002/F-003 close under repeated acceptance checks; original records remain separately bound.",
+    "Embedded source bytes and PDF/build hashes passed verification."
+  ],
+  "frozenRebuild": {
+    "sameRuntimeByteIdentical": true,
+    "sha256": "2554da4b77612098ad4172025b0d31e910885c5d2f4d9191b81ef3badd1b270b"
+  },
+  "scopeConclusion": "Complete scoped practice retest; 3 fixed, 0 still open, 0 new observed and 0 required unverified. No production release approval."
+}
