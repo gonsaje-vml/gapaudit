@@ -113,6 +113,7 @@ cp urls.example.txt urls.txt</code></pre>
         </li>
         <li>
           <h3>Verify the differences</h3>
+          <p>For the fictional practice kit, <code>python3 practice/run_demo.py prepare-review --run runs/practice-01</code> prepares blank review records without overwriting notes. For your own sites, copy the skill’s browser manifest and audit checklist into the collected run and set its evidence reference from <code>analysis.json</code>.</p>
           <p>Compare source and target in the browser at matching viewports. Review shared navigation, representative templates, content outliers and required journeys. Record actions, expected and actual results, screenshots, reviewer and time in the <a href="./downloads/review-checklist.md" download>review checklist</a>.</p>
           <p>Add supported findings to <code>audit-run-01/reviews.json</code> while keeping its <code>evidenceSha256</code>. Each finding records the affected pages, observation, impact, priority, corrective action, owner or TBD, acceptance test and evidence references. The <a href="./downloads/SKILL.md" download>AI skill</a> includes the finding schema.</p>
         </li>
@@ -128,7 +129,7 @@ cp urls.example.txt urls.txt</code></pre>
 
     <section id="pdf-skill" class="guide-section" aria-labelledby="skill-title">
       <div class="section-heading"><p class="eyebrow">03 / Review &amp; presentation</p><h2 id="skill-title">The AI skill for a PDF audit</h2></div>
-      <p>The custom skill is <strong>pdf-gap-audit</strong>, version 1.4.1. Its <a href="./downloads/SKILL.md" download>SKILL.md instructions</a> and supporting files are available as a <a href="./downloads/pdf-gap-audit-skill.zip" download>complete skill package</a>. The full audit kit includes the same skill.</p>
+      <p>The custom skill is <strong>pdf-gap-audit</strong>, version 1.4.2. Its <a href="./downloads/SKILL.md" download>SKILL.md instructions</a> and supporting files are available as a <a href="./downloads/pdf-gap-audit-skill.zip" download>complete skill package</a>. The full audit kit includes the same skill.</p>
       <p>Use it with any capable agent that can read local files, run Python, access the websites, operate a browser and save screenshots. The workflow uses portable files and commands. Your agent does not need a particular vendor's skill system: ask it to read <code>SKILL.md</code> and follow the referenced protocol.</p>
       <h3>Files in the audit skill</h3>
       <div class="table-scroll" role="region" aria-label="Skill package contents" tabindex="0">

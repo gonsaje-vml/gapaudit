@@ -46,6 +46,19 @@ has not performed browser checks or confirmed findings for you.
 
 ## 3. Compare in the browser
 
+Keep the first terminal running. Open a **second terminal in the extracted kit
+folder** and prepare the review records:
+
+```bash
+python3 practice/run_demo.py prepare-review --run runs/practice-01
+```
+
+This creates `runs/practice-01/browser/`, a blank `browser-review.json` with this
+run's evidence reference, and `audit-checklist.md`. It preserves existing review
+notes and stops if a manifest belongs to different evidence. It does not perform
+checks or add findings. Open the generated checklist and manifest in your editor
+and fill them as you follow the exercises.
+
 Open source and target in separate tabs. Use matching viewports: 1440x900, then
 390x844. If your browser supports responsive device controls, enter those exact
 dimensions; otherwise record the actual window dimensions you used.
@@ -58,8 +71,9 @@ dimensions; otherwise record the actual window dimensions you used.
    with Enter/Space. Check each side. Do not assume success without doing it.
 5. Check shared navigation and record any remaining limits.
 
-Use `docs/gap-audit/review-checklist.md` and the skill's
-`assets/audit-checklist.md`. Save matched screenshots under the run's `browser/`
+Use the generated `runs/practice-01/audit-checklist.md`; the additional journey
+worksheet is `docs/gap-audit/review-checklist.md`. The original checklist template
+is `skills/pdf-gap-audit/assets/audit-checklist.md`. Save matched screenshots under the run's `browser/`
 folder, preserving originals. The fictional contact address has no service behind
 it; this exercise never asks you to send messages.
 
@@ -83,6 +97,12 @@ Follow the illustrated guide's finding example and the skill's review protocol.
 Use actual page IDs and the `evidenceSha256` from your own `analysis.json`.
 Do not copy a hash or reviewer observation from another run.
 
+To display this run's evidence reference and page IDs:
+
+```bash
+python3 -c "import json,pathlib; a=json.loads(pathlib.Path('runs/practice-01/analysis.json').read_text()); print('Evidence SHA-256:',a['evidenceSha256']); [print(r['id'],r['route']) for r in a['rows']]"
+```
+
 In a **second terminal in the kit folder**, regenerate after review:
 
 ```bash
@@ -94,12 +114,20 @@ same report. Collection is a new observation; it gets a new output folder.
 
 ## 5. Optional: review and PDF with an agent
 
-Give an agent this folder and `practice/agent-prompt.txt`, while the servers are
-running. The agent must have file/Python access and browser/screenshot tools.
+Open an agent session with access to the extracted folder and paste the contents
+of `practice/agent-prompt.txt`, while the servers are running. The agent must have
+file/Python access and browser/screenshot tools. If you chose a different run
+folder, replace `runs/practice-01` in the prompt and subsequent commands.
 It follows the one bundled `pdf-gap-audit` skill, records actual review evidence,
 prepares `readiness.json`, and builds the readiness PDF. PDF dependencies are in
 `skills/pdf-gap-audit/requirements.txt`; page-image verification also needs Poppler.
 The initial practice run does not require those tools or dependencies.
+
+Wait for the reviewed `runs/practice-01/readiness.json` before running the PDF
+commands. The collector and review-setup command do not create this assessment.
+Without the assessment, keep the JSON/Markdown report and continue browser review
+or ask a capable agent to prepare it. The PDF builder validates a completed
+assessment; it does not supply the missing judgments.
 
 Without browser tools, keep visual and journey coverage Unverified and deliver
 the measured partial audit. Do not turn the deliberate-defect answer key into
@@ -128,9 +156,20 @@ repairs. Original fixtures remain under `practice/sites/` and retain their defec
 python3 practice/run_demo.py start --sites repaired --out runs/practice-fixed-01
 ```
 
+In the second terminal, prepare that run's separate review records:
+
+```bash
+python3 practice/run_demo.py prepare-review --run runs/practice-fixed-01
+```
+
 The repaired copy defaults to source port 8861 and target port 8862. Repeat the
 same browser actions and viewports, keeping the first run. To reopen those sites,
 use `python3 practice/run_demo.py serve --sites repaired`.
+
+Use `runs/practice-fixed-01` in the review/render/PDF commands for this retest.
+Expect zero unavailable target URLs and no resources content flag. Confirm the
+restored content, download identity and mobile layout in the browser. An empty
+new finding list alone does not establish that the repairs passed.
 
 The published retest lesson compares actual before/after captures and explains
 the separate finding-ID closure record. A new evidence hash must not be substituted

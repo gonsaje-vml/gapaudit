@@ -34,6 +34,9 @@ The practice runner starts local-only servers on ports 8851/8852 (configurable),
 collects a real baseline from the fictional HTML and leaves the servers open for
 review. Generated runs stay on the learner's machine. The static build uses an
 explicit practice-file allowlist and never copies generated evidence into the ZIP.
+The current practice runner also provides `prepare-review --run runs/practice-01`
+to create blank review records without replacing existing notes. Completed-example
+downloads keep their original toolkit copies for frozen reproduction.
 
 ## Deployment
 

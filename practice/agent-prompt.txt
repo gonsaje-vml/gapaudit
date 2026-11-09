@@ -3,12 +3,15 @@ Follow the skill's review protocol, browser schema and readiness report contract
 This is a fictional local teaching exercise, not a client audit.
 
 Use the existing run at runs/practice-01. The user has started the local sample
-servers. Read demo-inputs/config.json for the actual source/target origins and
+servers. Read runs/practice-01/demo-inputs/config.json for the actual source/target origins and
 route mapping; do not assume the default ports. If servers are unavailable,
 explain how to reopen them with practice/run_demo.py serve and the same ports.
 
 Explain the evidence files before changing any review records. Copy the skill's
-audit-checklist.md into the run and maintain it with supported outcomes. Inspect
+audit-checklist.md into the run if it is missing, and maintain it with supported
+outcomes. Preserve any existing checklist and browser-review records. If the
+review files are missing, run python3 practice/run_demo.py prepare-review --run
+runs/practice-01 from the kit folder. Inspect
 the static baseline, then compare every scoped page at 1440x900 and 390x844.
 Test navigation, the checklist download from home and resources, resources
 context, contact overflow and both help disclosures with mouse/keyboard.

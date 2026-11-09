@@ -18,6 +18,11 @@ checkout. See [the practice instructions](practice/README.md) and
 input/output and skill file, evidence flow, chart units, browser review, optional
 readiness PDF generation, retesting and switching to your own sites.
 
+In a second terminal, run `python3 practice/run_demo.py prepare-review --run runs/practice-01`
+to create blank review records and a screenshot folder without overwriting notes.
+Collection and review setup do not create `readiness.json`; a reviewer or capable
+agent prepares that assessment before PDF generation.
+
 ## The GitHub Pages guide
 
 The site explains the method, Python outputs, reproduction commands and PDF workflow. It publishes neutral starter kits, the finished fictional practice audit and a before-and-after retest of a separately repaired copy. Both issued PDFs, original screenshots, annotated outputs and reproducible downloads are available. Historical client audit data remains excluded.

@@ -1,4 +1,4 @@
-# Review protocol 1.4.1
+# Review protocol 1.4.2
 
 This protocol defines the repeatable choices that a capable agent should follow. Use the user's specified scope, viewports and acceptance criteria first; record any departures so another agent can repeat them.
 

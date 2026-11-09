@@ -11,6 +11,12 @@ folder, then follow `practice/README.md`. The initial exercise needs only Python
 and a browser. The practice runner always uses its local fixtures; use the direct
 collector commands below for your own sites.
 
+Keep the sample servers running. In a second terminal in the practice-kit folder,
+run `python3 practice/run_demo.py prepare-review --run runs/practice-01` to prepare
+blank review records and the screenshot folder. Existing notes remain unchanged.
+The current practice kit provides this helper; frozen worked-example toolkits
+retain their original files for reproduction.
+
 ## 1. Prepare the scope and configuration
 
 Extract the downloadable kit and run commands from its top-level folder. In a repository checkout, the example configuration and URLs are under `docs/gap-audit/`; copy those files to the root instead.
@@ -95,7 +101,7 @@ This recalculates `analysis.json` and `report.md` without network requests. A mi
 
 ## 5. Use the complete AI skill
 
-The custom `pdf-gap-audit` skill, version 1.4.1, includes instructions, an eleven-area audit checklist, a review protocol, browser-manifest schema, fixed PDF builder, verification helper, blank templates and pinned dependencies. It is supplied under `skills/pdf-gap-audit/` in the full kit and as a standalone skill ZIP. It uses portable Python and files and can be read by any capable agent; no particular vendor's skill loader is required. New main reports use readiness contract 2 and the readiness builder; the legacy measured builder remains available for supporting records and frozen reproduction.
+The custom `pdf-gap-audit` skill, version 1.4.2, includes instructions, an eleven-area audit checklist, a review protocol, browser-manifest schema, fixed PDF builder, verification helper, blank templates and pinned dependencies. It is supplied under `skills/pdf-gap-audit/` in the full kit and as a standalone skill ZIP. It uses portable Python and files and can be read by any capable agent; no particular vendor's skill loader is required. New main reports use readiness contract 2 and the readiness builder; the legacy measured builder remains available for supporting records and frozen reproduction.
 
 For an agent to perform the whole fresh audit, give it the extracted kit and this request with actual inputs:
 
