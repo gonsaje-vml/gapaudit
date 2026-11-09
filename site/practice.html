@@ -41,6 +41,17 @@
     <p><strong>Python collects.</strong> It requests pages, compares their static content and records linked-resource availability. <strong>A reviewer verifies.</strong> A person or browser-capable agent checks the rendered experience and required actions. <strong>The skill guides reporting.</strong> It tells an agent how to preserve evidence, assess readiness, build a PDF and verify the result.</p>
     <figure class="diagram"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Audit journey diagram; scroll horizontally on small screens"><img src="./diagrams/audit-journey.svg" alt="Scope leads to Python collection, browser review, recorded judgments, then the verified PDF. Collection produces observations; browser review supplies evidence for judgments."></div><figcaption>Read left to right. The collector starts the audit; browser review checks the rendered behavior.</figcaption></figure>
     <div class="learning-grid"><div><h3>The first stopping point</h3><p>Run the sample collector and understand <code>report.md</code>. This needs only Python and a browser. You can stop with a static baseline whose browser checks remain unverified.</p></div><div><h3>The complete learning path</h3><p>Perform the browser exercises, record findings, then give the run to an agent with the bundled skill. PDF generation needs the pinned packages; visual PDF verification also needs Poppler.</p></div></div>
+    <h3>Inputs, method, output and completion check</h3>
+    <p>Follow one run through the table. Machine-generated measurements and reviewed judgments have different inputs. The <a href="./downloads/audit-methods.md" download>technical methods reference</a> contains the extraction rules, equations, hash conventions and stage contracts. It is also included as <code>docs/audit-methods.md</code> in both starter kits.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Audit stages, inputs, methods, outputs and checks"><table><thead><tr><th scope="col">Stage / input</th><th scope="col">Method</th><th scope="col">Output / check before continuing</th></tr></thead><tbody>
+      <tr><th scope="row">Scope: approved URLs, mappings and requirements</th><td>Deduplicate the inventory, apply path inclusions/exclusions and map source routes to target routes.</td><td>Configuration, inventory and <code>scope.md</code>. Check four source routes; <code>/guide/</code> maps to <code>/help/</code>.</td></tr>
+      <tr><th scope="row">Collect: configured origins and inventory</th><td>Request each pair, preserve raw responses, extract static HTML and check unique target content-link destinations.</td><td><code>evidence.json</code>, snapshots, analysis, empty reviews and report. Check four comparable pairs, one unavailable URL and two affected pages.</td></tr>
+      <tr><th scope="row">Browser review: evidence, scope and live sample sites</th><td>Prepare blank records; perform matched-state desktop/mobile, download, disclosure and navigation checks.</td><td>Original screenshots, populated manifest and checklist. Every required check has evidence or an explicit Unverified limitation.</td></tr>
+      <tr><th scope="row">Findings: observed differences and acceptance criteria</th><td>Record impact, priority, references and observable acceptance tests; render the measured report offline.</td><td>Reviewed <code>reviews.json</code>, regenerated analysis/report. Keep the same evidence binding; confirm that each finding cites this run.</td></tr>
+      <tr><th scope="row">Readiness: actual census and reviewed checks</th><td>Count body block types, exact variants and uses; assess visual, functional and readiness fields separately.</td><td><code>readiness.json</code>. Counts reconcile; Complete/Ready ratings meet their coverage gates.</td></tr>
+      <tr><th scope="row">PDF: validated assessment and supporting records</th><td>Build with pinned packages, verify references/hashes, render every page and inspect the images.</td><td>PDF, build record and <code>pdf-qa/</code>. Record visual inspection and resolve clipping or unreadable captures.</td></tr>
+      <tr><th scope="row">Retest: repaired copy and original acceptance tests</th><td>Collect a new run and repeat affected checks; map results back to the original finding IDs.</td><td>New evidence/report and retest ledger. Close only repairs supported by fresh observations.</td></tr>
+    </tbody></table></div>
     <aside class="note"><strong>Everything here is fictional.</strong><p>The files deliberately contain teaching defects. The runner makes real HTTP requests to these local files; the answer key describes expected results, not browser checks already performed on your behalf.</p></aside>
   </section>
 
@@ -67,12 +78,42 @@
     <p><strong>The initial confirmed finding count is zero.</strong> Automated flags are review candidates. A reviewer still needs to establish the defect, impact, priority and acceptance test. The answer key is also included as <code>practice/expected-results.md</code>.</p>
     <h3>Read the labels carefully</h3><p><strong>Good:</strong> no automated content flags. <strong>Review:</strong> a content difference or comparison limitation needs checking. <strong>Critical:</strong> an explicit content-fidelity override supported by a confirmed P0 content or functional finding. <strong>Unverified:</strong> no usable source/target comparison. Resource failures remain independent of those content labels.</p>
     <p>404/410 means unavailable at capture time. A timeout, access block or other unsuccessful response remains unverified. HTTP 200 may still be a wrong page or soft error. Text similarity below 90%, heading coverage below 90% and link-label coverage below 95% trigger review; they are not visual or completion scores.</p>
+    <div id="methods">
+      <h3>How the collector calculates these values</h3>
+      <p>The parser prefers <code>&lt;main&gt;</code> for text, headings, link labels and image-alt signals. Without it, extraction falls back to the document and records a flag. It ignores script, style, noscript and template text. It does not execute JavaScript or evaluate CSS visibility. Target link checks cover unique same-origin destinations extracted from that content region; shared navigation still needs browser review.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Metric calculations and their limits"><table><thead><tr><th scope="col">Field</th><th scope="col">Calculation</th><th scope="col">What it can miss</th></tr></thead><tbody>
+        <tr><th scope="row"><code>textSimilarity</code></th><td>Case-fold text, keep <code>\w+</code> tokens longer than two characters, count frequencies, then calculate cosine similarity. Round to six decimal places; an empty vector gives <code>null</code>.</td><td>Word order, rendered layout and successful actions. Identical text can receive 1.0 while the mobile panel overflows.</td></tr>
+        <tr><th scope="row"><code>headingCoverage</code></th><td>Distinct normalized source heading labels also present on target ÷ distinct source labels. Two source labels with one retained gives 0.5.</td><td>Heading order and level need separate inspection. An empty source set gives <code>null</code>.</td></tr>
+        <tr><th scope="row"><code>linkTextCoverage</code></th><td>The same source-label coverage calculation, using whitespace-normalized, case-folded anchor text.</td><td>A retained label can point to a failed or wrong destination. No source labels gives <code>null</code>, not a pass.</td></tr>
+      </tbody></table></div>
+      <p>This is a selected-field excerpt from the <a href="./worked-example.html#baseline">recorded original resources row</a>, not a complete <code>analysis.json</code>:</p>
+      <pre><code>{
+  "route": "/resources/",
+  "content": "Review",
+  "metrics": {
+    "textSimilarity": 0.860689,
+    "headingCoverage": 0.5,
+    "linkTextCoverage": 1.0
+  }
+}</code></pre>
+      <p>The lost guidance changes the word frequencies; one of two distinct headings remains. The checklist label survives, so link-label coverage is 1.0 even though its destination returns 404. Read the availability record beside the content metrics. <code>unavailableLinks: 1</code> counts the unique URL; <code>affectedPages: 2</code> counts home and resources, which both link to it.</p>
+      <details class="explain"><summary>Work through the text-similarity equation</summary><pre><code>similarity = sum(A[token] × B[token])
+             ÷ (sqrt(sum(A[token]²)) × sqrt(sum(B[token]²)))
+
+"alpha alpha beta" → A = (2, 1)
+"alpha beta"       → B = (1, 1)
+similarity = 3 ÷ sqrt(10) = 0.948683</code></pre><p>This is an arithmetic illustration, not a practice finding. Frequency counts ignore word order. The <a href="./downloads/audit-methods.md" download>methods reference</a> explains normalization, availability states, denominators and evidence hashes.</p></details>
+    </div>
   </section>
 
   <section id="browser" class="guide-section" aria-labelledby="browser-title">
     <div class="section-heading"><p class="eyebrow">04 / Check the rendered experience</p><h2 id="browser-title">Turn a signal into an observation</h2></div>
     <h3>Prepare the review files</h3><p>Keep the first terminal running. Open a second terminal in the extracted kit folder and run:</p><pre><code>python3 practice/run_demo.py prepare-review --run runs/practice-01</code></pre>
     <p>This creates <code>runs/practice-01/browser/</code>, a blank <code>browser-review.json</code> with the correct evidence reference, and <code>audit-checklist.md</code>. Existing notes are preserved; a manifest tied to different evidence is rejected. No checks or findings are confirmed automatically. Open these files in your editor and fill them as you follow the exercises.</p>
+    <p>On the first call, expect output like this, with your chosen run path:</p><pre><code>Created: runs/practice-01/browser-review.json
+Created: runs/practice-01/audit-checklist.md
+Save screenshot originals in runs/practice-01/browser.
+This setup command does not perform browser checks or confirm findings.</code></pre><p>A repeated call prints <code>Kept existing:</code> for existing records. The manifest's <code>checks</code>, <code>components</code> and <code>screenshotPairs</code> arrays start empty; its evidence hash comes from this run's analysis.</p>
     <h3>Compare source and target</h3>
     <p>Open source and target side by side. Match viewport, scroll position and interaction state before comparing. The exercise asks for <strong>1440×900</strong> and <strong>390×844</strong>. Enter these in your browser’s responsive controls where available; record the actual dimensions if you use another size.</p>
     <ol class="process">
@@ -85,6 +126,13 @@
     <h3>Capture enough context to repeat the check</h3><p>Keep screenshot originals in <code>runs/practice-01/browser/</code>. For each pair, record URL, viewport, state, capture time and SHA-256. In <code>browser-review.json</code>, record browser/version, reviewer, actual actions, expected result, observed result and evidence references. Use actual page IDs from this run.</p>
     <p>Hash a saved screenshot with this portable Python command, replacing the filename:</p><pre><code>python3 -c "import hashlib,pathlib; print(hashlib.sha256(pathlib.Path('runs/practice-01/browser/home-source.png').read_bytes()).hexdigest())"</code></pre>
     <p>The browser-manifest schema defines the fields; the blank asset is a starting point, not completed evidence. Keep unavailable or unperformed checks <strong>Unverified</strong>. Your screenshots establish only their captured states and viewports.</p>
+    <h3>Read an observed result</h3><p>This selected-field excerpt comes from the <a href="./worked-example.html#browser">completed example's contact check</a>. It shows why the static contact score of 1.0 does not settle the browser result. The full record also includes page IDs, actions, browser/version, reviewer, time and evidence references; create those from your own check.</p><pre><code>{
+  "id": "V03-mobile",
+  "viewport": "390x844",
+  "outcome": "fail",
+  "actualSource": "Source heading/content rendered and fits the scoped viewport.",
+  "actualTarget": "Text retained. Panel is 760 CSS pixels wide; document width is 780 at a 390 CSS pixel viewport."
+}</code></pre>
     <div id="verification-passes">
       <h3>How many audit passes should I make?</h3>
       <p>Use the stages below to decide what needs another check. A verification pass can continue the current review before the report is issued; it does not always need another collection.</p>
@@ -110,7 +158,7 @@ config.example.json          neutral configuration for your own sites
 urls.example.txt             neutral inventory for your own sites
 tools/gap_audit.py            the real collector and measured renderer
 practice/                    runner, fixtures, scope, answer key, prompt
-docs/                        reproduction guide and review checklist
+docs/                        reproduction guide, methods and review checklist
 skills/pdf-gap-audit/         the complete audit skill
 runs/practice-01/             created when you run the exercise</code></pre>
     <div class="table-scroll" tabindex="0" role="region" aria-label="Practice kit input files"><table><thead><tr><th scope="col">File</th><th scope="col">Read it for</th><th scope="col">When to change it</th></tr></thead><tbody>
@@ -120,6 +168,7 @@ runs/practice-01/             created when you run the exercise</code></pre>
       <tr><th scope="row"><code>urls.example.txt</code></th><td>The format: one full source URL per line.</td><td>Copy to <code>urls.txt</code> and replace with your approved source routes.</td></tr>
       <tr><th scope="row"><code>tools/gap_audit.py</code></th><td><code>collect</code> requests and saves evidence; <code>render</code> recalculates JSON/Markdown offline.</td><td>Use its CLI. Changing formulas or schemas changes the method and requires regression checks/version control.</td></tr>
       <tr><th scope="row"><code>docs/reproduce-audit.md</code></th><td>The full fresh-audit and frozen-reproduction process, including PDF setup.</td><td>Keep as the reference for real work.</td></tr>
+      <tr><th scope="row"><code>docs/audit-methods.md</code></th><td>Stage inputs/outputs, extraction rules, configuration limits, equations, worked values, evidence hashes and verification criteria.</td><td>Use to interpret the generated records and their limits; check your run's method version.</td></tr>
       <tr><th scope="row"><code>docs/gap-audit/review-checklist.md</code></th><td>Browser coverage, journeys and evidence to record.</td><td>Copy into each run; fill with actual observations.</td></tr>
     </tbody></table></div>
     <h3>Inside <code>practice/</code></h3>
@@ -197,6 +246,7 @@ runs/practice-01/             created when you run the exercise</code></pre>
 }</code></pre>
     <p>P0 is justified here by the fictional scope’s required download journey. Real projects need their own criteria. The resources content and mobile layout problems need their own supported findings; a layout issue is a visual finding, not a deduction from text similarity. A P0 download finding can coexist with Good static content: priority and content fidelity are separate. The optional <code>contentFidelity: "Critical"</code> override changes the page label only when supported by a confirmed P0 content/functional finding. Do not add that override merely because a resource is unavailable. See the review protocol for the complete category/field rules.</p>
     <h3>Regenerate without collecting again</h3><p>Open a second terminal in the kit folder. After editing supported findings, run:</p><pre><code>python3 tools/gap_audit.py render --evidence runs/practice-01/evidence.json --reviews runs/practice-01/reviews.json --out runs/practice-01</code></pre><p>This updates <code>analysis.json</code> and <code>report.md</code> using saved files only. A mismatched evidence hash is rejected. Do not “fix” the mismatch by substituting a hash from a different audit; review the actual evidence and use the correct run.</p>
+    <p>Check the result: <code>evidenceSha256</code> still identifies the same captured evidence, while <code>reviewsSha256</code> identifies the supplied finding register. In the completed example, confirmed findings rise from zero to three after review; the four comparable pairs, one unavailable target URL and two affected pages stay unchanged. This command recalculates the report; fresh HTTP or browser evidence requires another collection or recorded check.</p>
     <p><code>reviews.json</code> answers “what are the actionable findings?” <code>browser-review.json</code> answers “what did we check and capture?” <code>readiness.json</code> answers “what works, what remains, and how close is each page/block?” Keep these responsibilities separate.</p>
   </section>
 
@@ -212,6 +262,11 @@ runs/practice-01/             created when you run the exercise</code></pre>
 
 .venv/bin/python skills/pdf-gap-audit/scripts/verify_pdf.py --pdf runs/practice-01/readiness-audit.pdf --assessment runs/practice-01/readiness.json --out runs/practice-01/pdf-qa</code></pre>
     <p>The verification helper needs Poppler’s <code>pdftoppm</code> to render pages. The full reproduction guide documents installation. Inspect every rendered page for clipping, crowded tables, readable screenshot crops, correct chart units and honest limitations. The build record stores hashes; preserve it with the PDF and all source records.</p>
+    <h3>Know what each command produces</h3><div class="table-scroll" tabindex="0" role="region" aria-label="PDF commands, outputs and interpretation"><table><thead><tr><th scope="col">Command</th><th scope="col">Output</th><th scope="col">What success establishes</th></tr></thead><tbody>
+      <tr><th scope="row"><code>--validate-only</code></th><td>Reconciled inventory counts printed as JSON. No PDF.</td><td>The assessment satisfies structural, reference, count, rating and capture checks. It does not perform browser actions.</td></tr>
+      <tr><th scope="row">Build with <code>--out</code></th><td><code>readiness-audit.pdf</code> and <code>readiness-audit.build.json</code>.</td><td>The renderer built the report from those inputs. The build record identifies assessment, supplied records, packages/fonts and PDF bytes.</td></tr>
+      <tr><th scope="row">Run <code>verify_pdf.py</code></th><td><code>pdf-qa/text.txt</code>, <code>checks.json</code> and one PNG per PDF page.</td><td>Integrity/reference checks and page rendering completed. <code>visualInspection</code> remains pending until a reviewer inspects every image.</td></tr>
+    </tbody></table></div><p>The <a href="./worked-example.html#verification">completed verification example</a> includes actual terminal output and rendered pages. Its page count belongs to that assessment; your own layout and recorded evidence can produce another count.</p>
     <aside class="note"><strong>There is no shortcut from a high text score to Ready.</strong><p>Complete and Ready have explicit required-state, viewport and quality-coverage gates. If the agent lacks browser tools or required coverage is missing, retain Unverified results and describe the audit as partial.</p></aside>
     <details class="explain"><summary>When would I use the other PDF builder?</summary><p><code>scripts/build_pdf.py --run … --browser-review … --out …</code> produces the legacy measured technical report and supports frozen reproduction. Without a browser manifest it explicitly labels browser coverage unverified. New main reports use <code>build_readiness_pdf.py</code>; the older builder is still useful for the measured supporting record.</p></details>
   </section>

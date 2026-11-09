@@ -6,6 +6,11 @@ collector, and the complete PDF audit skill. No client evidence is included.
 Open **START-HERE.html** for the illustrated walkthrough. In a repository
 checkout, the same walkthrough is `site/practice.html` (build the guide first).
 
+Read `docs/audit-methods.md` for the technical breakdown: each stage's inputs,
+method, output files and completion checks; static extraction rules; metric
+equations with example values; evidence hashes; and what PDF validation verifies.
+The walkthrough includes stage tables and links to actual completed outputs.
+
 ## 1. Start the exercise
 
 Extract the entire ZIP. Open a terminal **in the extracted folder**. Check:

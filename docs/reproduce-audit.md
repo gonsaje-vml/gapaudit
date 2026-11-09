@@ -2,6 +2,12 @@
 
 The process is Python evidence collection, browser verification, reviewed findings, then an AI-assisted PDF report. Python 3.10+ and its standard library are sufficient for collection and Markdown/JSON rendering. Collection needs network access; offline rendering uses saved evidence. PDF rendering uses pinned Python packages; a capable AI assistant can help perform the review and prepare the assessment. New browser checks need browser tools.
 
+For the implementation details behind these commands, read
+`docs/audit-methods.md` in the extracted kit. It explains stage inputs and
+outputs, extraction boundaries, normalization, metric equations, worked values,
+evidence/hash conventions and completion checks. The practice walkthrough pairs
+those methods with observed results and the finished report.
+
 ## Practice first
 
 The separate practice kit includes this entire toolkit plus fictional local sites,

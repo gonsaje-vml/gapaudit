@@ -17,6 +17,7 @@ DOWNLOADS = {
     'review-checklist.md': 'docs/gap-audit/review-checklist.md',
     'SKILL.md': 'skills/pdf-gap-audit/SKILL.md',
     'review-protocol.md': 'skills/pdf-gap-audit/references/review-protocol.md',
+    'audit-methods.md': 'docs/audit-methods.md',
 }
 KIT_FILES = {
     'README.md': 'docs/reproduce-audit.md',
@@ -24,6 +25,7 @@ KIT_FILES = {
     'config.example.json': 'docs/gap-audit/config.example.json',
     'urls.example.txt': 'docs/gap-audit/urls.example.txt',
     'docs/reproduce-audit.md': 'docs/reproduce-audit.md',
+    'docs/audit-methods.md': 'docs/audit-methods.md',
     'docs/gap-audit/review-checklist.md': 'docs/gap-audit/review-checklist.md',
     'skills/pdf-gap-audit/SKILL.md': 'skills/pdf-gap-audit/SKILL.md',
 }
@@ -98,10 +100,12 @@ def build(output=None):
                                           'href="https://gonsaje-vml.github.io/gapaudit/"')
         walkthrough = walkthrough.replace('href="./downloads/gap-audit-practice-kit.zip"',
                                           'href="https://gonsaje-vml.github.io/gapaudit/downloads/gap-audit-practice-kit.zip"')
-        walkthrough = walkthrough.replace('href="./worked-example.html"',
-                                          'href="https://gonsaje-vml.github.io/gapaudit/worked-example.html"')
-        walkthrough = walkthrough.replace('href="./retest.html"',
-                                          'href="https://gonsaje-vml.github.io/gapaudit/retest.html"')
+        walkthrough = walkthrough.replace('href="./worked-example.html',
+                                          'href="https://gonsaje-vml.github.io/gapaudit/worked-example.html')
+        walkthrough = walkthrough.replace('href="./retest.html',
+                                          'href="https://gonsaje-vml.github.io/gapaudit/retest.html')
+        walkthrough = walkthrough.replace('href="./downloads/audit-methods.md"',
+                                          'href="./docs/audit-methods.md"')
         practice.writestr('START-HERE.html', walkthrough)
     worked_example.build(output)
     retest_example.build(output)
