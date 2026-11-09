@@ -8,6 +8,11 @@ a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--red);outline-of
 .skip-link{position:absolute;top:-100px;left:16px;padding:8px 16px;background:#fff;z-index:10}
 .skip-link:focus{top:12px}
 .site-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:24px;border-bottom:1px solid var(--line)}
+.site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px}
+.site-nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;font-size:13px;font-weight:600;line-height:1.7;text-decoration:none;white-space:nowrap}
+.site-nav a:hover{background:var(--paper);text-decoration:underline}
+.site-nav a[aria-current="page"]{background:var(--navy);color:#fff}
+@media(max-width:900px){.site-header{flex-wrap:wrap}.site-nav{width:100%;justify-content:flex-start}}
 .brand{display:flex;align-items:center;gap:16px;text-decoration:none;line-height:1.25;font-size:19px;font-weight:700;letter-spacing:-.02em}
 .brand img{display:block;object-fit:contain}
 .brand small{display:block;margin-top:6px;color:var(--muted);font-size:12px;font-weight:500;letter-spacing:.02em}

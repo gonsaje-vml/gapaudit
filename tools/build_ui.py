@@ -98,6 +98,8 @@ def build(output=None):
         walkthrough = (ROOT / 'site/practice.html').read_text(encoding='utf-8')
         walkthrough = walkthrough.replace('href="./index.html"',
                                           'href="https://gonsaje-vml.github.io/gapaudit/"')
+        walkthrough = walkthrough.replace('href="./practice.html"',
+                                          'href="./START-HERE.html"')
         walkthrough = walkthrough.replace('href="./downloads/gap-audit-practice-kit.zip"',
                                           'href="https://gonsaje-vml.github.io/gapaudit/downloads/gap-audit-practice-kit.zip"')
         walkthrough = walkthrough.replace('href="./worked-example.html',

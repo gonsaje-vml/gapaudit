@@ -76,11 +76,15 @@ def build(output):
         for prefix, run in [('before', frozen.RUN), ('after', RUN)]:
             for relative, source in frozen.approved_files(run).items():
                 packet.write(source, prefix + '/' + relative)
-                if prefix == 'after' and relative.startswith('kit/') and relative != 'kit/README.md':
+                if prefix == 'after' and relative.startswith('kit/') and relative not in ('kit/README.md', 'kit/guide.css'):
                     packet.write(source, relative.removeprefix('kit/'))
             packet.write(run / 'public-example.json', prefix + '/public-example.json')
         packet.write(RUN / 'README.md', 'README.md')
+        # Style the current teaching page; archived kits keep their original CSS.
+        packet.write(ROOT / 'site/guide.css', 'guide.css')
         offline = page.replace('href="./index.html"', 'href="https://gonsaje-vml.github.io/gapaudit/"')
+        offline = offline.replace('href="./practice.html"', 'href="https://gonsaje-vml.github.io/gapaudit/practice.html"')
+        offline = offline.replace('href="./retest.html"', 'href="./START-HERE.html"')
         offline = offline.replace('href="./worked-example.html"', 'href="https://gonsaje-vml.github.io/gapaudit/worked-example.html"')
         offline = offline.replace('./practice-output/', './before/').replace('./retest-output/', './after/')
         offline = offline.replace('href="./downloads/gap-audit-retest-example.zip"', 'href="https://gonsaje-vml.github.io/gapaudit/downloads/gap-audit-retest-example.zip"')
