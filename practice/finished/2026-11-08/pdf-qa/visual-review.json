@@ -1,0 +1,53 @@
+{
+  "reviewer": "Codex",
+  "reviewedAt": "2026-11-09T02:26:36.044939+00:00",
+  "pdfSha256": "6a5fd09ed8e3d3548b1ad5ce2aef14f7d3c1f0be32afceeac108a6563c293bf4",
+  "pageCount": 31,
+  "renderedPagesInspected": [
+    "page-01.png",
+    "page-02.png",
+    "page-03.png",
+    "page-04.png",
+    "page-05.png",
+    "page-06.png",
+    "page-07.png",
+    "page-08.png",
+    "page-09.png",
+    "page-10.png",
+    "page-11.png",
+    "page-12.png",
+    "page-13.png",
+    "page-14.png",
+    "page-15.png",
+    "page-16.png",
+    "page-17.png",
+    "page-18.png",
+    "page-19.png",
+    "page-20.png",
+    "page-21.png",
+    "page-22.png",
+    "page-23.png",
+    "page-24.png",
+    "page-25.png",
+    "page-26.png",
+    "page-27.png",
+    "page-28.png",
+    "page-29.png",
+    "page-30.png",
+    "page-31.png"
+  ],
+  "inspectionMethod": "All 31 rendered page images examined in eight contact sheets; pages 1, 7, 9 and 30 also inspected at full render resolution.",
+  "visualInspection": "passed",
+  "checks": [
+    "No page clipping, table collisions or blank/duplicate pages found.",
+    "Readiness chart/table agree: 6 body types; page bars count 9 required uses.",
+    "Matched screenshot crops readable; all 30 original JPEGs retained unchanged.",
+    "Page 12 is the expected continuation of the guide comparison; bookmark/table-of-contents destinations checked.",
+    "All supplied original records verified byte for byte in the PDF attachment."
+  ],
+  "frozenRebuild": {
+    "sameRuntimeByteIdentical": true,
+    "sha256": "6a5fd09ed8e3d3548b1ad5ce2aef14f7d3c1f0be32afceeac108a6563c293bf4"
+  },
+  "scopeConclusion": "Complete for the stated fictional practice scope; three open defects remain. No release approval."
+}

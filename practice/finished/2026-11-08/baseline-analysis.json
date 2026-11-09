@@ -1,0 +1,102 @@
+{
+  "evidenceSha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+  "findings": [],
+  "methodVersion": "1.0.0",
+  "reviewsSha256": null,
+  "rows": [
+    {
+      "brokenLinks": [
+        "http://127.0.0.1:8852/downloads/checklist.txt"
+      ],
+      "content": "Good",
+      "flags": [],
+      "id": "PAGE-94d251729fdb",
+      "metrics": {
+        "headingCoverage": 1.0,
+        "linkTextCoverage": 1.0,
+        "textSimilarity": 1.0
+      },
+      "route": "/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    },
+    {
+      "brokenLinks": [],
+      "content": "Good",
+      "flags": [],
+      "id": "PAGE-3c32be8e5d4f",
+      "metrics": {
+        "headingCoverage": 1.0,
+        "linkTextCoverage": null,
+        "textSimilarity": 1.0
+      },
+      "route": "/contact/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    },
+    {
+      "brokenLinks": [],
+      "content": "Good",
+      "flags": [],
+      "id": "PAGE-eedf4cc7bddc",
+      "metrics": {
+        "headingCoverage": 1.0,
+        "linkTextCoverage": null,
+        "textSimilarity": 1.0
+      },
+      "route": "/guide/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    },
+    {
+      "brokenLinks": [
+        "http://127.0.0.1:8852/downloads/checklist.txt"
+      ],
+      "content": "Review",
+      "flags": [
+        "Content/structure difference",
+        "Missing H1: regression"
+      ],
+      "id": "PAGE-8d7d68e3faf1",
+      "metrics": {
+        "headingCoverage": 0.5,
+        "linkTextCoverage": 1.0,
+        "textSimilarity": 0.860689
+      },
+      "route": "/resources/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    }
+  ],
+  "schemaVersion": 1,
+  "summary": {
+    "affectedPages": 2,
+    "canonicalsPresent": 4,
+    "comparablePages": 4,
+    "confirmedFindings": 0,
+    "descriptionsPresent": 4,
+    "emptyAltImages": 0,
+    "headingJumpPages": 0,
+    "matchingTitles": 4,
+    "meanTextSimilarity": 0.965172,
+    "missingAltImages": 0,
+    "missingH1": 1,
+    "missingLanguage": 0,
+    "pages": 4,
+    "textSampleSize": 4,
+    "unavailableDocuments": 1,
+    "unavailableLinks": 1,
+    "uniqueLinksChecked": 2,
+    "unverifiedLinks": 0,
+    "usableTargetPages": 4
+  },
+  "thresholds": {
+    "headingCoverage": 0.9,
+    "linkTextCoverage": 0.95,
+    "textSimilarity": 0.9
+  }
+}

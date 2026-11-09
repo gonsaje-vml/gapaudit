@@ -1,0 +1,183 @@
+{
+  "evidenceSha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+  "findings": [
+    {
+      "acceptance": "From both pages at both viewports, open the approved checklist and verify its content, not just an HTTP 200.",
+      "category": "functional",
+      "contentFidelity": null,
+      "disposition": "confirmed",
+      "evidence": [
+        "D-desktop",
+        "D-mobile",
+        "download-mobile",
+        "asset-checks.json",
+        "evidence.json: linkChecks"
+      ],
+      "id": "F-001",
+      "impact": "The practice scope requires this preparation download without an accepted alternative. Two pages are affected by one unique unavailable URL.",
+      "observation": "At 1440x900 and 390x844, following the checklist link from home and resources opened the approved text on source and the same 404 URL on target. HTTP capture and byte checks agree.",
+      "owner": "TBD",
+      "pageIds": [
+        "PAGE-94d251729fdb",
+        "PAGE-8d7d68e3faf1"
+      ],
+      "priority": "P0",
+      "recommendation": "Publish the approved sample checklist at /downloads/checklist.txt or update both entry points to an approved destination.",
+      "reviewedAt": "2026-11-09T02:22:12.341566+00:00",
+      "reviewer": "Codex",
+      "title": "Required checklist download returns 404"
+    },
+    {
+      "acceptance": "At desktop and mobile sizes, verify the H1, exact approved guidance and order; retain the kit and download link.",
+      "category": "content",
+      "contentFidelity": "Review",
+      "disposition": "confirmed",
+      "evidence": [
+        "V02-desktop",
+        "V02-mobile",
+        "resources-mobile",
+        "quality-observations.json"
+      ],
+      "id": "F-002",
+      "impact": "Learners lose preparation instructions and the main page heading; heading structure also regresses.",
+      "observation": "The source resources page displays Learning resources as H1 and the preparation paragraph. The target starts with Your preparation kit (H2) and omits both source elements at both viewports.",
+      "owner": "TBD",
+      "pageIds": [
+        "PAGE-8d7d68e3faf1"
+      ],
+      "priority": "P1",
+      "recommendation": "Restore the approved H1 and introductory preparation paragraph before the kit.",
+      "reviewedAt": "2026-11-09T02:22:12.341566+00:00",
+      "reviewer": "Codex",
+      "title": "Resources heading and preparation guidance omitted"
+    },
+    {
+      "acceptance": "At 390x844 and 1440x900, all panel copy fits without horizontal scrolling and remains matched to source.",
+      "category": "visual",
+      "contentFidelity": null,
+      "disposition": "confirmed",
+      "evidence": [
+        "V03-mobile",
+        "contact-mobile",
+        "browser-observations.json",
+        "asset-checks.json"
+      ],
+      "id": "F-003",
+      "impact": "Mobile learners cannot read the panel naturally without horizontal scrolling. Matching static text does not establish responsive parity.",
+      "observation": "At 390x844, target .contact-panel is 760 CSS pixels wide and the document spans 780 pixels, clipping text and requiring horizontal scrolling. Source panel is 335 pixels wide and fits. Desktop content matches.",
+      "owner": "TBD",
+      "pageIds": [
+        "PAGE-3c32be8e5d4f"
+      ],
+      "priority": "P1",
+      "recommendation": "Remove the target-only fixed mobile width and allow the panel to fit its container.",
+      "reviewedAt": "2026-11-09T02:22:12.341566+00:00",
+      "reviewer": "Codex",
+      "title": "Contact panel overflows the mobile viewport"
+    }
+  ],
+  "methodVersion": "1.0.0",
+  "reviewsSha256": "8754dbd321da5b522db7b16524bc6f9e5899581b6f5246fc296ddcad79aa01c7",
+  "rows": [
+    {
+      "brokenLinks": [
+        "http://127.0.0.1:8852/downloads/checklist.txt"
+      ],
+      "content": "Good",
+      "flags": [
+        "F-001: Required checklist download returns 404 (confirmed)"
+      ],
+      "id": "PAGE-94d251729fdb",
+      "metrics": {
+        "headingCoverage": 1.0,
+        "linkTextCoverage": 1.0,
+        "textSimilarity": 1.0
+      },
+      "route": "/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    },
+    {
+      "brokenLinks": [],
+      "content": "Good",
+      "flags": [
+        "F-003: Contact panel overflows the mobile viewport (confirmed)"
+      ],
+      "id": "PAGE-3c32be8e5d4f",
+      "metrics": {
+        "headingCoverage": 1.0,
+        "linkTextCoverage": null,
+        "textSimilarity": 1.0
+      },
+      "route": "/contact/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    },
+    {
+      "brokenLinks": [],
+      "content": "Good",
+      "flags": [],
+      "id": "PAGE-eedf4cc7bddc",
+      "metrics": {
+        "headingCoverage": 1.0,
+        "linkTextCoverage": null,
+        "textSimilarity": 1.0
+      },
+      "route": "/guide/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    },
+    {
+      "brokenLinks": [
+        "http://127.0.0.1:8852/downloads/checklist.txt"
+      ],
+      "content": "Review",
+      "flags": [
+        "Content/structure difference",
+        "Missing H1: regression",
+        "F-001: Required checklist download returns 404 (confirmed)",
+        "F-002: Resources heading and preparation guidance omitted (confirmed)"
+      ],
+      "id": "PAGE-8d7d68e3faf1",
+      "metrics": {
+        "headingCoverage": 0.5,
+        "linkTextCoverage": 1.0,
+        "textSimilarity": 0.860689
+      },
+      "route": "/resources/",
+      "sourceStatus": 200,
+      "targetStatus": 200,
+      "unverifiedLinks": []
+    }
+  ],
+  "schemaVersion": 1,
+  "summary": {
+    "affectedPages": 2,
+    "canonicalsPresent": 4,
+    "comparablePages": 4,
+    "confirmedFindings": 3,
+    "descriptionsPresent": 4,
+    "emptyAltImages": 0,
+    "headingJumpPages": 0,
+    "matchingTitles": 4,
+    "meanTextSimilarity": 0.965172,
+    "missingAltImages": 0,
+    "missingH1": 1,
+    "missingLanguage": 0,
+    "pages": 4,
+    "textSampleSize": 4,
+    "unavailableDocuments": 1,
+    "unavailableLinks": 1,
+    "uniqueLinksChecked": 2,
+    "unverifiedLinks": 0,
+    "usableTargetPages": 4
+  },
+  "thresholds": {
+    "headingCoverage": 0.9,
+    "linkTextCoverage": 0.95,
+    "textSimilarity": 0.9
+  }
+}

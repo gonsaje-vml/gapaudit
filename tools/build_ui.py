@@ -1,8 +1,9 @@
-"""Build the GitHub Pages guide and a reusable kit without past audit results."""
+"""Build the guide, blank starter kits and one reviewed fictional worked example."""
 
 from pathlib import Path
 import shutil
 import zipfile
+import worked_example
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -91,10 +92,13 @@ def build(output=None):
                                           'href="https://gonsaje-vml.github.io/gapaudit/"')
         walkthrough = walkthrough.replace('href="./downloads/gap-audit-practice-kit.zip"',
                                           'href="https://gonsaje-vml.github.io/gapaudit/downloads/gap-audit-practice-kit.zip"')
+        walkthrough = walkthrough.replace('href="./worked-example.html"',
+                                          'href="https://gonsaje-vml.github.io/gapaudit/worked-example.html"')
         practice.writestr('START-HERE.html', walkthrough)
+    worked_example.build(output)
     (output / '.nojekyll').write_text('', encoding='utf-8')
     print(f'Built {output}: visual practice lab, local demo, Python toolkit and PDF audit skill')
-    return {'downloads': [*DOWNLOADS, 'gap-audit-kit.zip', 'pdf-gap-audit-skill.zip', 'gap-audit-practice-kit.zip']}
+    return {'downloads': [*DOWNLOADS, 'gap-audit-kit.zip', 'pdf-gap-audit-skill.zip', 'gap-audit-practice-kit.zip', 'gap-audit-worked-example.zip']}
 
 
 if __name__ == '__main__':

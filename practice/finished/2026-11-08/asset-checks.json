@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-11-09T02:19:48.001242+00:00",
+  "responses": [
+    {
+      "side": "source",
+      "url": "http://127.0.0.1:8851/style.css",
+      "status": 200,
+      "sha256": "d46dac05e33bcd45adcb292edc94ea9f36ea7c633e04ac22847d020fc5fb9e2f",
+      "matchesFixtureBytes": true
+    },
+    {
+      "side": "source",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "status": 200,
+      "sha256": "0b8330c532d2dd22ed150cf6516ce6bf9ec2d0f89d32137716c33cc93cb6bb48",
+      "matchesFixtureBytes": true
+    },
+    {
+      "side": "target",
+      "url": "http://127.0.0.1:8852/style.css",
+      "status": 200,
+      "sha256": "df872dd31e56124659936a2df4bea78e0400256c02b67bc2d85a5b50d7ade241",
+      "matchesFixtureBytes": true
+    },
+    {
+      "side": "target",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "status": 404,
+      "sha256": "b47a55e09e9d3af62b1d6a73975ca7f455b4a76cf3d39e552fef398a7bdba7a9",
+      "matchesFixtureBytes": false
+    }
+  ],
+  "contrastPairs": [
+    {
+      "foreground": "#253047",
+      "background": "#fbfcff",
+      "ratio": 12.85,
+      "basis": "Literal authored CSS colors; scoped text/focus pairs, not a full conformance audit."
+    },
+    {
+      "foreground": "#253047",
+      "background": "#e9eefc",
+      "ratio": 11.37,
+      "basis": "Literal authored CSS colors; scoped text/focus pairs, not a full conformance audit."
+    },
+    {
+      "foreground": "#253047",
+      "background": "#fff3d5",
+      "ratio": 11.95,
+      "basis": "Literal authored CSS colors; scoped text/focus pairs, not a full conformance audit."
+    },
+    {
+      "foreground": "#0d2264",
+      "background": "#fbfcff",
+      "ratio": 14.32,
+      "basis": "Literal authored CSS colors; scoped text/focus pairs, not a full conformance audit."
+    },
+    {
+      "foreground": "#0d2264",
+      "background": "#e9eefc",
+      "ratio": 12.66,
+      "basis": "Literal authored CSS colors; scoped text/focus pairs, not a full conformance audit."
+    },
+    {
+      "foreground": "#d50023",
+      "background": "#fbfcff",
+      "ratio": 5.31,
+      "basis": "Literal authored CSS colors; scoped text/focus pairs, not a full conformance audit."
+    }
+  ]
+}

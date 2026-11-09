@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A completed practice migration audit: real screenshots, the finished readiness PDF, and annotated examples of every step's actual output.">
+  <meta name="theme-color" content="#0d2264">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>A finished practice audit — Mind the Gap</title>
+  <link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./guide.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to the finished example</a>
+<header class="site-header wrap"><a class="brand" href="./index.html"><img src="./mind-the-gap.png" alt="" width="92" height="69"><span>Mind the Gap<small>The finished example</small></span></a><a class="repo-link" href="./practice.html">Practice walkthrough ↗</a></header>
+<main id="main" class="wrap lab worked-example">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">Actually collected, reviewed and rendered</p>
+    <h1 id="title">See the finished audit.<br>Follow the outputs.</h1>
+    <p class="lede">Here is the complete Northstar practice audit: the finished PDF, original screenshots, and the actual files produced at each step, with an explanation of what you are looking at.</p>
+    <div class="actions"><a class="button" href="./practice-output/readiness-audit.pdf">Open the finished PDF ↗</a><a class="text-link" href="./downloads/gap-audit-worked-example.zip" download>Download the complete example ↓</a></div>
+    <p class="intro-note">Report date: November 8, 2026, America/New_York · Chrome 156 · Fictional local sites · Matched desktop and mobile review</p>
+  </section>
+
+  <div class="example-stats" aria-label="Completed audit scope"><div><strong>4</strong><span>page pairs</span></div><div><strong>{{CHECK_COUNT}}</strong><span>browser checks</span></div><div><strong>{{CAPTURE_COUNT}}</strong><span>original screenshots</span></div><div><strong>{{PDF_PAGES}}</strong><span>PDF pages</span></div></div>
+  <aside class="note"><strong>A finished audit can report an unfinished migration.</strong><p>The review confirmed three deliberate defects: a missing required checklist (P0), omitted resources context (P1), and mobile contact overflow (P1). Navigation and disclosures worked. There are {{PASS_COUNT}} passing and {{FAIL_COUNT}} failing checks; shared failures are grouped into three findings. This is not client data or release approval.</p></aside>
+
+  <nav class="lab-nav" aria-label="Example output steps"><a href="#final">The final PDF</a><a href="#inputs">01 / Inputs</a><a href="#collection">02 / Collection</a><a href="#baseline">03 / Baseline</a><a href="#browser">04 / Browser evidence</a><a href="#findings">05 / Findings</a><a href="#assessment">06 / Readiness</a><a href="#verification">07 / PDF and verification</a><a href="#packet">08 / Reproduce it</a></nav>
+
+  <section id="final" class="guide-section" aria-labelledby="final-title">
+    <div class="section-heading"><p class="eyebrow">Start with the result</p><h2 id="final-title">What the final deliverable looks like</h2></div>
+    <div class="report-preview"><a href="./practice-output/readiness-audit.pdf"><img src="./practice-output/pdf-qa/page-01.png" alt="First PDF page: readiness chart for six block types, exact category counts, and four page bars counting nine required uses." width="935" height="1210"></a><div><h3>Read the first page in this order</h3><ol class="process"><li><strong>Verdict:</strong> the required download is blocked; the other two defects also remain open.</li><li><strong>Overall chart:</strong> six distinct body block types, partitioned into two Ready, two Minor work and two Capability missing. Zero categories remain visible.</li><li><strong>Page bars:</strong> nine source-required block uses across four pages. A use and a block type are different units.</li><li><strong>Visual status:</strong> shown separately. Retained text and working HTTP responses do not establish visual parity.</li></ol><p>The remaining pages provide page comparisons, block/variant matrices, capabilities, scoped quality checks and a work board. The PDF embeds the original supporting records.</p><p><a href="./practice-output/readiness-audit.pdf">Read all {{PDF_PAGES}} pages ↗</a></p></div></div>
+  </section>
+
+  <section id="inputs" class="guide-section" aria-labelledby="inputs-title">
+    <div class="section-heading"><p class="eyebrow">01 / Decide what is in scope</p><h2 id="inputs-title">Configuration and route inventory</h2></div>
+    <p>These are the actual local inputs created by the runner. <code>sourceOrigin</code> and <code>targetOrigin</code> identify the two sample servers. <code>routeMap</code> explains the intentional guide move; it prevents the audit from incorrectly treating <code>/guide/ → /help/</code> as a missing page.</p>
+    <details class="explain"><summary>View the configuration used by this run</summary><pre><code>{{CONFIG}}</code></pre></details>
+    <h3>The four source routes</h3><pre><code>{{URLS}}</code></pre>
+    <p><strong>What to notice:</strong> the inventory lists source URLs. The collector calculates each target using the origin and exact mapping. Your own run will use different origins and approved routes.</p><p><a href="./practice-output/audit-checklist.md">Read the completed coverage checklist</a> · <a href="./practice.html#start">Run this exercise yourself</a></p>
+  </section>
+
+  <section id="collection" class="guide-section" aria-labelledby="collection-title">
+    <div class="section-heading"><p class="eyebrow">02 / Collect real observations</p><h2 id="collection-title">The console log and captured evidence</h2></div>
+    <p>The commands on this page show the recorded run's repository paths. For a fresh starter run, use the <a href="./practice.html#start">practice instructions</a>. For the completed-example ZIP, use its README's <code>run/…</code> paths when rebuilding.</p>
+    <pre><code>python3 practice/run_demo.py start --once --out practice/finished/2026-11-08</code></pre>
+    <p>The run used <code>--once</code> for collection, then <code>serve</code> for browser review. The ordinary <code>start</code> command keeps the sites open automatically. The recorded log below shortens the local output-folder prefix; its page/link messages come from the real run.</p>
+    <pre><code>{{COLLECT_LOG}}</code></pre>
+    <p><strong>What to notice:</strong> four page pairs were collected, then two distinct internal destinations were checked. These progress messages show activity, not passing browser behavior.</p>
+    <h3>A small excerpt from <code>evidence.json</code></h3><pre><code>{{EVIDENCE}}</code></pre>
+    <p>Both resources pages returned HTTP 200, but target’s <code>h1s</code> array is empty. The <code>snapshot</code> path identifies the preserved original response body; <code>sha256</code> identifies those exact bytes. This is enough to flag a content difference, not to judge its visual impact.</p><p><a href="./practice-output/evidence.json">Open the complete captured evidence</a></p>
+  </section>
+
+  <section id="baseline" class="guide-section" aria-labelledby="baseline-title">
+    <div class="section-heading"><p class="eyebrow">03 / Read before reviewing</p><h2 id="baseline-title">The automated baseline</h2></div>
+    <pre><code>{{BASELINE_SUMMARY}}</code></pre>
+    <p><strong>What to notice:</strong> all four page pairs are comparable. There is <strong>one</strong> unique unavailable target and <strong>two</strong> affected pages. <code>confirmedFindings</code> is initially zero: the script has not acted as a browser reviewer. A content score is not a readiness score.</p>
+    <p>The initial <code>baseline-analysis.json</code> and <code>baseline-report.md</code> are preserved in the complete download. The reviewed versions are separate, so learners can compare before and after without losing the original baseline.</p>
+  </section>
+
+  <section id="browser" class="guide-section" aria-labelledby="browser-title">
+    <div class="section-heading"><p class="eyebrow">04 / See the differences</p><h2 id="browser-title">Original matched screenshots and actual checks</h2></div>
+    <p>Every page was reviewed at <strong>1440×900</strong> and <strong>390×844</strong> CSS viewports. Navigation, both referring download journeys, and mouse/Enter/Space disclosure states were exercised on each side. Click any image to inspect the full original capture.</p>
+    <h3>Resources: a heading and instructions are gone</h3>
+    <div class="comparison-pair mobile-pair"><figure><a href="./practice-output/browser/resources-source-mobile.jpg"><img src="./practice-output/browser/resources-source-mobile.jpg" alt="Source resources page with Learning resources H1 and preparation guidance above the kit." loading="lazy"></a><figcaption>Source · main heading and guidance present.</figcaption></figure><figure><a href="./practice-output/browser/resources-target-mobile.jpg"><img src="./practice-output/browser/resources-target-mobile.jpg" alt="Target resources page starts with Your preparation kit; the H1 and introductory instructions are absent." loading="lazy"></a><figcaption>Target · the kit remains; context is omitted.</figcaption></figure></div>
+    <p><strong>What you are looking at:</strong> HTTP 200 on both sides concealed an omitted content region. The browser comparison confirms the visible consequence and supports finding F-002.</p>
+    <h3>Contact: identical text can still overflow</h3>
+    <div class="comparison-pair mobile-pair"><figure><a href="./practice-output/browser/contact-source-mobile.jpg"><img src="./practice-output/browser/contact-source-mobile.jpg" alt="Source contact panel fits its narrow viewport and wraps text naturally." loading="lazy"></a><figcaption>Source · panel fits and text wraps.</figcaption></figure><figure><a href="./practice-output/browser/contact-target-mobile.jpg"><img src="./practice-output/browser/contact-target-mobile.jpg" alt="Target contact panel extends beyond the right edge, clipping sentences at the same mobile viewport." loading="lazy"></a><figcaption>Target · fixed 760px width clips mobile text.</figcaption></figure></div>
+    <p><strong>What you are looking at:</strong> target’s panel is 760 CSS pixels wide inside a 390px viewport. The static contact text matches source, so its content label remains Good; the visual review fails. Some mobile capture originals are 375×812 image pixels even though the measured CSS viewport is 390×844. Their original dimensions/hashes are recorded; PDF crops use image pixels.</p>
+    <details class="explain"><summary>See the actual browser-check record behind this comparison</summary><pre><code>{{BROWSER_CHECK}}</code></pre></details>
+    <h3>Guide: preserve the passing behavior too</h3>
+    <div class="comparison-pair mobile-pair"><figure><a href="./practice-output/browser/guide-source-mobile-open.jpg"><img src="./practice-output/browser/guide-source-mobile-open.jpg" alt="Source guide showing both disclosure answers open." loading="lazy"></a><figcaption>Source · both answers open.</figcaption></figure><figure><a href="./practice-output/browser/guide-target-mobile-open.jpg"><img src="./practice-output/browser/guide-target-mobile-open.jpg" alt="Target help route showing the same two disclosure answers open." loading="lazy"></a><figcaption>Target · both answers retained at /help/.</figcaption></figure></div>
+    <p>The screenshots and browser observations preserve the mouse-open state. The action log separately records Enter opening and Space closing each control, mouse closing, and Tab reaching the first summary. A screenshot alone does not prove those interactions.</p><p><a href="./practice-output/browser-review.json">Read all {{CHECK_COUNT}} browser checks</a></p>
+  </section>
+
+  <section id="findings" class="guide-section" aria-labelledby="findings-title">
+    <div class="section-heading"><p class="eyebrow">05 / Explain the work required</p><h2 id="findings-title">From a failed journey to a finding</h2></div>
+    <div class="comparison-pair"><figure><a href="./practice-output/browser/download-source-mobile.jpg"><img src="./practice-output/browser/download-source-mobile.jpg" alt="Source checklist document with the approved preparation items." loading="lazy"></a><figcaption>Source · the actual approved sample checklist.</figcaption></figure><figure><a href="./practice-output/browser/download-target-mobile.jpg"><img src="./practice-output/browser/download-target-mobile.jpg" alt="Target download returns a File not found 404 error." loading="lazy"></a><figcaption>Target · the same URL is unavailable from both entry points.</figcaption></figure></div>
+    <details class="explain" open><summary>F-001, as recorded in reviews.json</summary><pre><code>{{FINDING}}</code></pre></details>
+    <p><strong>What to notice:</strong> the finding lists both affected page IDs, impact, a concrete repair and an observable acceptance test. P0 comes from the practice scope’s required download journey, not from an arbitrary similarity threshold. The owner remains TBD; no real owner or approval is invented.</p>
+    <h3>Render again from saved evidence</h3><pre><code>python3 tools/gap_audit.py render --evidence practice/finished/2026-11-08/evidence.json --reviews practice/finished/2026-11-08/reviews.json --out practice/finished/2026-11-08</code></pre>
+    <details class="explain"><summary>Compare the reviewed summary with the initial one</summary><pre><code>{{REVIEWED_SUMMARY}}</code></pre></details>
+    <p>Static counts stay evidence-bound. The confirmed finding count becomes three after supported review. F-002 explains the missing resources context; F-003 explains contact overflow. The same broken URL appearing on two pages remains one shared finding.</p><p><a href="./practice-output/report.md">Read the measured Markdown report</a> · <a href="./practice-output/reviews.json">Read all three findings</a></p>
+  </section>
+
+  <section id="assessment" class="guide-section" aria-labelledby="assessment-title">
+    <div class="section-heading"><p class="eyebrow">06 / Assess the remaining work</p><h2 id="assessment-title">Separate visual match, behavior and readiness</h2></div>
+    <pre><code>{{READINESS}}</code></pre>
+    <p>The contact page has retained static content, a Partial visual assessment and Minor work remaining. Its fictional contact panel has no sending service, so functionality is Not applicable rather than an invented successful form test.</p>
+    <figure class="pdf-figure"><a href="./practice-output/readiness-audit.pdf#page=14"><img src="./practice-output/pdf-qa/page-14.png" alt="PDF block usage matrix showing six body types, their per-page frequencies, nine required uses, and separate visual, function and readiness columns." loading="lazy"></a><figcaption>The frequency matrix is generated from the reviewed census, not a visual estimate. Open PDF page 14 to inspect the table.</figcaption></figure>
+    <p><strong>Count basis:</strong> six non-overlapping logical body types and nine source-required uses. Target currently has eight rendered uses because the resources intro is absent. Shared header/footer counts stay separate. Only <code>hero</code> and <code>contact-panel</code> have authored CSS classes; other labels identify unclassed native HTML groups, not a made-up component library.</p>
+    <p>Each Ready assessment is bounded by the tested states, viewports and scoped quality checks. This audit records one missing download capability affecting two block types, plus the remaining content/layout work; it does not award a migration-completion percentage.</p><p><a href="./practice-output/readiness.json">Inspect the complete readiness assessment</a> · <a href="./practice-output/census.json">Inspect the count basis and target exceptions</a></p>
+  </section>
+
+  <section id="verification" class="guide-section" aria-labelledby="verification-title">
+    <div class="section-heading"><p class="eyebrow">07 / Build and verify</p><h2 id="verification-title">The PDF, build record and page-image checks</h2></div>
+    <pre><code>.venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment practice/finished/2026-11-08/readiness.json --validate-only
+.venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment practice/finished/2026-11-08/readiness.json --out practice/finished/2026-11-08/readiness-audit.pdf
+.venv/bin/python skills/pdf-gap-audit/scripts/verify_pdf.py --pdf practice/finished/2026-11-08/readiness-audit.pdf --assessment practice/finished/2026-11-08/readiness.json --out practice/finished/2026-11-08/pdf-qa</code></pre>
+    <p>Prepare the pinned PDF environment as explained in the <a href="./practice.html#pdf">practice walkthrough</a>. Windows uses <code>.venv\Scripts\python.exe</code>. The verifier also needs Poppler. Below are excerpts from the actual build and final visual-review records.</p>
+    <details class="explain"><summary>Build record: inputs, dependencies and output hash</summary><pre><code>{{BUILD_RECORD}}</code></pre></details>
+    <pre><code>{{QA}}</code></pre>
+    <p><strong>What to notice:</strong> all {{PDF_PAGES}} pages were rendered and inspected. The original records embedded in the PDF were verified against their source bytes. A second build in the same runtime reproduced identical PDF bytes. Automated rendering alone would have left visual inspection pending; the separate final review records the actual inspection.</p>
+    <figure class="pdf-figure"><a href="./practice-output/readiness-audit.pdf#page=30"><img src="./practice-output/pdf-qa/page-30.png" alt="Final PDF work board listing the missing checklist, omitted resources context and mobile contact overflow with scope, priority, repair and acceptance test." loading="lazy"></a><figcaption>Final work board, PDF page 30: repairs are tied to affected pages and observable completion criteria.</figcaption></figure>
+    <p><a href="./practice-output/readiness-audit.build.json">Open the build record</a> · <a href="./practice-output/pdf-qa/visual-review.json">Open the final QA record</a></p>
+  </section>
+
+  <section id="packet" class="guide-section" aria-labelledby="packet-title">
+    <div class="section-heading"><p class="eyebrow">08 / Keep the whole chain</p><h2 id="packet-title">Download, inspect and reproduce</h2></div>
+    <p>The completed-example ZIP contains the frozen run, original screenshots, HTTP snapshots, before/after measured outputs, all review records, the PDF and page-image QA, plus the exact toolkit copy used to build it. Its README explains offline reproduction without recollecting the sites.</p>
+    <div class="actions"><a class="button" href="./downloads/gap-audit-worked-example.zip" download>Download the complete example ↓</a><a class="text-link" href="./practice-output/readiness-audit.pdf">Open the finished PDF ↗</a></div>
+    <p class="intro-note">PDF SHA-256: <code>{{PDF_SHA256}}</code></p>
+    <p>Use the <a href="./practice.html">starter practice kit</a> for a fresh run. Your fresh timestamps, temporary inventory paths and review records will differ. Reproduce this report using the frozen inputs; review your new evidence before assigning findings to a new run.</p>
+    <p>Capture timestamps are stored in UTC. Late-evening November 8 in New York appears as November 9 UTC in screenshot labels; those original times are preserved.</p>
+  </section>
+</main>
+<footer class="site-footer wrap"><p>Mind the Gap · Real observations of fictional sites.</p><a href="#title">Back to top ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,355 @@
+{
+  "config": {
+    "documentPrefixes": [
+      "/downloads/"
+    ],
+    "excludePrefixes": [],
+    "includePrefixes": [
+      "/"
+    ],
+    "inventories": [
+      {
+        "kind": "urls",
+        "location": "urls.txt"
+      }
+    ],
+    "maxLinks": 30,
+    "maxPages": 10,
+    "maxSitemaps": 5,
+    "name": "Northstar practice migration — fictional local sites",
+    "requestDelaySeconds": 0,
+    "routeMap": {
+      "/guide/": "/help/"
+    },
+    "sourceOrigin": "http://127.0.0.1:8851",
+    "targetOrigin": "http://127.0.0.1:8852",
+    "timeoutSeconds": 5
+  },
+  "configHash": "9f578c77072903b5992e77fd1e675b60b151c5c058269a77645d1c31bb2338af",
+  "generatedAt": "2026-11-09T02:12:05.296611+00:00",
+  "inventory": {
+    "candidateCount": 4,
+    "excluded": [],
+    "inputs": [
+      {
+        "kind": "urls",
+        "location": "/private/var/folders/47/1z19hznd68qgzh6ryq6bpdd00000gn/T/gap-practice-inputs-bjjexael/urls.txt",
+        "sha256": "249c2915778d119f1052daa99a3a99537b0481a6aa6559394a706d5ce4c52f92",
+        "snapshot": "snapshots/249c2915778d119f1052daa99a3a99537b0481a6aa6559394a706d5ce4c52f92.inventory"
+      }
+    ]
+  },
+  "linkChecks": [
+    {
+      "checkedAt": "2026-11-09T02:12:05.292989+00:00",
+      "contentType": "text/html;charset=utf-8",
+      "error": "",
+      "finalUrl": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "redirects": [],
+      "status": 404,
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt"
+    },
+    {
+      "checkedAt": "2026-11-09T02:12:05.288656+00:00",
+      "contentType": "text/html",
+      "error": "",
+      "finalUrl": "http://127.0.0.1:8852/resources/",
+      "redirects": [],
+      "sha256": "900a23d22444383448adbc9ae3e29ebe794b45c72e84c67e887a9e86e4c51a81",
+      "snapshot": "snapshots/900a23d22444383448adbc9ae3e29ebe794b45c72e84c67e887a9e86e4c51a81.body",
+      "status": 200,
+      "url": "http://127.0.0.1:8852/resources/"
+    }
+  ],
+  "methodVersion": "1.0.0",
+  "pages": [
+    {
+      "id": "PAGE-94d251729fdb",
+      "route": "/",
+      "source": {
+        "checkedAt": "2026-11-09T02:12:05.251702+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8851/",
+        "html": {
+          "canonical": "http://127.0.0.1:8851/",
+          "description": "Fictional Northstar migration practice page: Welcome to Northstar.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Learn something new"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Learn something new",
+            "Plan your next step"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Browse learning resources",
+              "url": "http://127.0.0.1:8851/resources/"
+            },
+            {
+              "text": "Download the session checklist",
+              "url": "http://127.0.0.1:8851/downloads/checklist.txt"
+            }
+          ],
+          "mainText": "Learn something new Northstar is a fictional learning hub for this migration audit exercise. Plan your next step Explore our learning resources and prepare for your first session. Browse learning resources Download the session checklist",
+          "missingAltCount": 0,
+          "title": "Welcome to Northstar | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "0ba68dafb24fafc8a9805238851d3a148a62fcef1fa780af0b82adb54adb0b36",
+        "snapshot": "snapshots/0ba68dafb24fafc8a9805238851d3a148a62fcef1fa780af0b82adb54adb0b36.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8851/"
+      },
+      "target": {
+        "checkedAt": "2026-11-09T02:12:05.261808+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8852/",
+        "html": {
+          "canonical": "http://127.0.0.1:8852/",
+          "description": "Fictional Northstar migration practice page: Welcome to Northstar.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Learn something new"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Learn something new",
+            "Plan your next step"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Browse learning resources",
+              "url": "http://127.0.0.1:8852/resources/"
+            },
+            {
+              "text": "Download the session checklist",
+              "url": "http://127.0.0.1:8852/downloads/checklist.txt"
+            }
+          ],
+          "mainText": "Learn something new Northstar is a fictional learning hub for this migration audit exercise. Plan your next step Explore our learning resources and prepare for your first session. Browse learning resources Download the session checklist",
+          "missingAltCount": 0,
+          "title": "Welcome to Northstar | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "092c73dfe76de6ed076e0accbbb4297b8410daf3a1f50ff948baeb5f7b9d2b70",
+        "snapshot": "snapshots/092c73dfe76de6ed076e0accbbb4297b8410daf3a1f50ff948baeb5f7b9d2b70.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8852/"
+      }
+    },
+    {
+      "id": "PAGE-3c32be8e5d4f",
+      "route": "/contact/",
+      "source": {
+        "checkedAt": "2026-11-09T02:12:05.266419+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8851/contact/",
+        "html": {
+          "canonical": "http://127.0.0.1:8851/contact/",
+          "description": "Fictional Northstar migration practice page: Contact the learning team.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Contact the learning team"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Contact the learning team",
+            "We can help you prepare"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Contact the learning team Have questions about the learning programme? Here is how to reach our fictional team. We can help you prepare Our learning team can explain session formats and help you choose a suitable starting point. Fictional address: team@example.test Practice only. No messages are sent from this sample website.",
+          "missingAltCount": 0,
+          "title": "Contact the learning team | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "9d8396a97de24a87b231f08be36ca8572ad75f16e8043a502bd44bdaeaf6d96a",
+        "snapshot": "snapshots/9d8396a97de24a87b231f08be36ca8572ad75f16e8043a502bd44bdaeaf6d96a.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8851/contact/"
+      },
+      "target": {
+        "checkedAt": "2026-11-09T02:12:05.270787+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8852/contact/",
+        "html": {
+          "canonical": "http://127.0.0.1:8852/contact/",
+          "description": "Fictional Northstar migration practice page: Contact the learning team.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Contact the learning team"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Contact the learning team",
+            "We can help you prepare"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Contact the learning team Have questions about the learning programme? Here is how to reach our fictional team. We can help you prepare Our learning team can explain session formats and help you choose a suitable starting point. Fictional address: team@example.test Practice only. No messages are sent from this sample website.",
+          "missingAltCount": 0,
+          "title": "Contact the learning team | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "b28190586497eb5518ab03a0cd7ceb075490ed3906ba4ec379fd5e0f7730c968",
+        "snapshot": "snapshots/b28190586497eb5518ab03a0cd7ceb075490ed3906ba4ec379fd5e0f7730c968.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8852/contact/"
+      }
+    },
+    {
+      "id": "PAGE-eedf4cc7bddc",
+      "route": "/guide/",
+      "source": {
+        "checkedAt": "2026-11-09T02:12:05.274854+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8851/guide/",
+        "html": {
+          "canonical": "http://127.0.0.1:8851/guide/",
+          "description": "Fictional Northstar migration practice page: Session guide.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Session guide"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Session guide"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Session guide Find answers before joining your first learning session. What should I bring? Bring your checklist, a notebook and one learning goal. Can I learn at my own pace? Yes. Pause between topics and return to the guide whenever you need a reminder.",
+          "missingAltCount": 0,
+          "title": "Session guide | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "55f0a588e069d297fbf11c055133ccdbbfd4d1d302e974fd6acb556f9506a604",
+        "snapshot": "snapshots/55f0a588e069d297fbf11c055133ccdbbfd4d1d302e974fd6acb556f9506a604.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8851/guide/"
+      },
+      "target": {
+        "checkedAt": "2026-11-09T02:12:05.280241+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8852/help/",
+        "html": {
+          "canonical": "http://127.0.0.1:8852/help/",
+          "description": "Fictional Northstar migration practice page: Session guide.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Session guide"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Session guide"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [],
+          "mainText": "Session guide Find answers before joining your first learning session. What should I bring? Bring your checklist, a notebook and one learning goal. Can I learn at my own pace? Yes. Pause between topics and return to the guide whenever you need a reminder.",
+          "missingAltCount": 0,
+          "title": "Session guide | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "c1a1fe885f555fcf8e41c1894fd93477d209595c2c5a346f5896d05d2d0e03b3",
+        "snapshot": "snapshots/c1a1fe885f555fcf8e41c1894fd93477d209595c2c5a346f5896d05d2d0e03b3.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8852/help/"
+      }
+    },
+    {
+      "id": "PAGE-8d7d68e3faf1",
+      "route": "/resources/",
+      "source": {
+        "checkedAt": "2026-11-09T02:12:05.284544+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8851/resources/",
+        "html": {
+          "canonical": "http://127.0.0.1:8851/resources/",
+          "description": "Fictional Northstar migration practice page: Learning resources.",
+          "emptyAltCount": 0,
+          "h1s": [
+            "Learning resources"
+          ],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Learning resources",
+            "Your preparation kit"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Download the session checklist",
+              "url": "http://127.0.0.1:8851/downloads/checklist.txt"
+            }
+          ],
+          "mainText": "Learning resources Before your first session, download the checklist and prepare a quiet workspace. Bring your questions, choose one learning goal, and read the session guidance carefully. Your preparation kit A notebook for your learning goals A comfortable place to practise The session checklist Download the session checklist",
+          "missingAltCount": 0,
+          "title": "Learning resources | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "d8708be2dbd687ea8018368c91312e1849bb7979336fae875cae1ecd850f295b",
+        "snapshot": "snapshots/d8708be2dbd687ea8018368c91312e1849bb7979336fae875cae1ecd850f295b.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8851/resources/"
+      },
+      "target": {
+        "checkedAt": "2026-11-09T02:12:05.288656+00:00",
+        "contentType": "text/html",
+        "error": "",
+        "finalUrl": "http://127.0.0.1:8852/resources/",
+        "html": {
+          "canonical": "http://127.0.0.1:8852/resources/",
+          "description": "Fictional Northstar migration practice page: Learning resources.",
+          "emptyAltCount": 0,
+          "h1s": [],
+          "hasMain": true,
+          "headingJumps": 0,
+          "headings": [
+            "Your preparation kit"
+          ],
+          "imageCount": 0,
+          "lang": "en",
+          "links": [
+            {
+              "text": "Download the session checklist",
+              "url": "http://127.0.0.1:8852/downloads/checklist.txt"
+            }
+          ],
+          "mainText": "Your preparation kit A notebook for your learning goals A comfortable place to practise The session checklist Download the session checklist",
+          "missingAltCount": 0,
+          "title": "Learning resources | Northstar practice site"
+        },
+        "redirects": [],
+        "sha256": "900a23d22444383448adbc9ae3e29ebe794b45c72e84c67e887a9e86e4c51a81",
+        "snapshot": "snapshots/900a23d22444383448adbc9ae3e29ebe794b45c72e84c67e887a9e86e4c51a81.body",
+        "status": 200,
+        "url": "http://127.0.0.1:8852/resources/"
+      }
+    }
+  ],
+  "schemaVersion": 1
+}

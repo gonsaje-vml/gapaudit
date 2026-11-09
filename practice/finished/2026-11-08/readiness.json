@@ -1,0 +1,1315 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Northstar practice migration audit",
+    "date": "2026-11-08",
+    "baseline": "Fictional source-to-target parity; 4 scoped routes",
+    "method": "Fresh collection and Chrome review at 1440x900 and 390x844; original screenshots retained.",
+    "sourceEvidenceSha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+    "summary": [
+      "Three confirmed defects remain: checklist unavailable (P0), resources context omitted (P1), and mobile contact overflow (P1).",
+      "Navigation, route mapping and both native disclosures worked in the performed mouse/keyboard checks.",
+      "This is a finished audit of deliberately flawed practice sites, not a successful migration or release approval."
+    ],
+    "readinessSummary": "Required preparation download is blocked. Restore the missing guidance and mobile reflow, then retest the same journeys and viewports.",
+    "limitations": [
+      "Local fictional scope only. Formal accessibility conformance, production indexing, authentication, external services and real message submission are excluded.",
+      "Counts use source-present, non-overlapping logical regions: 6 body types and 9 required uses; target currently has 8 because the resources intro is absent.",
+      "Only hero and contact-panel have authored CSS classes. Unclassed variant labels describe observed native HTML selectors; they are not invented library classes.",
+      "CSS viewports are 1440x900 and 390x844; some mobile JPEG originals are 375x812 pixels. Crops use original image pixels."
+    ],
+    "summaryChartStyle": "flat"
+  },
+  "pages": [
+    {
+      "id": "PAGE-94d251729fdb",
+      "name": "Home",
+      "route": "/",
+      "sourceUrl": "http://127.0.0.1:8851/",
+      "targetUrl": "http://127.0.0.1:8852/",
+      "visualStatus": "Close",
+      "functionalStatus": "Partial",
+      "readiness": "Capability missing",
+      "retained": [
+        "Hero and preparation content match; resources navigation works."
+      ],
+      "gaps": [
+        "F-001: required checklist unavailable."
+      ],
+      "components": [
+        {
+          "family": "hero",
+          "variant": "hero",
+          "count": 1,
+          "visualStatus": "Close",
+          "functionalStatus": "Not applicable",
+          "readiness": "Ready",
+          "requiredStates": [
+            "initial"
+          ],
+          "verifiedStates": [
+            "initial"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "note": "Literal authored class hero; tested only within the fictional scope."
+        },
+        {
+          "family": "home preparation",
+          "variant": "(unclassed h2 + paragraphs)",
+          "count": 1,
+          "visualStatus": "Close",
+          "functionalStatus": "Partial",
+          "readiness": "Capability missing",
+          "note": "Native unclassed home group. Resources link works; its separate checklist action is missing."
+        }
+      ],
+      "screenshotPairs": [
+        {
+          "title": "Home / desktop",
+          "caption": "Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.",
+          "source": {
+            "path": "browser/home-source-desktop.jpg",
+            "url": "http://127.0.0.1:8851/",
+            "sha256": "e32745906f3643957b40d6becb34f12174208285959a7a06e15e17a3e8ec684b",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:14:13.529Z",
+            "crop": [
+              245,
+              210,
+              935,
+              390
+            ]
+          },
+          "target": {
+            "path": "browser/home-target-desktop.jpg",
+            "url": "http://127.0.0.1:8852/",
+            "sha256": "b8849192c6bcbcc460265bbbcd6cc72e2ef34da5d0afd14cc3562e787a0b2583",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:15:42.939Z",
+            "crop": [
+              245,
+              210,
+              935,
+              390
+            ]
+          }
+        },
+        {
+          "title": "Home / mobile",
+          "caption": "Matched mobile view at 390x844; content reflows on both sides.",
+          "source": {
+            "path": "browser/home-source-mobile.jpg",
+            "url": "http://127.0.0.1:8851/",
+            "sha256": "671df25f4c7bade2645ab480da75b918f1d2ad92ecd75ac375615006c9f14e9a",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:53.210Z",
+            "crop": [
+              15,
+              235,
+              360,
+              500
+            ]
+          },
+          "target": {
+            "path": "browser/home-target-mobile.jpg",
+            "url": "http://127.0.0.1:8852/",
+            "sha256": "7a1b005342dcb90c2f4d8ab9a703f26053da633071d7342cd8f92a0a1043215b",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:55.135Z",
+            "crop": [
+              15,
+              235,
+              360,
+              500
+            ]
+          }
+        }
+      ],
+      "qualityNotes": [
+        "Review limited to the stated local practice scope; no production approval."
+      ]
+    },
+    {
+      "id": "PAGE-8d7d68e3faf1",
+      "name": "Resources",
+      "route": "/resources/",
+      "sourceUrl": "http://127.0.0.1:8851/resources/",
+      "targetUrl": "http://127.0.0.1:8852/resources/",
+      "visualStatus": "Partial",
+      "functionalStatus": "Partial",
+      "readiness": "Capability missing",
+      "retained": [
+        "Kit heading, three list items and download label retained."
+      ],
+      "gaps": [
+        "F-001: required checklist unavailable.",
+        "F-002: H1 and introductory guidance missing."
+      ],
+      "components": [
+        {
+          "family": "introductory content",
+          "variant": "(unclassed h1 + p)",
+          "count": 1,
+          "visualStatus": "Partial",
+          "functionalStatus": "Not applicable",
+          "readiness": "Minor work",
+          "note": "Unclassed native h1 + p group. Resources is missing; contact and guide remain Ready. The aggregate keeps the worst observed remaining work visible."
+        },
+        {
+          "family": "preparation kit",
+          "variant": "(unclassed h2 + ul + p)",
+          "count": 1,
+          "visualStatus": "Close",
+          "functionalStatus": "Partial",
+          "readiness": "Capability missing",
+          "note": "Native unclassed resources kit. Text/list retained; checklist action fails."
+        }
+      ],
+      "screenshotPairs": [
+        {
+          "title": "Resources / desktop",
+          "caption": "Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.",
+          "source": {
+            "path": "browser/resources-source-desktop.jpg",
+            "url": "http://127.0.0.1:8851/resources/",
+            "sha256": "5ea9d1590ceee231e48a44d79b291b5cd979ebb973bfddc6870fcec4fb925199",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:14:14.461Z",
+            "crop": [
+              245,
+              205,
+              920,
+              470
+            ]
+          },
+          "target": {
+            "path": "browser/resources-target-desktop.jpg",
+            "url": "http://127.0.0.1:8852/resources/",
+            "sha256": "d9cfe74235bf23ad685e10953197a3c83755f42aa0c1666bb63ac731aa84863b",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:15:43.115Z",
+            "crop": [
+              245,
+              205,
+              920,
+              470
+            ]
+          }
+        },
+        {
+          "title": "Resources / mobile",
+          "caption": "Source heading and preparation guidance are missing on target; the preparation kit itself remains.",
+          "source": {
+            "path": "browser/resources-source-mobile.jpg",
+            "url": "http://127.0.0.1:8851/resources/",
+            "sha256": "c780b094d3851bff4abb94481f5fbd19f71a211230eea76c8370b06e5a569166",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:53.361Z",
+            "crop": [
+              15,
+              250,
+              375,
+              475
+            ]
+          },
+          "target": {
+            "path": "browser/resources-target-mobile.jpg",
+            "url": "http://127.0.0.1:8852/resources/",
+            "sha256": "6b9261a5060ce8a964ac0ef4649551684d237ea044c91be04abc0320c115d362",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:55.301Z",
+            "crop": [
+              15,
+              250,
+              375,
+              475
+            ]
+          }
+        }
+      ],
+      "qualityNotes": [
+        "Review limited to the stated local practice scope; no production approval."
+      ]
+    },
+    {
+      "id": "PAGE-3c32be8e5d4f",
+      "name": "Contact",
+      "route": "/contact/",
+      "sourceUrl": "http://127.0.0.1:8851/contact/",
+      "targetUrl": "http://127.0.0.1:8852/contact/",
+      "visualStatus": "Partial",
+      "functionalStatus": "Not applicable",
+      "readiness": "Minor work",
+      "retained": [
+        "Heading, introduction and all panel text retained; desktop presentation matches."
+      ],
+      "gaps": [
+        "F-003: mobile contact panel overflows; desktop text/layout match."
+      ],
+      "components": [
+        {
+          "family": "introductory content",
+          "variant": "(unclassed h1 + p)",
+          "count": 1,
+          "visualStatus": "Close",
+          "functionalStatus": "Not applicable",
+          "readiness": "Ready",
+          "requiredStates": [
+            "initial"
+          ],
+          "verifiedStates": [
+            "initial"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "limitations": [],
+          "note": "This page intro remains matched; the aggregate issue affects resources only."
+        },
+        {
+          "family": "contact-panel",
+          "variant": "contact-panel",
+          "count": 1,
+          "visualStatus": "Partial",
+          "functionalStatus": "Not applicable",
+          "readiness": "Minor work",
+          "note": "Literal authored class contact-panel; tested only within the fictional scope."
+        }
+      ],
+      "screenshotPairs": [
+        {
+          "title": "Contact / desktop",
+          "caption": "Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.",
+          "source": {
+            "path": "browser/contact-source-desktop.jpg",
+            "url": "http://127.0.0.1:8851/contact/",
+            "sha256": "e672b8ea4a301a578bc4b44227a8dde08110aa9b078e8c30a1a9bc21982e31c6",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:14:14.651Z",
+            "crop": [
+              245,
+              205,
+              925,
+              505
+            ]
+          },
+          "target": {
+            "path": "browser/contact-target-desktop.jpg",
+            "url": "http://127.0.0.1:8852/contact/",
+            "sha256": "a023071faecddee94061ad7d1860ae3df5f3f02334ca8b4f41d4c9f2bcb33a39",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:15:43.278Z",
+            "crop": [
+              245,
+              205,
+              925,
+              505
+            ]
+          }
+        },
+        {
+          "title": "Contact / mobile",
+          "caption": "At the same 390x844 CSS viewport, target fixes the panel at 760 CSS pixels and clips its text; source fits. Original JPEGs are 375x812 pixels, so crop bounds use those pixels.",
+          "source": {
+            "path": "browser/contact-source-mobile.jpg",
+            "url": "http://127.0.0.1:8851/contact/",
+            "sha256": "cfb5cdb36198c8fd0e609ab9339575bec7b05a6291a02685b3031e2c66e207e2",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:53.520Z",
+            "crop": [
+              15,
+              440,
+              360,
+              690
+            ]
+          },
+          "target": {
+            "path": "browser/contact-target-mobile.jpg",
+            "url": "http://127.0.0.1:8852/contact/",
+            "sha256": "ab9dec53e9ef39dc317af02423d2dd93360c9cc9e35a8f14b3695c1f12374bef",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:55.468Z",
+            "crop": [
+              15,
+              440,
+              360,
+              690
+            ]
+          }
+        }
+      ],
+      "qualityNotes": [
+        "Review limited to the stated local practice scope; no production approval."
+      ]
+    },
+    {
+      "id": "PAGE-eedf4cc7bddc",
+      "name": "Guide",
+      "route": "/guide/",
+      "sourceUrl": "http://127.0.0.1:8851/guide/",
+      "targetUrl": "http://127.0.0.1:8852/help/",
+      "visualStatus": "Close",
+      "functionalStatus": "Complete",
+      "readiness": "Ready",
+      "requiredStates": [
+        "closed/open disclosures; keyboard/mouse; navigation"
+      ],
+      "verifiedStates": [
+        "closed/open disclosures; keyboard/mouse; navigation"
+      ],
+      "requiredViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "verifiedViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "qualityComplete": true,
+      "limitations": [],
+      "retained": [
+        "Moved route maps to /help/; both disclosures and answers retained."
+      ],
+      "gaps": [],
+      "components": [
+        {
+          "family": "introductory content",
+          "variant": "(unclassed h1 + p)",
+          "count": 1,
+          "visualStatus": "Close",
+          "functionalStatus": "Not applicable",
+          "readiness": "Ready",
+          "requiredStates": [
+            "initial"
+          ],
+          "verifiedStates": [
+            "initial"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "limitations": [],
+          "note": "This page intro remains matched; the aggregate issue affects resources only."
+        },
+        {
+          "family": "disclosure",
+          "variant": "(unclassed details)",
+          "count": 2,
+          "visualStatus": "Close",
+          "functionalStatus": "Complete",
+          "readiness": "Ready",
+          "requiredStates": [
+            "both closed",
+            "first open",
+            "second open",
+            "both open",
+            "keyboard Enter/Space",
+            "mouse open/close"
+          ],
+          "verifiedStates": [
+            "both closed",
+            "first open",
+            "second open",
+            "both open",
+            "keyboard Enter/Space",
+            "mouse open/close"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "note": "Two unclassed native details elements, counted as two uses, not one accordion library instance."
+        }
+      ],
+      "screenshotPairs": [
+        {
+          "title": "Guide / desktop",
+          "caption": "Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.",
+          "source": {
+            "path": "browser/guide-source-desktop.jpg",
+            "url": "http://127.0.0.1:8851/guide/",
+            "sha256": "2c772126028aa778495711aeadc0d9a716ec88ad8fda07223cc67218f5cde65b",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:14:14.834Z",
+            "crop": [
+              245,
+              205,
+              925,
+              460
+            ]
+          },
+          "target": {
+            "path": "browser/guide-target-desktop.jpg",
+            "url": "http://127.0.0.1:8852/help/",
+            "sha256": "a9575922b008bcd5b56c18644f9cfb87b3af39cd70f88ff9d59532002ef6e649",
+            "viewport": "1440x900",
+            "state": "Top of page; disclosures collapsed; no horizontal scroll",
+            "capturedAt": "2026-11-09T02:15:43.457Z",
+            "crop": [
+              245,
+              205,
+              925,
+              460
+            ]
+          }
+        },
+        {
+          "title": "Guide / mobile",
+          "caption": "Both collapsed native disclosures remain present at 390x844.",
+          "source": {
+            "path": "browser/guide-source-mobile.jpg",
+            "url": "http://127.0.0.1:8851/guide/",
+            "sha256": "f14d09d101cc7987937f6263a8270ccc6b203d1574e1ec999fd362810e2c6773",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:53.730Z",
+            "crop": [
+              15,
+              260,
+              375,
+              490
+            ]
+          },
+          "target": {
+            "path": "browser/guide-target-mobile.jpg",
+            "url": "http://127.0.0.1:8852/help/",
+            "sha256": "160b8191c50735a9b5e64807c16d105b68293e3a77be10641dbc9036cacc4d85",
+            "viewport": "390x844",
+            "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+            "capturedAt": "2026-11-09T02:15:55.702Z",
+            "crop": [
+              15,
+              260,
+              375,
+              490
+            ]
+          }
+        },
+        {
+          "title": "Guide / mobile-open",
+          "caption": "Both answers opened by mouse. Enter opened and Space closed each disclosure on both sites at both required viewports; browser-actions.json preserves the state sequence.",
+          "source": {
+            "path": "browser/guide-source-mobile-open.jpg",
+            "url": "http://127.0.0.1:8851/guide/",
+            "sha256": "019fd6fba3acc5ced39fe745f6d72757cc67212d80658d51ee5c121594f204a4",
+            "viewport": "390x844",
+            "state": "Both disclosures opened with mouse; top of page",
+            "capturedAt": "2026-11-09T02:15:54.420Z",
+            "crop": [
+              15,
+              410,
+              375,
+              705
+            ]
+          },
+          "target": {
+            "path": "browser/guide-target-mobile-open.jpg",
+            "url": "http://127.0.0.1:8852/help/",
+            "sha256": "801b854b3ac36c6d8147e85bb3ff38cae9fa42f19d52b9b44050e821dc2b5bf5",
+            "viewport": "390x844",
+            "state": "Both disclosures opened with mouse; top of page",
+            "capturedAt": "2026-11-09T02:15:56.405Z",
+            "crop": [
+              15,
+              410,
+              375,
+              705
+            ]
+          }
+        }
+      ],
+      "qualityNotes": [
+        "Review limited to the stated local practice scope; no production approval."
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "B01",
+      "family": "hero",
+      "variants": [
+        "hero"
+      ],
+      "usage": {
+        "PAGE-94d251729fdb": 1
+      },
+      "visualStatus": "Close",
+      "functionalStatus": "Not applicable",
+      "readiness": "Ready",
+      "requiredStates": [
+        "initial"
+      ],
+      "verifiedStates": [
+        "initial"
+      ],
+      "requiredViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "verifiedViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "qualityComplete": true,
+      "limitations": [],
+      "expected": "Retain the static hero heading, paragraph, navy/red treatment and responsive layout.",
+      "retained": [
+        "Heading, paragraph and presentation match at both viewports."
+      ],
+      "visualGaps": [],
+      "functionalGaps": [],
+      "remainingWork": [],
+      "acceptance": [
+        "No repair needed within the scoped static hero."
+      ],
+      "evidence": [
+        "home-desktop",
+        "home-mobile"
+      ],
+      "variantAssessments": [
+        {
+          "variant": "hero",
+          "usage": {
+            "PAGE-94d251729fdb": 1
+          },
+          "visualStatus": "Close",
+          "functionalStatus": "Not applicable",
+          "readiness": "Ready",
+          "requiredStates": [
+            "initial"
+          ],
+          "verifiedStates": [
+            "initial"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "limitations": [],
+          "note": "Literal authored class hero; tested only within the fictional scope."
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "family": "home preparation",
+      "variants": [
+        "(unclassed h2 + paragraphs)"
+      ],
+      "usage": {
+        "PAGE-94d251729fdb": 1
+      },
+      "visualStatus": "Close",
+      "functionalStatus": "Partial",
+      "readiness": "Capability missing",
+      "expected": "Retain the preparation content and both resource/download entry points.",
+      "retained": [
+        "Heading and copy match; the resources link opens the intended page."
+      ],
+      "visualGaps": [],
+      "functionalGaps": [
+        "Required checklist entry point returns 404."
+      ],
+      "remainingWork": [
+        "Restore the required checklist destination (F-001)."
+      ],
+      "acceptance": [
+        "Both entry points open the approved checklist at both sizes."
+      ],
+      "evidence": [
+        "D-desktop",
+        "D-mobile",
+        "home-mobile"
+      ],
+      "limitations": [],
+      "variantAssessments": [
+        {
+          "variant": "(unclassed h2 + paragraphs)",
+          "usage": {
+            "PAGE-94d251729fdb": 1
+          },
+          "visualStatus": "Close",
+          "functionalStatus": "Partial",
+          "readiness": "Capability missing",
+          "note": "Native unclassed home group. Resources link works; its separate checklist action is missing."
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "family": "introductory content",
+      "variants": [
+        "(unclassed h1 + p)"
+      ],
+      "usage": {
+        "PAGE-8d7d68e3faf1": 1,
+        "PAGE-3c32be8e5d4f": 1,
+        "PAGE-eedf4cc7bddc": 1
+      },
+      "visualStatus": "Partial",
+      "functionalStatus": "Not applicable",
+      "readiness": "Minor work",
+      "expected": "Retain each page main heading and its introductory guidance.",
+      "retained": [
+        "Contact and guide introductions remain matched at both sizes."
+      ],
+      "visualGaps": [
+        "Resources loses the entire H1/guidance region (F-002)."
+      ],
+      "functionalGaps": [],
+      "remainingWork": [
+        "Restore the resources H1 and preparation paragraph."
+      ],
+      "acceptance": [
+        "Approved headings/guidance appear before body content at both sizes."
+      ],
+      "evidence": [
+        "resources-mobile",
+        "quality-observations.json"
+      ],
+      "limitations": [],
+      "variantAssessments": [
+        {
+          "variant": "(unclassed h1 + p)",
+          "usage": {
+            "PAGE-8d7d68e3faf1": 1,
+            "PAGE-3c32be8e5d4f": 1,
+            "PAGE-eedf4cc7bddc": 1
+          },
+          "visualStatus": "Partial",
+          "functionalStatus": "Not applicable",
+          "readiness": "Minor work",
+          "note": "Unclassed native h1 + p group. Resources is missing; contact and guide remain Ready. The aggregate keeps the worst observed remaining work visible."
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "family": "preparation kit",
+      "variants": [
+        "(unclassed h2 + ul + p)"
+      ],
+      "usage": {
+        "PAGE-8d7d68e3faf1": 1
+      },
+      "visualStatus": "Close",
+      "functionalStatus": "Partial",
+      "readiness": "Capability missing",
+      "expected": "Retain the preparation list and working checklist download.",
+      "retained": [
+        "Preparation heading, three list items and download label remain."
+      ],
+      "visualGaps": [],
+      "functionalGaps": [
+        "Download returns the same unavailable URL as home (F-001)."
+      ],
+      "remainingWork": [
+        "Publish the approved checklist or approved replacement destination."
+      ],
+      "acceptance": [
+        "Open correct checklist from resources at both sizes."
+      ],
+      "evidence": [
+        "resources-desktop",
+        "D-desktop",
+        "D-mobile"
+      ],
+      "limitations": [],
+      "variantAssessments": [
+        {
+          "variant": "(unclassed h2 + ul + p)",
+          "usage": {
+            "PAGE-8d7d68e3faf1": 1
+          },
+          "visualStatus": "Close",
+          "functionalStatus": "Partial",
+          "readiness": "Capability missing",
+          "note": "Native unclassed resources kit. Text/list retained; checklist action fails."
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "family": "contact-panel",
+      "variants": [
+        "contact-panel"
+      ],
+      "usage": {
+        "PAGE-3c32be8e5d4f": 1
+      },
+      "visualStatus": "Partial",
+      "functionalStatus": "Not applicable",
+      "readiness": "Minor work",
+      "expected": "Fit all fictional contact content to its container without horizontal scrolling.",
+      "retained": [
+        "All text is retained; desktop panel matches. No form or sending service exists."
+      ],
+      "visualGaps": [
+        "Target uses a fixed 760px panel at mobile width (F-003)."
+      ],
+      "functionalGaps": [],
+      "remainingWork": [
+        "Remove the target-only mobile width and retest reflow."
+      ],
+      "acceptance": [
+        "At 390x844 all copy fits without horizontal scroll; retain desktop match."
+      ],
+      "evidence": [
+        "contact-desktop",
+        "contact-mobile",
+        "browser-observations.json"
+      ],
+      "limitations": [],
+      "variantAssessments": [
+        {
+          "variant": "contact-panel",
+          "usage": {
+            "PAGE-3c32be8e5d4f": 1
+          },
+          "visualStatus": "Partial",
+          "functionalStatus": "Not applicable",
+          "readiness": "Minor work",
+          "note": "Literal authored class contact-panel; tested only within the fictional scope."
+        }
+      ]
+    },
+    {
+      "id": "B06",
+      "family": "disclosure",
+      "variants": [
+        "(unclassed details)"
+      ],
+      "usage": {
+        "PAGE-eedf4cc7bddc": 2
+      },
+      "visualStatus": "Close",
+      "functionalStatus": "Complete",
+      "readiness": "Ready",
+      "requiredStates": [
+        "both closed",
+        "first open",
+        "second open",
+        "both open",
+        "keyboard Enter/Space",
+        "mouse open/close"
+      ],
+      "verifiedStates": [
+        "both closed",
+        "first open",
+        "second open",
+        "both open",
+        "keyboard Enter/Space",
+        "mouse open/close"
+      ],
+      "requiredViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "verifiedViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "qualityComplete": true,
+      "limitations": [],
+      "expected": "Retain both native details/summary controls, answers and keyboard behavior.",
+      "retained": [
+        "Both controls and answers match. Enter/Space and mouse state transitions passed at both sizes."
+      ],
+      "visualGaps": [],
+      "functionalGaps": [],
+      "remainingWork": [],
+      "acceptance": [
+        "Continue preserving both answer texts and keyboard/pointer operation."
+      ],
+      "evidence": [
+        "I-desktop",
+        "I-mobile",
+        "guide-mobile-open"
+      ],
+      "variantAssessments": [
+        {
+          "variant": "(unclassed details)",
+          "usage": {
+            "PAGE-eedf4cc7bddc": 2
+          },
+          "visualStatus": "Close",
+          "functionalStatus": "Complete",
+          "readiness": "Ready",
+          "requiredStates": [
+            "both closed",
+            "first open",
+            "second open",
+            "both open",
+            "keyboard Enter/Space",
+            "mouse open/close"
+          ],
+          "verifiedStates": [
+            "both closed",
+            "first open",
+            "second open",
+            "both open",
+            "keyboard Enter/Space",
+            "mouse open/close"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "limitations": [],
+          "note": "Two unclassed native details elements, counted as two uses, not one accordion library instance."
+        }
+      ]
+    }
+  ],
+  "sharedComponents": [
+    {
+      "id": "S01",
+      "family": "header",
+      "variants": [
+        "(unclassed header)"
+      ],
+      "usage": {
+        "PAGE-94d251729fdb": 1,
+        "PAGE-3c32be8e5d4f": 1,
+        "PAGE-eedf4cc7bddc": 1,
+        "PAGE-8d7d68e3faf1": 1
+      },
+      "visualStatus": "Close",
+      "functionalStatus": "Complete",
+      "readiness": "Ready",
+      "requiredStates": [
+        "all four navigation destinations",
+        "keyboard order"
+      ],
+      "verifiedStates": [
+        "all four navigation destinations",
+        "keyboard order"
+      ],
+      "requiredViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "verifiedViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "qualityComplete": true,
+      "limitations": [],
+      "expected": "Preserve the shared header and its scoped behavior.",
+      "retained": [
+        "Matched presentation and content; all four links and route mapping work."
+      ],
+      "visualGaps": [],
+      "functionalGaps": [],
+      "remainingWork": [],
+      "acceptance": [
+        "Retain the tested content and behavior at both viewports."
+      ],
+      "evidence": [
+        "N-desktop",
+        "N-mobile",
+        "browser-actions.json",
+        "browser-observations.json"
+      ],
+      "variantAssessments": [
+        {
+          "variant": "(unclassed header)",
+          "usage": {
+            "PAGE-94d251729fdb": 1,
+            "PAGE-3c32be8e5d4f": 1,
+            "PAGE-eedf4cc7bddc": 1,
+            "PAGE-8d7d68e3faf1": 1
+          },
+          "visualStatus": "Close",
+          "functionalStatus": "Complete",
+          "readiness": "Ready",
+          "requiredStates": [
+            "all four navigation destinations",
+            "keyboard order"
+          ],
+          "verifiedStates": [
+            "all four navigation destinations",
+            "keyboard order"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "limitations": [],
+          "note": "Native HTML with no class attribute. Four uses on each environment; excluded from body totals."
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "family": "footer",
+      "variants": [
+        "(unclassed footer)"
+      ],
+      "usage": {
+        "PAGE-94d251729fdb": 1,
+        "PAGE-3c32be8e5d4f": 1,
+        "PAGE-eedf4cc7bddc": 1,
+        "PAGE-8d7d68e3faf1": 1
+      },
+      "visualStatus": "Close",
+      "functionalStatus": "Not applicable",
+      "readiness": "Ready",
+      "requiredStates": [
+        "initial and lower page"
+      ],
+      "verifiedStates": [
+        "initial and lower page"
+      ],
+      "requiredViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "verifiedViewports": [
+        "1440x900",
+        "390x844"
+      ],
+      "qualityComplete": true,
+      "limitations": [],
+      "expected": "Preserve the shared footer and its scoped behavior.",
+      "retained": [
+        "Matched presentation and content; lower-page copy retained."
+      ],
+      "visualGaps": [],
+      "functionalGaps": [],
+      "remainingWork": [],
+      "acceptance": [
+        "Retain the tested content and behavior at both viewports."
+      ],
+      "evidence": [
+        "N-desktop",
+        "N-mobile",
+        "browser-actions.json",
+        "browser-observations.json"
+      ],
+      "variantAssessments": [
+        {
+          "variant": "(unclassed footer)",
+          "usage": {
+            "PAGE-94d251729fdb": 1,
+            "PAGE-3c32be8e5d4f": 1,
+            "PAGE-eedf4cc7bddc": 1,
+            "PAGE-8d7d68e3faf1": 1
+          },
+          "visualStatus": "Close",
+          "functionalStatus": "Not applicable",
+          "readiness": "Ready",
+          "requiredStates": [
+            "initial and lower page"
+          ],
+          "verifiedStates": [
+            "initial and lower page"
+          ],
+          "requiredViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "verifiedViewports": [
+            "1440x900",
+            "390x844"
+          ],
+          "qualityComplete": true,
+          "limitations": [],
+          "note": "Native HTML with no class attribute. Four uses on each environment; excluded from body totals."
+        }
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "K01",
+      "name": "Required preparation download",
+      "pageIds": [
+        "PAGE-94d251729fdb",
+        "PAGE-8d7d68e3faf1"
+      ],
+      "status": "Fail",
+      "retained": "Both visible entry points and labels remain.",
+      "missing": "Target file is unavailable (404).",
+      "action": "Resolve F-001 and repeat both journeys at both sizes.",
+      "evidence": [
+        "D-desktop",
+        "D-mobile",
+        "asset-checks.json"
+      ]
+    },
+    {
+      "id": "K02",
+      "name": "Shared navigation and moved guide route",
+      "pageIds": [
+        "PAGE-94d251729fdb",
+        "PAGE-3c32be8e5d4f",
+        "PAGE-eedf4cc7bddc",
+        "PAGE-8d7d68e3faf1"
+      ],
+      "status": "Pass",
+      "retained": "All four navigation destinations work; /guide/ maps to /help/.",
+      "missing": "No missing scoped navigation capability observed.",
+      "action": "Preserve tested destinations and mapping.",
+      "evidence": [
+        "N-desktop",
+        "N-mobile"
+      ]
+    },
+    {
+      "id": "K03",
+      "name": "Two native help disclosures",
+      "pageIds": [
+        "PAGE-eedf4cc7bddc"
+      ],
+      "status": "Pass",
+      "retained": "Mouse and Enter/Space open/close both retained answers.",
+      "missing": "No missing scoped disclosure state observed.",
+      "action": "Retain both tested controls and answer content.",
+      "evidence": [
+        "I-desktop",
+        "I-mobile",
+        "browser-actions.json"
+      ]
+    }
+  ],
+  "qualityAreas": [
+    {
+      "name": "Responsive visual parity",
+      "outcome": "Fail",
+      "observations": [
+        "Home and guide reflow at both sizes. Contact target is 760px wide within the 390px viewport. Resources omits its intro."
+      ],
+      "remainingWork": [
+        "Resolve F-002/F-003 and repeat matched captures."
+      ],
+      "evidence": [
+        "V02-mobile",
+        "V03-mobile",
+        "browser-observations.json"
+      ]
+    },
+    {
+      "name": "Scoped accessibility",
+      "outcome": "Fail",
+      "observations": [
+        "Keyboard order, focus outline and native disclosure controls passed. Language and nav label retained. Authored text/focus contrast pairs exceed scoped minimums. Resources loses its H1; contact fails mobile reflow."
+      ],
+      "remainingWork": [
+        "Restore the H1 and mobile reflow. Formal conformance is outside this exercise."
+      ],
+      "evidence": [
+        "A-desktop",
+        "A-mobile",
+        "quality-observations.json",
+        "asset-checks.json"
+      ]
+    },
+    {
+      "name": "Local SEO and environment",
+      "outcome": "Pass",
+      "observations": [
+        "Page titles/descriptions and canonical paths retained, including /help/. Stylesheet responses match fixture bytes. No forms, JavaScript, images or external services exist in the reviewed pages."
+      ],
+      "remainingWork": [
+        "Production robots, sitemap/indexing and service checks are not applicable to this local exercise."
+      ],
+      "evidence": [
+        "SEO",
+        "quality-observations.json",
+        "asset-checks.json"
+      ]
+    },
+    {
+      "name": "Evidence and reproducibility",
+      "outcome": "Pass",
+      "observations": [
+        "Static baseline, reviewed findings, browser action sequences, screenshot originals and hashes are preserved. PDF verification is issued separately after rendering."
+      ],
+      "remainingWork": [
+        "No release decision is requested. Preserve the frozen packet when reproducing."
+      ],
+      "evidence": [
+        "evidence.json",
+        "browser-review.json",
+        "browser-actions.json",
+        "capture-archive.zip"
+      ]
+    }
+  ],
+  "workItems": [
+    {
+      "id": "W-F-001",
+      "title": "Required checklist download returns 404",
+      "status": "Fail",
+      "priority": "P0",
+      "componentIds": [
+        "B02",
+        "B04"
+      ],
+      "pageIds": [
+        "PAGE-94d251729fdb",
+        "PAGE-8d7d68e3faf1"
+      ],
+      "action": "Publish the approved sample checklist at /downloads/checklist.txt or update both entry points to an approved destination.",
+      "doneWhen": "From both pages at both viewports, open the approved checklist and verify its content, not just an HTTP 200.",
+      "owner": "TBD",
+      "evidence": [
+        "D-desktop",
+        "D-mobile",
+        "download-mobile",
+        "asset-checks.json",
+        "evidence.json: linkChecks"
+      ]
+    },
+    {
+      "id": "W-F-002",
+      "title": "Resources heading and preparation guidance omitted",
+      "status": "Fail",
+      "priority": "P1",
+      "componentIds": [
+        "B03"
+      ],
+      "pageIds": [
+        "PAGE-8d7d68e3faf1"
+      ],
+      "action": "Restore the approved H1 and introductory preparation paragraph before the kit.",
+      "doneWhen": "At desktop and mobile sizes, verify the H1, exact approved guidance and order; retain the kit and download link.",
+      "owner": "TBD",
+      "evidence": [
+        "V02-desktop",
+        "V02-mobile",
+        "resources-mobile",
+        "quality-observations.json"
+      ]
+    },
+    {
+      "id": "W-F-003",
+      "title": "Contact panel overflows the mobile viewport",
+      "status": "Fail",
+      "priority": "P1",
+      "componentIds": [
+        "B05"
+      ],
+      "pageIds": [
+        "PAGE-3c32be8e5d4f"
+      ],
+      "action": "Remove the target-only fixed mobile width and allow the panel to fit its container.",
+      "doneWhen": "At 390x844 and 1440x900, all panel copy fits without horizontal scrolling and remains matched to source.",
+      "owner": "TBD",
+      "evidence": [
+        "V03-mobile",
+        "contact-mobile",
+        "browser-observations.json",
+        "asset-checks.json"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "path": "evidence.json",
+      "label": "Frozen static HTTP observations"
+    },
+    {
+      "path": "baseline-analysis.json",
+      "label": "Initial automated baseline before review"
+    },
+    {
+      "path": "analysis.json",
+      "label": "Recomputed measured totals with findings"
+    },
+    {
+      "path": "report.md",
+      "label": "Reviewed measured supporting report"
+    },
+    {
+      "path": "reviews.json",
+      "label": "All three supported findings"
+    },
+    {
+      "path": "browser-review.json",
+      "label": "Individual checks and screenshot bindings"
+    },
+    {
+      "path": "browser-actions.json",
+      "label": "Actual navigation/download/disclosure state sequences"
+    },
+    {
+      "path": "browser-observations.json",
+      "label": "DOM readings and original capture metadata"
+    },
+    {
+      "path": "quality-observations.json",
+      "label": "Observed document metadata and authored identifiers"
+    },
+    {
+      "path": "asset-checks.json",
+      "label": "Served CSS/checklist bytes and scoped contrast calculations"
+    },
+    {
+      "path": "census.json",
+      "label": "Non-overlapping native region census and target exceptions"
+    },
+    {
+      "path": "scope.md",
+      "label": "Agreed fictional exercise scope"
+    },
+    {
+      "path": "capture-archive.zip",
+      "label": "Original screenshots, HTTP snapshots, inputs and matching fixture code"
+    }
+  ]
+}

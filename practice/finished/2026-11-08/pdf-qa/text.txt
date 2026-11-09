@@ -1,0 +1,1093 @@
+--- Page 1 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+1
+EVIDENCE: 2026-11-08
+Northstar practice migration audit
+Three confirmed defects remain: checklist unavailable (P0), resources context omitted (P1), and
+mobile contact overflow (P1).
+Component readiness
+2
+2
+2
+6
+block types
+One rating per distinct block type
+Readiness
+Block types
+Ready
+2
+Minor work
+2
+Substantial work
+0
+Capability missing
+2
+Unverified
+0
+Scoped pages
+Block types
+Variants
+Block uses
+4
+6
+6
+9
+Block uses by page
+Page
+Readiness mix
+Uses
+Visual match
+Home
+1
+1
+2
+Close
+Resources
+1
+1
+2
+Partial
+Contact
+1
+1
+2
+Partial
+Guide
+3
+3
+Close
+Same readiness colors as above. Each row counts uses on that page; repeated types can appear on several
+pages. Visual match is a separate assessment.
+Navigation, route mapping and both native disclosures worked in the performed mouse/keyboard
+checks.
+This is a finished audit of deliberately flawed practice sites, not a successful migration or release
+approval.
+Required preparation download is blocked. Restore the missing guidance and mobile reflow, then
+retest the same journeys and viewports.
+Baseline: Fictional source-to-target parity; 4 scoped routes
+Readiness counts are not completion percentages. Shared header/footer are assessed separately.
+
+
+--- Page 2 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+2
+CONTENTS / CLICKABLE PDF BOOKMARKS
+Find the detail you need
+Section
+Page
+Reading the assessments
+3
+Scope and page mappings
+4
+Page breakdown: Home
+5
+Page breakdown: Resources
+7
+Page breakdown: Contact
+9
+Page breakdown: Guide
+11
+Block usage by page
+14
+Exact authored variants
+15
+Shared usage and source-to-block mapping
+16
+Block-by-block assessments
+17
+Retained and missing capabilities
+25
+Responsive visual parity
+26
+Scoped accessibility
+27
+Local SEO and environment
+28
+Evidence and reproducibility
+29
+Final work board
+30
+Technical evidence and original outcomes
+31
+Every detailed component section is bookmarked. Full original check records and machine-readable assessments
+are embedded in audit-records.zip. Full-size evidence remains at the retained paths.
+
+
+--- Page 3 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+3
+SCOPE / TERMS / EVIDENCE BOUNDARIES
+Reading the assessments
+Fresh collection and Chrome review at 1440x900 and 390x844; original screenshots retained.
+Dimension
+Meaning
+Visual: Close / Partial / Far
+off / Unverified
+Rendered comparison of layout, typography, spacing, color, imagery
+and states. A missing file alone does not establish a visual rating.
+Functional: Complete /
+Partial / Missing / Unverified /
+Not applicable
+Expected capabilities and states compared with production.
+Complete requires every stated required state verified. Sampled
+success remains bounded.
+Readiness: Ready / Minor
+work / Substantial work /
+Capability missing /
+Unverified
+Delivery assessment using visual, functional and required quality
+coverage. Ready requires completed required states/viewports and
+quality checks.
+Block types, variants and
+uses
+A block type is a distinct implementation, such as hero. A variant is
+an exact class combination, such as hero video. Each placement is
+one use; cards inside a block are not separate uses. Shared
+header/footer are excluded from body totals.
+Remaining limits
+Local fictional scope only. Formal accessibility conformance, production indexing, authentication, external
+services and real message submission are excluded.
+Counts use source-present, non-overlapping logical regions: 6 body types and 9 required uses; target currently
+has 8 because the resources intro is absent.
+Only hero and contact-panel have authored CSS classes. Unclassed variant labels describe observed native HTML
+selectors; they are not invented library classes.
+CSS viewports are 1440x900 and 390x844; some mobile JPEG originals are 375x812 pixels. Crops use original
+image pixels.
+
+
+--- Page 4 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+4
+4-PAGE INVENTORY / SOURCE AND TARGET REFERENCE
+Scope and page mappings
+Comparison baseline: Fictional source-to-target parity; 4 scoped routes
+Page
+Production / target mappings
+Home
+PAGE-94d251729fdb
+http://127.0.0.1:8851/
+http://127.0.0.1:8852/
+Resources
+PAGE-8d7d68e3faf1
+http://127.0.0.1:8851/resources/
+http://127.0.0.1:8852/resources/
+Contact
+PAGE-3c32be8e5d4f
+http://127.0.0.1:8851/contact/
+http://127.0.0.1:8852/contact/
+Guide
+PAGE-eedf4cc7bddc
+http://127.0.0.1:8851/guide/
+http://127.0.0.1:8852/help/
+
+
+--- Page 5 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+5
+PAGE-94D251729FDB / /
+Page breakdown: Home
+Visual: Close | Functional: Partial
+Readiness: Capability missing
+PRODUCTION / SOURCE / 1440x900
+Source page / 2026-11-09T02:14:13.529Z
+Capture: home-source-desktop.jpg
+MIGRATED / TARGET / 1440x900
+Target page / 2026-11-09T02:15:42.939Z
+Capture: home-target-desktop.jpg
+Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.
+PRODUCTION / SOURCE / 390x844
+Source page / 2026-11-09T02:15:53.210Z
+Capture: home-source-mobile.jpg
+MIGRATED / TARGET / 390x844
+Target page / 2026-11-09T02:15:55.135Z
+Capture: home-target-mobile.jpg
+Matched mobile view at 390x844; content reflows on both sides.
+Already retained / working
+Hero and preparation content match; resources navigation works.
+Gaps and remaining work
+F-001: required checklist unavailable.
+Page-specific quality checks
+Review limited to the stated local practice scope; no production approval.
+
+
+--- Page 6 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+6
+PAGE BREAKDOWN / COUNTS AND READINESS
+Blocks on Home
+Counts below are authored uses of the exact class combination. Statuses apply to the noted evidence and states;
+review each variant and page-specific exception.
+Actual class / uses
+Visual
+Functional
+Readiness / remaining detail
+hero / 1
+Close
+Not applicable
+Ready
+Literal authored class hero; tested only
+within the fictional scope.
+(unclassed h2 + paragraphs)
+/ 1
+Close
+Partial
+Capability missing
+Native unclassed home group. Resources
+link works; its separate checklist action
+is missing.
+
+
+--- Page 7 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+7
+PAGE-8D7D68E3FAF1 / /RESOURCES/
+Page breakdown: Resources
+Visual: Partial | Functional: Partial
+Readiness: Capability missing
+PRODUCTION / SOURCE / 1440x900
+Source page / 2026-11-09T02:14:14.461Z
+Capture: resources-source-desktop.jpg
+MIGRATED / TARGET / 1440x900
+Target page / 2026-11-09T02:15:43.115Z
+Capture: resources-target-desktop.jpg
+Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.
+PRODUCTION / SOURCE / 390x844
+Source page / 2026-11-09T02:15:53.361Z
+Capture: resources-source-mobile.jpg
+MIGRATED / TARGET / 390x844
+Target page / 2026-11-09T02:15:55.301Z
+Capture: resources-target-mobile.jpg
+Source heading and preparation guidance are missing on target; the preparation kit itself remains.
+Already retained / working
+Kit heading, three list items and download label retained.
+Gaps and remaining work
+F-001: required checklist unavailable.
+F-002: H1 and introductory guidance missing.
+Page-specific quality checks
+Review limited to the stated local practice scope; no production approval.
+
+
+--- Page 8 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+8
+PAGE BREAKDOWN / COUNTS AND READINESS
+Blocks on Resources
+Counts below are authored uses of the exact class combination. Statuses apply to the noted evidence and states;
+review each variant and page-specific exception.
+Actual class / uses
+Visual
+Functional
+Readiness / remaining detail
+(unclassed h1 + p) / 1
+Partial
+Not applicable
+Minor work
+Unclassed native h1 + p group.
+Resources is missing; contact and guide
+remain Ready. The aggregate keeps the
+worst observed remaining work visible.
+(unclassed h2 + ul + p) / 1
+Close
+Partial
+Capability missing
+Native unclassed resources kit. Text/list
+retained; checklist action fails.
+
+
+--- Page 9 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+9
+PAGE-3C32BE8E5D4F / /CONTACT/
+Page breakdown: Contact
+Visual: Partial | Functional: Not applicable
+Readiness: Minor work
+PRODUCTION / SOURCE / 1440x900
+Source page / 2026-11-09T02:14:14.651Z
+Capture: contact-source-desktop.jpg
+MIGRATED / TARGET / 1440x900
+Target page / 2026-11-09T02:15:43.278Z
+Capture: contact-target-desktop.jpg
+Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.
+PRODUCTION / SOURCE / 390x844
+Source page / 2026-11-09T02:15:53.520Z
+Capture: contact-source-mobile.jpg
+MIGRATED / TARGET / 390x844
+Target page / 2026-11-09T02:15:55.468Z
+Capture: contact-target-mobile.jpg
+At the same 390x844 CSS viewport, target fixes the panel at 760 CSS pixels and clips its text; source fits.
+Original JPEGs are 375x812 pixels, so crop bounds use those pixels.
+Already retained / working
+Heading, introduction and all panel text retained; desktop presentation matches.
+Gaps and remaining work
+F-003: mobile contact panel overflows; desktop text/layout match.
+Page-specific quality checks
+Review limited to the stated local practice scope; no production approval.
+
+
+--- Page 10 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+10
+PAGE BREAKDOWN / COUNTS AND READINESS
+Blocks on Contact
+Counts below are authored uses of the exact class combination. Statuses apply to the noted evidence and states;
+review each variant and page-specific exception.
+Actual class / uses
+Visual
+Functional
+Readiness / remaining detail
+(unclassed h1 + p) / 1
+Close
+Not applicable
+Ready
+This page intro remains matched; the
+aggregate issue affects resources only.
+contact-panel / 1
+Partial
+Not applicable
+Minor work
+Literal authored class contact-panel;
+tested only within the fictional scope.
+
+
+--- Page 11 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+11
+PAGE-EEDF4CC7BDDC / /GUIDE/
+Page breakdown: Guide
+Visual: Close | Functional: Complete
+Readiness: Ready
+PRODUCTION / SOURCE / 1440x900
+Source page / 2026-11-09T02:14:14.834Z
+Capture: guide-source-desktop.jpg
+MIGRATED / TARGET / 1440x900
+Target page / 2026-11-09T02:15:43.457Z
+Capture: guide-target-desktop.jpg
+Matched desktop view at 1440x900. Source/Target banners identify environments and are intentional.
+PRODUCTION / SOURCE / 390x844
+Source page / 2026-11-09T02:15:53.730Z
+Capture: guide-source-mobile.jpg
+MIGRATED / TARGET / 390x844
+Target page / 2026-11-09T02:15:55.702Z
+Capture: guide-target-mobile.jpg
+Both collapsed native disclosures remain present at 390x844.
+
+
+--- Page 12 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+12
+PRODUCTION / SOURCE / 390x844
+Source page / 2026-11-09T02:15:54.420Z
+Capture: guide-source-mobile-open.jpg
+MIGRATED / TARGET / 390x844
+Target page / 2026-11-09T02:15:56.405Z
+Capture: guide-target-mobile-open.jpg
+Both answers opened by mouse. Enter opened and Space closed each disclosure on both sites at both required
+viewports; browser-actions.json preserves the state sequence.
+Already retained / working
+Moved route maps to /help/; both disclosures and answers retained.
+Gaps and remaining work
+Page-specific quality checks
+Review limited to the stated local practice scope; no production approval.
+
+
+--- Page 13 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+13
+PAGE BREAKDOWN / COUNTS AND READINESS
+Blocks on Guide
+Counts below are authored uses of the exact class combination. Statuses apply to the noted evidence and states;
+review each variant and page-specific exception.
+Actual class / uses
+Visual
+Functional
+Readiness / remaining detail
+(unclassed h1 + p) / 1
+Close
+Not applicable
+Ready
+This page intro remains matched; the
+aggregate issue affects resources only.
+(unclassed details) / 2
+Close
+Complete
+Ready
+Two unclassed native details elements,
+counted as two uses, not one accordion
+library use.
+
+
+--- Page 14 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+14
+FREQUENCY / ORIGINAL AUTHORED HTML
+Block usage by page
+Numbers count authored block uses. A dash means absent. Uses is the full-scope total. Shared header/footer
+uses are separate. Variants retain their exact original class names.
+These rows summarize each block type. Page-specific and variant exceptions remain in their separate rows and
+detail assessments.
+P01 = Home; P02 = Resources; P03 = Contact; P04 = Guide
+Block type
+P01
+P02
+P03
+P04
+Uses
+Visual
+Function
+Readiness
+hero
+1
+-
+-
+-
+1
+Close
+Not
+applicable
+Ready
+home preparation
+1
+-
+-
+-
+1
+Close
+Partial
+Capability missing
+introductory content
+-
+1
+1
+1
+3
+Partial
+Not
+applicable
+Minor work
+preparation kit
+-
+1
+-
+-
+1
+Close
+Partial
+Capability missing
+contact-panel
+-
+-
+1
+-
+1
+Partial
+Not
+applicable
+Minor work
+disclosure
+-
+-
+-
+2
+2
+Close
+Complete
+Ready
+
+
+--- Page 15 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+15
+FREQUENCY / ORIGINAL AUTHORED HTML
+Exact authored variants
+Numbers count authored block uses. A dash means absent. Uses is the full-scope total. Shared header/footer
+uses are separate. Variants retain their exact original class names.
+These status columns use each exact variant assessment. Page-specific exceptions remain in the page
+breakdowns and notes.
+P01 = Home; P02 = Resources; P03 = Contact; P04 = Guide
+Exact class attribute
+P01
+P02
+P03
+P04
+Uses
+Visual
+Function
+Readiness
+hero
+1
+-
+-
+-
+1
+Close
+Not
+applicable
+Ready
+(unclassed h2 +
+paragraphs)
+1
+-
+-
+-
+1
+Close
+Partial
+Capability missing
+(unclassed h1 + p)
+-
+1
+1
+1
+3
+Partial
+Not
+applicable
+Minor work
+(unclassed h2 + ul + p)
+-
+1
+-
+-
+1
+Close
+Partial
+Capability missing
+contact-panel
+-
+-
+1
+-
+1
+Partial
+Not
+applicable
+Minor work
+(unclassed details)
+-
+-
+-
+2
+2
+Close
+Complete
+Ready
+
+
+--- Page 16 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+16
+ACTUAL PRODUCTION NAMES / SEPARATE SHARED COUNTS
+Shared usage and source-to-block
+mapping
+Shared block type
+Pages
+Uses
+header
+Home, Contact, Guide, Resources
+4
+footer
+Home, Contact, Guide, Resources
+4
+
+
+--- Page 17 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+17
+B01 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: hero
+Visual: Close | Functional: Not applicable
+Readiness: Ready
+Usage: Home x1
+Expected: Retain the static hero heading, paragraph, navy/red treatment and responsive layout.
+Already retained
+Visual gaps
+Functional gaps
+Heading, paragraph and
+presentation match at both
+viewports.
+None recorded
+None recorded
+Remaining work:
+Done when: No repair needed within the scoped static hero.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+hero / 1
+Close / Not applicable / Ready
+Literal authored class hero; tested only
+within the fictional scope.
+Evidence: home-desktop; home-mobile
+
+
+--- Page 18 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+18
+B02 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: home preparation
+Visual: Close | Functional: Partial
+Readiness: Capability missing
+Usage: Home x1
+Expected: Retain the preparation content and both resource/download entry points.
+Already retained
+Visual gaps
+Functional gaps
+Heading and copy match; the
+resources link opens the intended
+page.
+None recorded
+Required checklist entry point
+returns 404.
+Remaining work: Restore the required checklist destination (F-001).
+Done when: Both entry points open the approved checklist at both sizes.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+(unclassed h2 + paragraphs)
+/ 1
+Close / Partial / Capability
+missing
+Native unclassed home group.
+Resources link works; its separate
+checklist action is missing.
+Evidence: D-desktop; D-mobile; home-mobile
+
+
+--- Page 19 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+19
+B03 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: introductory content
+Visual: Partial | Functional: Not applicable
+Readiness: Minor work
+Usage: Resources x1; Contact x1; Guide x1
+Expected: Retain each page main heading and its introductory guidance.
+Already retained
+Visual gaps
+Functional gaps
+Contact and guide introductions
+remain matched at both sizes.
+Resources loses the entire
+H1/guidance region (F-002).
+None recorded
+Remaining work: Restore the resources H1 and preparation paragraph.
+Done when: Approved headings/guidance appear before body content at both sizes.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+(unclassed h1 + p) / 3
+Partial / Not applicable / Minor
+work
+Unclassed native h1 + p group.
+Resources is missing; contact and guide
+remain Ready. The aggregate keeps the
+worst observed remaining work visible.
+Evidence: resources-mobile; quality-observations.json
+
+
+--- Page 20 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+20
+B04 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: preparation kit
+Visual: Close | Functional: Partial
+Readiness: Capability missing
+Usage: Resources x1
+Expected: Retain the preparation list and working checklist download.
+Already retained
+Visual gaps
+Functional gaps
+Preparation heading, three list
+items and download label remain.
+None recorded
+Download returns the same
+unavailable URL as home (F-001).
+Remaining work: Publish the approved checklist or approved replacement destination.
+Done when: Open correct checklist from resources at both sizes.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+(unclassed h2 + ul + p) / 1
+Close / Partial / Capability
+missing
+Native unclassed resources kit. Text/list
+retained; checklist action fails.
+Evidence: resources-desktop; D-desktop; D-mobile
+
+
+--- Page 21 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+21
+B05 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: contact-panel
+Visual: Partial | Functional: Not applicable
+Readiness: Minor work
+Usage: Contact x1
+Expected: Fit all fictional contact content to its container without horizontal scrolling.
+Already retained
+Visual gaps
+Functional gaps
+All text is retained; desktop panel
+matches. No form or sending
+service exists.
+Target uses a fixed 760px panel
+at mobile width (F-003).
+None recorded
+Remaining work: Remove the target-only mobile width and retest reflow.
+Done when: At 390x844 all copy fits without horizontal scroll; retain desktop match.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+contact-panel / 1
+Partial / Not applicable / Minor
+work
+Literal authored class contact-panel;
+tested only within the fictional scope.
+Evidence: contact-desktop; contact-mobile; browser-observations.json
+
+
+--- Page 22 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+22
+B06 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: disclosure
+Visual: Close | Functional: Complete
+Readiness: Ready
+Usage: Guide x2
+Expected: Retain both native details/summary controls, answers and keyboard behavior.
+Already retained
+Visual gaps
+Functional gaps
+Both controls and answers match.
+Enter/Space and mouse state
+transitions passed at both sizes.
+None recorded
+None recorded
+Remaining work:
+Done when: Continue preserving both answer texts and keyboard/pointer operation.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+(unclassed details) / 2
+Close / Complete / Ready
+Two unclassed native details elements,
+counted as two uses, not one accordion
+library use.
+Evidence: I-desktop; I-mobile; guide-mobile-open
+
+
+--- Page 23 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+23
+S01 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: header
+Visual: Close | Functional: Complete
+Readiness: Ready
+Usage: Home x1; Contact x1; Guide x1; Resources x1 (shared header/footer; excluded from body totals)
+Expected: Preserve the shared header and its scoped behavior.
+Already retained
+Visual gaps
+Functional gaps
+Matched presentation and
+content; all four links and route
+mapping work.
+None recorded
+None recorded
+Remaining work:
+Done when: Retain the tested content and behavior at both viewports.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+(unclassed header) / 4
+Close / Complete / Ready
+Native HTML with no class attribute.
+Four uses on each environment;
+excluded from body totals.
+Evidence: N-desktop; N-mobile; browser-actions.json; browser-observations.json
+
+
+--- Page 24 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+24
+S02 / ACTUAL AUTHORED NAME / VISUAL AND FUNCTIONAL READINESS
+Block assessment: footer
+Visual: Close | Functional: Not applicable
+Readiness: Ready
+Usage: Home x1; Contact x1; Guide x1; Resources x1 (shared header/footer; excluded from body totals)
+Expected: Preserve the shared footer and its scoped behavior.
+Already retained
+Visual gaps
+Functional gaps
+Matched presentation and
+content; lower-page copy
+retained.
+None recorded
+None recorded
+Remaining work:
+Done when: Retain the tested content and behavior at both viewports.
+Exact variant / total uses
+Visual / functional / readiness
+Specific evidence boundary
+(unclassed footer) / 4
+Close / Not applicable / Ready
+Native HTML with no class attribute.
+Four uses on each environment;
+excluded from body totals.
+Evidence: N-desktop; N-mobile; browser-actions.json; browser-observations.json
+
+
+--- Page 25 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+25
+EXPERIENCE GAPS ACROSS BLOCKS AND SERVICES
+Retained and missing capabilities
+Capability / affected pages
+Status / what remains
+Required action
+K01 / Required preparation
+download
+Home, Resources
+Fail
+Retained: Both visible entry points
+and labels remain.
+Missing / open: Target file is
+unavailable (404).
+Resolve F-001 and repeat both
+journeys at both sizes.
+D-desktop; D-mobile;
+asset-checks.json
+K02 / Shared navigation and
+moved guide route
+Home, Contact, Guide,
+Resources
+Pass
+Retained: All four navigation
+destinations work; /guide/ maps to
+/help/.
+Missing / open: No missing
+scoped navigation capability
+observed.
+Preserve tested destinations and
+mapping.
+N-desktop; N-mobile
+K03 / Two native help
+disclosures
+Guide
+Pass
+Retained: Mouse and Enter/Space
+open/close both retained answers.
+Missing / open: No missing
+scoped disclosure state observed.
+Retain both tested controls and
+answer content.
+I-desktop; I-mobile;
+browser-actions.json
+
+
+--- Page 26 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+26
+QUALITY REQUIREMENTS / FAIL
+Responsive visual parity
+What the evidence establishes
+Home and guide reflow at both sizes. Contact target is 760px wide within the 390px viewport.
+Resources omits its intro.
+Remaining work
+Resolve F-002/F-003 and repeat matched captures.
+Evidence: V02-mobile; V03-mobile; browser-observations.json
+
+
+--- Page 27 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+27
+QUALITY REQUIREMENTS / FAIL
+Scoped accessibility
+What the evidence establishes
+Keyboard order, focus outline and native disclosure controls passed. Language and nav label
+retained. Authored text/focus contrast pairs exceed scoped minimums. Resources loses its H1;
+contact fails mobile reflow.
+Remaining work
+Restore the H1 and mobile reflow. Formal conformance is outside this exercise.
+Evidence: A-desktop; A-mobile; quality-observations.json; asset-checks.json
+
+
+--- Page 28 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+28
+QUALITY REQUIREMENTS / PASS
+Local SEO and environment
+What the evidence establishes
+Page titles/descriptions and canonical paths retained, including /help/. Stylesheet responses match
+fixture bytes. No forms, JavaScript, images or external services exist in the reviewed pages.
+Remaining work
+Production robots, sitemap/indexing and service checks are not applicable to this local exercise.
+Evidence: SEO; quality-observations.json; asset-checks.json
+
+
+--- Page 29 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+29
+QUALITY REQUIREMENTS / PASS
+Evidence and reproducibility
+What the evidence establishes
+Static baseline, reviewed findings, browser action sequences, screenshot originals and hashes are
+preserved. PDF verification is issued separately after rendering.
+Remaining work
+No release decision is requested. Preserve the frozen packet when reproducing.
+Evidence: evidence.json; browser-review.json; browser-actions.json; capture-archive.zip
+
+
+--- Page 30 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+30
+DELIVERY ACTIONS / ALL OUTCOMES REMAIN EVIDENCE-BOUND
+Final work board
+Task / status / owner
+Affected scope and action
+Done when
+W-F-001 / Required checklist
+download returns 404
+Fail / P0
+Owner: TBD
+Home, Resources
+Publish the approved sample
+checklist at /downloads/checklist.txt
+or update both entry points to an
+approved destination.
+From both pages at both viewports,
+open the approved checklist and
+verify its content, not just an HTTP
+200.
+W-F-002 / Resources heading
+and preparation guidance
+omitted
+Fail / P1
+Owner: TBD
+Resources
+Restore the approved H1 and
+introductory preparation paragraph
+before the kit.
+At desktop and mobile sizes, verify
+the H1, exact approved guidance
+and order; retain the kit and
+download link.
+W-F-003 / Contact panel
+overflows the mobile
+viewport
+Fail / P1
+Owner: TBD
+Contact
+Remove the target-only fixed
+mobile width and allow the panel to
+fit its container.
+At 390x844 and 1440x900, all
+panel copy fits without horizontal
+scrolling and remains matched to
+source.
+
+
+--- Page 31 ---
+MIGRATION READINESS / PAGE AND COMPONENT AUDIT
+2026-11-08
+Visual and functional readiness are separate / open checks remain explicit
+31
+APPENDIX / SUPPORTING RECORDS
+Technical evidence and original
+outcomes
+The main report explains the migrated experience. Supporting records include preserved original
+measurements/check outcomes, any new collection and supplemental observations, and supplied
+workflow references. Their dates and evidence lineage remain distinct; they are not visual-completion
+scores.
+Embedded supporting record
+Purpose
+evidence.json
+Frozen static HTTP observations
+baseline-analysis.json
+Initial automated baseline before review
+analysis.json
+Recomputed measured totals with findings
+report.md
+Reviewed measured supporting report
+reviews.json
+All three supported findings
+browser-review.json
+Individual checks and screenshot bindings
+browser-actions.json
+Actual navigation/download/disclosure state sequences
+browser-observations.json
+DOM readings and original capture metadata
+quality-observations.json
+Observed document metadata and authored identifiers
+asset-checks.json
+Served CSS/checklist bytes and scoped contrast
+calculations
+census.json
+Non-overlapping native region census and target
+exceptions
+scope.md
+Agreed fictional exercise scope
+capture-archive.zip
+Original screenshots, HTTP snapshots, inputs and matching
+fixture code
+Use a PDF reader with an attachments panel to extract audit-records.zip. It includes this assessment, exact
+original record bytes, file hashes and any supplied additional archive. Screenshot/HTTP bodies are only
+embedded if supplied as record files; their retained paths do not imply every binary is inside the PDF.

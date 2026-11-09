@@ -1,0 +1,197 @@
+{
+  "observedAt": "2026-11-09T02:17:15.560Z",
+  "pages": [
+    {
+      "canonical": "/",
+      "classes": [
+        {
+          "class": "hero",
+          "tag": "SECTION"
+        }
+      ],
+      "description": "Fictional Northstar migration practice page: Welcome to Northstar.",
+      "details": 0,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Learn something new"
+        },
+        {
+          "tag": "H2",
+          "text": "Plan your next step"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Welcome to Northstar | Northstar practice site",
+      "url": "http://127.0.0.1:8851/"
+    },
+    {
+      "canonical": "/resources/",
+      "classes": [],
+      "description": "Fictional Northstar migration practice page: Learning resources.",
+      "details": 0,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Learning resources"
+        },
+        {
+          "tag": "H2",
+          "text": "Your preparation kit"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Learning resources | Northstar practice site",
+      "url": "http://127.0.0.1:8851/resources/"
+    },
+    {
+      "canonical": "/contact/",
+      "classes": [
+        {
+          "class": "contact-panel",
+          "tag": "SECTION"
+        }
+      ],
+      "description": "Fictional Northstar migration practice page: Contact the learning team.",
+      "details": 0,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Contact the learning team"
+        },
+        {
+          "tag": "H2",
+          "text": "We can help you prepare"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8851/contact/"
+    },
+    {
+      "canonical": "/guide/",
+      "classes": [],
+      "description": "Fictional Northstar migration practice page: Session guide.",
+      "details": 2,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Session guide"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/"
+    },
+    {
+      "canonical": "/",
+      "classes": [
+        {
+          "class": "hero",
+          "tag": "SECTION"
+        }
+      ],
+      "description": "Fictional Northstar migration practice page: Welcome to Northstar.",
+      "details": 0,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Learn something new"
+        },
+        {
+          "tag": "H2",
+          "text": "Plan your next step"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Welcome to Northstar | Northstar practice site",
+      "url": "http://127.0.0.1:8852/"
+    },
+    {
+      "canonical": "/resources/",
+      "classes": [],
+      "description": "Fictional Northstar migration practice page: Learning resources.",
+      "details": 0,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H2",
+          "text": "Your preparation kit"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Learning resources | Northstar practice site",
+      "url": "http://127.0.0.1:8852/resources/"
+    },
+    {
+      "canonical": "/contact/",
+      "classes": [
+        {
+          "class": "contact-panel",
+          "tag": "SECTION"
+        }
+      ],
+      "description": "Fictional Northstar migration practice page: Contact the learning team.",
+      "details": 0,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Contact the learning team"
+        },
+        {
+          "tag": "H2",
+          "text": "We can help you prepare"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8852/contact/"
+    },
+    {
+      "canonical": "/help/",
+      "classes": [],
+      "description": "Fictional Northstar migration practice page: Session guide.",
+      "details": 2,
+      "forms": 0,
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Session guide"
+        }
+      ],
+      "images": 0,
+      "lang": "en",
+      "navLabel": "Main navigation",
+      "scripts": 0,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/"
+    }
+  ]
+}

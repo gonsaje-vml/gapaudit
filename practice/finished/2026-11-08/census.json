@@ -1,0 +1,106 @@
+{
+  "basis": "Source-present logical body regions, matched to target. Missing target regions remain required uses. Unclassed selectors identify native HTML; they are not fabricated CSS classes or a CMS variant system.",
+  "bodyTypes": [
+    {
+      "id": "B01",
+      "family": "hero",
+      "variant": "hero",
+      "selector": "main > section.hero",
+      "sourceUsage": {
+        "PAGE-94d251729fdb": 1
+      },
+      "targetUsage": {
+        "PAGE-94d251729fdb": 1
+      }
+    },
+    {
+      "id": "B02",
+      "family": "home preparation",
+      "variant": "(unclassed h2 + paragraphs)",
+      "selector": "Home main > h2 plus following paragraphs",
+      "sourceUsage": {
+        "PAGE-94d251729fdb": 1
+      },
+      "targetUsage": {
+        "PAGE-94d251729fdb": 1
+      }
+    },
+    {
+      "id": "B03",
+      "family": "introductory content",
+      "variant": "(unclassed h1 + p)",
+      "selector": "Main > h1 and immediately following paragraph; resources/contact/guide",
+      "sourceUsage": {
+        "PAGE-8d7d68e3faf1": 1,
+        "PAGE-3c32be8e5d4f": 1,
+        "PAGE-eedf4cc7bddc": 1
+      },
+      "targetUsage": {
+        "PAGE-3c32be8e5d4f": 1,
+        "PAGE-eedf4cc7bddc": 1
+      }
+    },
+    {
+      "id": "B04",
+      "family": "preparation kit",
+      "variant": "(unclassed h2 + ul + p)",
+      "selector": "Resources main > h2, ul and following download paragraph",
+      "sourceUsage": {
+        "PAGE-8d7d68e3faf1": 1
+      },
+      "targetUsage": {
+        "PAGE-8d7d68e3faf1": 1
+      }
+    },
+    {
+      "id": "B05",
+      "family": "contact-panel",
+      "variant": "contact-panel",
+      "selector": "main > section.contact-panel",
+      "sourceUsage": {
+        "PAGE-3c32be8e5d4f": 1
+      },
+      "targetUsage": {
+        "PAGE-3c32be8e5d4f": 1
+      }
+    },
+    {
+      "id": "B06",
+      "family": "disclosure",
+      "variant": "(unclassed details)",
+      "selector": "main > details",
+      "sourceUsage": {
+        "PAGE-eedf4cc7bddc": 2
+      },
+      "targetUsage": {
+        "PAGE-eedf4cc7bddc": 2
+      }
+    }
+  ],
+  "shared": [
+    {
+      "family": "header",
+      "selector": "body > header",
+      "sourceUses": 4,
+      "targetUses": 4
+    },
+    {
+      "family": "footer",
+      "selector": "body > footer",
+      "sourceUses": 4,
+      "targetUses": 4
+    }
+  ],
+  "sourceBodyUses": 9,
+  "targetBodyUses": 8,
+  "distinctBodyTypes": 6,
+  "distinctAuthoredClasses": [
+    "hero",
+    "contact-panel"
+  ],
+  "provenance": [
+    "quality-observations.json",
+    "browser-observations.json",
+    "preserved fixture HTML in capture-archive.zip"
+  ]
+}

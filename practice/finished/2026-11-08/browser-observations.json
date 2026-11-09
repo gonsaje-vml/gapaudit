@@ -1,0 +1,1420 @@
+{
+  "browser": "Chrome 156.0.8078.81; dedicated audit tab",
+  "reviewer": "Codex",
+  "observations": [
+    {
+      "capture": "home-source-desktop",
+      "observedAt": "2026-11-09T02:14:13.529Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Learn something new"
+      ],
+      "height": 900,
+      "main": "Learn something new\n\nNorthstar is a fictional learning hub for this migration audit exercise.\n\nPlan your next step\n\nExplore our learning resources and prepare for your first session.\n\nBrowse learning resources\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Welcome to Northstar | Northstar practice site",
+      "url": "http://127.0.0.1:8851/",
+      "width": 1440
+    },
+    {
+      "capture": "resources-source-desktop",
+      "observedAt": "2026-11-09T02:14:14.461Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Learning resources"
+      ],
+      "height": 900,
+      "main": "Learning resources\n\nBefore your first session, download the checklist and prepare a quiet workspace. Bring your questions, choose one learning goal, and read the session guidance carefully.\n\nYour preparation kit\nA notebook for your learning goals\nA comfortable place to practise\nThe session checklist\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Learning resources | Northstar practice site",
+      "url": "http://127.0.0.1:8851/resources/",
+      "width": 1440
+    },
+    {
+      "capture": "contact-source-desktop",
+      "observedAt": "2026-11-09T02:14:14.651Z",
+      "contactWidth": 944,
+      "disclosures": [],
+      "h1": [
+        "Contact the learning team"
+      ],
+      "height": 900,
+      "main": "Contact the learning team\n\nHave questions about the learning programme? Here is how to reach our fictional team.\n\nWe can help you prepare\n\nOur learning team can explain session formats and help you choose a suitable starting point.\n\nFictional address: team@example.test\n\nPractice only. No messages are sent from this sample website.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8851/contact/",
+      "width": 1440
+    },
+    {
+      "capture": "guide-source-desktop",
+      "observedAt": "2026-11-09T02:14:14.834Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 900,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/",
+      "width": 1440
+    },
+    {
+      "capture": "guide-source-desktop-open",
+      "observedAt": "2026-11-09T02:15:39.193Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": true
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": true
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 900,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\n\nBring your checklist, a notebook and one learning goal.\n\nCan I learn at my own pace?\n\nYes. Pause between topics and return to the guide whenever you need a reminder.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/",
+      "width": 1440
+    },
+    {
+      "capture": "home-target-desktop",
+      "observedAt": "2026-11-09T02:15:42.939Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Learn something new"
+      ],
+      "height": 900,
+      "main": "Learn something new\n\nNorthstar is a fictional learning hub for this migration audit exercise.\n\nPlan your next step\n\nExplore our learning resources and prepare for your first session.\n\nBrowse learning resources\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Welcome to Northstar | Northstar practice site",
+      "url": "http://127.0.0.1:8852/",
+      "width": 1440
+    },
+    {
+      "capture": "resources-target-desktop",
+      "observedAt": "2026-11-09T02:15:43.115Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [],
+      "height": 900,
+      "main": "Your preparation kit\nA notebook for your learning goals\nA comfortable place to practise\nThe session checklist\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Learning resources | Northstar practice site",
+      "url": "http://127.0.0.1:8852/resources/",
+      "width": 1440
+    },
+    {
+      "capture": "contact-target-desktop",
+      "observedAt": "2026-11-09T02:15:43.278Z",
+      "contactWidth": 944,
+      "disclosures": [],
+      "h1": [
+        "Contact the learning team"
+      ],
+      "height": 900,
+      "main": "Contact the learning team\n\nHave questions about the learning programme? Here is how to reach our fictional team.\n\nWe can help you prepare\n\nOur learning team can explain session formats and help you choose a suitable starting point.\n\nFictional address: team@example.test\n\nPractice only. No messages are sent from this sample website.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8852/contact/",
+      "width": 1440
+    },
+    {
+      "capture": "guide-target-desktop",
+      "observedAt": "2026-11-09T02:15:43.457Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 900,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/",
+      "width": 1440
+    },
+    {
+      "capture": "guide-target-desktop-open",
+      "observedAt": "2026-11-09T02:15:44.183Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": true
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": true
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 900,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\n\nBring your checklist, a notebook and one learning goal.\n\nCan I learn at my own pace?\n\nYes. Pause between topics and return to the guide whenever you need a reminder.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/",
+      "width": 1440
+    },
+    {
+      "capture": "home-source-mobile",
+      "observedAt": "2026-11-09T02:15:53.210Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Learn something new"
+      ],
+      "height": 844,
+      "main": "Learn something new\n\nNorthstar is a fictional learning hub for this migration audit exercise.\n\nPlan your next step\n\nExplore our learning resources and prepare for your first session.\n\nBrowse learning resources\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 375,
+      "title": "Welcome to Northstar | Northstar practice site",
+      "url": "http://127.0.0.1:8851/",
+      "width": 390
+    },
+    {
+      "capture": "resources-source-mobile",
+      "observedAt": "2026-11-09T02:15:53.361Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Learning resources"
+      ],
+      "height": 844,
+      "main": "Learning resources\n\nBefore your first session, download the checklist and prepare a quiet workspace. Bring your questions, choose one learning goal, and read the session guidance carefully.\n\nYour preparation kit\nA notebook for your learning goals\nA comfortable place to practise\nThe session checklist\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Learning resources | Northstar practice site",
+      "url": "http://127.0.0.1:8851/resources/",
+      "width": 390
+    },
+    {
+      "capture": "contact-source-mobile",
+      "observedAt": "2026-11-09T02:15:53.520Z",
+      "contactWidth": 335,
+      "disclosures": [],
+      "h1": [
+        "Contact the learning team"
+      ],
+      "height": 844,
+      "main": "Contact the learning team\n\nHave questions about the learning programme? Here is how to reach our fictional team.\n\nWe can help you prepare\n\nOur learning team can explain session formats and help you choose a suitable starting point.\n\nFictional address: team@example.test\n\nPractice only. No messages are sent from this sample website.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 375,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8851/contact/",
+      "width": 390
+    },
+    {
+      "capture": "guide-source-mobile",
+      "observedAt": "2026-11-09T02:15:53.730Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 844,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/",
+      "width": 390
+    },
+    {
+      "capture": "guide-source-mobile-open",
+      "observedAt": "2026-11-09T02:15:54.420Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": true
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": true
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 844,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\n\nBring your checklist, a notebook and one learning goal.\n\nCan I learn at my own pace?\n\nYes. Pause between topics and return to the guide whenever you need a reminder.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/",
+      "width": 390
+    },
+    {
+      "capture": "home-target-mobile",
+      "observedAt": "2026-11-09T02:15:55.135Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Learn something new"
+      ],
+      "height": 844,
+      "main": "Learn something new\n\nNorthstar is a fictional learning hub for this migration audit exercise.\n\nPlan your next step\n\nExplore our learning resources and prepare for your first session.\n\nBrowse learning resources\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 375,
+      "title": "Welcome to Northstar | Northstar practice site",
+      "url": "http://127.0.0.1:8852/",
+      "width": 390
+    },
+    {
+      "capture": "resources-target-mobile",
+      "observedAt": "2026-11-09T02:15:55.301Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [],
+      "height": 844,
+      "main": "Your preparation kit\nA notebook for your learning goals\nA comfortable place to practise\nThe session checklist\n\nDownload the session checklist",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Learning resources | Northstar practice site",
+      "url": "http://127.0.0.1:8852/resources/",
+      "width": 390
+    },
+    {
+      "capture": "contact-target-mobile",
+      "observedAt": "2026-11-09T02:15:55.468Z",
+      "contactWidth": 760,
+      "disclosures": [],
+      "h1": [
+        "Contact the learning team"
+      ],
+      "height": 844,
+      "main": "Contact the learning team\n\nHave questions about the learning programme? Here is how to reach our fictional team.\n\nWe can help you prepare\n\nOur learning team can explain session formats and help you choose a suitable starting point.\n\nFictional address: team@example.test\n\nPractice only. No messages are sent from this sample website.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 780,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8852/contact/",
+      "width": 390
+    },
+    {
+      "capture": "guide-target-mobile",
+      "observedAt": "2026-11-09T02:15:55.702Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 844,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/",
+      "width": 390
+    },
+    {
+      "capture": "guide-target-mobile-open",
+      "observedAt": "2026-11-09T02:15:56.405Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": true
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": true
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 844,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\n\nBring your checklist, a notebook and one learning goal.\n\nCan I learn at my own pace?\n\nYes. Pause between topics and return to the guide whenever you need a reminder.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/",
+      "width": 390
+    },
+    {
+      "capture": "download-source-mobile",
+      "observedAt": "2026-11-09T02:16:36.936Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [],
+      "height": 844,
+      "main": "Northstar practice checklist\n1. Choose a learning goal.\n2. Bring a notebook.\n3. Prepare a quiet workspace.\n",
+      "nav": [],
+      "scrollWidth": 390,
+      "title": "",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "width": 390
+    },
+    {
+      "capture": "download-target-mobile",
+      "observedAt": "2026-11-09T02:16:38.609Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Error response"
+      ],
+      "height": 844,
+      "main": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+      "nav": [],
+      "scrollWidth": 390,
+      "title": "Error response",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "width": 390
+    },
+    {
+      "capture": "download-source-desktop",
+      "observedAt": "2026-11-09T02:16:40.836Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [],
+      "height": 900,
+      "main": "Northstar practice checklist\n1. Choose a learning goal.\n2. Bring a notebook.\n3. Prepare a quiet workspace.\n",
+      "nav": [],
+      "scrollWidth": 1440,
+      "title": "",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "width": 1440
+    },
+    {
+      "capture": "download-target-desktop",
+      "observedAt": "2026-11-09T02:16:42.422Z",
+      "contactWidth": null,
+      "disclosures": [],
+      "h1": [
+        "Error response"
+      ],
+      "height": 900,
+      "main": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+      "nav": [],
+      "scrollWidth": 1440,
+      "title": "Error response",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "width": 1440
+    },
+    {
+      "capture": "guide-source-desktop-focus",
+      "observedAt": "2026-11-09T02:17:15.814Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 900,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/",
+      "width": 1440
+    },
+    {
+      "capture": "guide-target-desktop-focus",
+      "observedAt": "2026-11-09T02:17:16.030Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 900,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 1440,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/",
+      "width": 1440
+    },
+    {
+      "capture": "guide-source-mobile-focus",
+      "observedAt": "2026-11-09T02:17:16.259Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 844,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8851/guide/",
+      "width": 390
+    },
+    {
+      "capture": "contact-source-mobile-bottom",
+      "observedAt": "2026-11-09T02:17:16.434Z",
+      "contactWidth": 335,
+      "disclosures": [],
+      "h1": [
+        "Contact the learning team"
+      ],
+      "height": 844,
+      "main": "Contact the learning team\n\nHave questions about the learning programme? Here is how to reach our fictional team.\n\nWe can help you prepare\n\nOur learning team can explain session formats and help you choose a suitable starting point.\n\nFictional address: team@example.test\n\nPractice only. No messages are sent from this sample website.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/guide/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 375,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8851/contact/",
+      "width": 390
+    },
+    {
+      "capture": "guide-target-mobile-focus",
+      "observedAt": "2026-11-09T02:17:16.637Z",
+      "contactWidth": null,
+      "disclosures": [
+        {
+          "label": "What should I bring?",
+          "open": false
+        },
+        {
+          "label": "Can I learn at my own pace?",
+          "open": false
+        }
+      ],
+      "h1": [
+        "Session guide"
+      ],
+      "height": 844,
+      "main": "Session guide\n\nFind answers before joining your first learning session.\n\nWhat should I bring?\nCan I learn at my own pace?",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 390,
+      "title": "Session guide | Northstar practice site",
+      "url": "http://127.0.0.1:8852/help/",
+      "width": 390
+    },
+    {
+      "capture": "contact-target-mobile-bottom",
+      "observedAt": "2026-11-09T02:17:16.809Z",
+      "contactWidth": 760,
+      "disclosures": [],
+      "h1": [
+        "Contact the learning team"
+      ],
+      "height": 844,
+      "main": "Contact the learning team\n\nHave questions about the learning programme? Here is how to reach our fictional team.\n\nWe can help you prepare\n\nOur learning team can explain session formats and help you choose a suitable starting point.\n\nFictional address: team@example.test\n\nPractice only. No messages are sent from this sample website.",
+      "nav": [
+        {
+          "href": "/",
+          "text": "Home"
+        },
+        {
+          "href": "/resources/",
+          "text": "Resources"
+        },
+        {
+          "href": "/contact/",
+          "text": "Contact"
+        },
+        {
+          "href": "/help/",
+          "text": "Session guide"
+        }
+      ],
+      "scrollWidth": 780,
+      "title": "Contact the learning team | Northstar practice site",
+      "url": "http://127.0.0.1:8852/contact/",
+      "width": 390
+    }
+  ],
+  "captures": [
+    {
+      "name": "home-source-desktop",
+      "path": "browser/home-source-desktop.jpg",
+      "url": "http://127.0.0.1:8851/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:14:13.529Z",
+      "sha256": "e32745906f3643957b40d6becb34f12174208285959a7a06e15e17a3e8ec684b",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "resources-source-desktop",
+      "path": "browser/resources-source-desktop.jpg",
+      "url": "http://127.0.0.1:8851/resources/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:14:14.461Z",
+      "sha256": "5ea9d1590ceee231e48a44d79b291b5cd979ebb973bfddc6870fcec4fb925199",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "contact-source-desktop",
+      "path": "browser/contact-source-desktop.jpg",
+      "url": "http://127.0.0.1:8851/contact/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:14:14.651Z",
+      "sha256": "e672b8ea4a301a578bc4b44227a8dde08110aa9b078e8c30a1a9bc21982e31c6",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-source-desktop",
+      "path": "browser/guide-source-desktop.jpg",
+      "url": "http://127.0.0.1:8851/guide/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:14:14.834Z",
+      "sha256": "2c772126028aa778495711aeadc0d9a716ec88ad8fda07223cc67218f5cde65b",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-source-desktop-open",
+      "path": "browser/guide-source-desktop-open.jpg",
+      "url": "http://127.0.0.1:8851/guide/",
+      "viewport": "1440x900",
+      "state": "Both disclosures opened with mouse; top of page",
+      "capturedAt": "2026-11-09T02:15:39.193Z",
+      "sha256": "705519299c538b78e9ff877be596c2d60d8bb672a6d370ea729e23718bf6c86e",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "home-target-desktop",
+      "path": "browser/home-target-desktop.jpg",
+      "url": "http://127.0.0.1:8852/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:15:42.939Z",
+      "sha256": "b8849192c6bcbcc460265bbbcd6cc72e2ef34da5d0afd14cc3562e787a0b2583",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "resources-target-desktop",
+      "path": "browser/resources-target-desktop.jpg",
+      "url": "http://127.0.0.1:8852/resources/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:15:43.115Z",
+      "sha256": "d9cfe74235bf23ad685e10953197a3c83755f42aa0c1666bb63ac731aa84863b",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "contact-target-desktop",
+      "path": "browser/contact-target-desktop.jpg",
+      "url": "http://127.0.0.1:8852/contact/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:15:43.278Z",
+      "sha256": "a023071faecddee94061ad7d1860ae3df5f3f02334ca8b4f41d4c9f2bcb33a39",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-target-desktop",
+      "path": "browser/guide-target-desktop.jpg",
+      "url": "http://127.0.0.1:8852/help/",
+      "viewport": "1440x900",
+      "state": "Top of page; disclosures collapsed; no horizontal scroll",
+      "capturedAt": "2026-11-09T02:15:43.457Z",
+      "sha256": "a9575922b008bcd5b56c18644f9cfb87b3af39cd70f88ff9d59532002ef6e649",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-target-desktop-open",
+      "path": "browser/guide-target-desktop-open.jpg",
+      "url": "http://127.0.0.1:8852/help/",
+      "viewport": "1440x900",
+      "state": "Both disclosures opened with mouse; top of page",
+      "capturedAt": "2026-11-09T02:15:44.183Z",
+      "sha256": "bb554f81a1dc6f95d20f1c67dbd6103751385075f80a01e4d266d604024ec8cf",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "home-source-mobile",
+      "path": "browser/home-source-mobile.jpg",
+      "url": "http://127.0.0.1:8851/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:53.210Z",
+      "sha256": "671df25f4c7bade2645ab480da75b918f1d2ad92ecd75ac375615006c9f14e9a",
+      "originalPixels": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "resources-source-mobile",
+      "path": "browser/resources-source-mobile.jpg",
+      "url": "http://127.0.0.1:8851/resources/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:53.361Z",
+      "sha256": "c780b094d3851bff4abb94481f5fbd19f71a211230eea76c8370b06e5a569166",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "contact-source-mobile",
+      "path": "browser/contact-source-mobile.jpg",
+      "url": "http://127.0.0.1:8851/contact/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:53.520Z",
+      "sha256": "cfb5cdb36198c8fd0e609ab9339575bec7b05a6291a02685b3031e2c66e207e2",
+      "originalPixels": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "guide-source-mobile",
+      "path": "browser/guide-source-mobile.jpg",
+      "url": "http://127.0.0.1:8851/guide/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:53.730Z",
+      "sha256": "f14d09d101cc7987937f6263a8270ccc6b203d1574e1ec999fd362810e2c6773",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "guide-source-mobile-open",
+      "path": "browser/guide-source-mobile-open.jpg",
+      "url": "http://127.0.0.1:8851/guide/",
+      "viewport": "390x844",
+      "state": "Both disclosures opened with mouse; top of page",
+      "capturedAt": "2026-11-09T02:15:54.420Z",
+      "sha256": "019fd6fba3acc5ced39fe745f6d72757cc67212d80658d51ee5c121594f204a4",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "home-target-mobile",
+      "path": "browser/home-target-mobile.jpg",
+      "url": "http://127.0.0.1:8852/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:55.135Z",
+      "sha256": "7a1b005342dcb90c2f4d8ab9a703f26053da633071d7342cd8f92a0a1043215b",
+      "originalPixels": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "resources-target-mobile",
+      "path": "browser/resources-target-mobile.jpg",
+      "url": "http://127.0.0.1:8852/resources/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:55.301Z",
+      "sha256": "6b9261a5060ce8a964ac0ef4649551684d237ea044c91be04abc0320c115d362",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "contact-target-mobile",
+      "path": "browser/contact-target-mobile.jpg",
+      "url": "http://127.0.0.1:8852/contact/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:55.468Z",
+      "sha256": "ab9dec53e9ef39dc317af02423d2dd93360c9cc9e35a8f14b3695c1f12374bef",
+      "originalPixels": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "guide-target-mobile",
+      "path": "browser/guide-target-mobile.jpg",
+      "url": "http://127.0.0.1:8852/help/",
+      "viewport": "390x844",
+      "state": "Top of page; 390x844 mobile viewport; disclosures collapsed; horizontal scroll at left edge",
+      "capturedAt": "2026-11-09T02:15:55.702Z",
+      "sha256": "160b8191c50735a9b5e64807c16d105b68293e3a77be10641dbc9036cacc4d85",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "guide-target-mobile-open",
+      "path": "browser/guide-target-mobile-open.jpg",
+      "url": "http://127.0.0.1:8852/help/",
+      "viewport": "390x844",
+      "state": "Both disclosures opened with mouse; top of page",
+      "capturedAt": "2026-11-09T02:15:56.405Z",
+      "sha256": "801b854b3ac36c6d8147e85bb3ff38cae9fa42f19d52b9b44050e821dc2b5bf5",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "download-source-mobile",
+      "path": "browser/download-source-mobile.jpg",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "viewport": "390x844",
+      "state": "Checklist link followed from home; resulting document/error at top",
+      "capturedAt": "2026-11-09T02:16:36.936Z",
+      "sha256": "7b0afaa4d2308f648caf6186992c1a4055fa65ee5f0384a8ac1e3f6d98555ee4",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "download-target-mobile",
+      "path": "browser/download-target-mobile.jpg",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "viewport": "390x844",
+      "state": "Checklist link followed from home; resulting document/error at top",
+      "capturedAt": "2026-11-09T02:16:38.609Z",
+      "sha256": "af114a4262c7b5ac1c9d5ad4330e595bc6fa0a80a020418a2562a8473029a385",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "download-source-desktop",
+      "path": "browser/download-source-desktop.jpg",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "viewport": "1440x900",
+      "state": "Checklist link followed from home; resulting document/error at top",
+      "capturedAt": "2026-11-09T02:16:40.836Z",
+      "sha256": "9de5d5f555aa6b0ab583151a35c50b5870f272595c1952b2dea90bbda018261a",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "download-target-desktop",
+      "path": "browser/download-target-desktop.jpg",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "viewport": "1440x900",
+      "state": "Checklist link followed from home; resulting document/error at top",
+      "capturedAt": "2026-11-09T02:16:42.422Z",
+      "sha256": "52aa47653627c96901dfcf643e15ef3d75d113dd30913c8decfa089b6eec739d",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-source-desktop-focus",
+      "path": "browser/guide-source-desktop-focus.jpg",
+      "url": "http://127.0.0.1:8851/guide/",
+      "viewport": "1440x900",
+      "state": "Keyboard focus on first disclosure after Tab from navigation; disclosures collapsed",
+      "capturedAt": "2026-11-09T02:17:15.814Z",
+      "sha256": "0affdb05f082883020173c7b1284b78b054b97f5c448d7642fc4cd2f834c0642",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-target-desktop-focus",
+      "path": "browser/guide-target-desktop-focus.jpg",
+      "url": "http://127.0.0.1:8852/help/",
+      "viewport": "1440x900",
+      "state": "Keyboard focus on first disclosure after Tab from navigation; disclosures collapsed",
+      "capturedAt": "2026-11-09T02:17:16.030Z",
+      "sha256": "3d0ae71b5b1984cb9f342f7e4869b80186ef286a3d2caf42973d223ad1d14a60",
+      "originalPixels": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "guide-source-mobile-focus",
+      "path": "browser/guide-source-mobile-focus.jpg",
+      "url": "http://127.0.0.1:8851/guide/",
+      "viewport": "390x844",
+      "state": "Keyboard focus on first disclosure after Tab from navigation; disclosures collapsed",
+      "capturedAt": "2026-11-09T02:17:16.259Z",
+      "sha256": "081d131d1cbc889cb410c137e3a6ca569567fead3a439687c29b214b0d34a1c9",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "contact-source-mobile-bottom",
+      "path": "browser/contact-source-mobile-bottom.jpg",
+      "url": "http://127.0.0.1:8851/contact/",
+      "viewport": "390x844",
+      "state": "Scrolled to bottom; horizontal scroll remains at left edge",
+      "capturedAt": "2026-11-09T02:17:16.434Z",
+      "sha256": "6de70c1c411022a95a7fa6f0b64fde08d8afd3bfbb92c79c9305c37b46aa507b",
+      "originalPixels": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "name": "guide-target-mobile-focus",
+      "path": "browser/guide-target-mobile-focus.jpg",
+      "url": "http://127.0.0.1:8852/help/",
+      "viewport": "390x844",
+      "state": "Keyboard focus on first disclosure after Tab from navigation; disclosures collapsed",
+      "capturedAt": "2026-11-09T02:17:16.637Z",
+      "sha256": "853c02cc1583f6aea394b13415183b4a781bc992789cc99711934a5555b5601c",
+      "originalPixels": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "contact-target-mobile-bottom",
+      "path": "browser/contact-target-mobile-bottom.jpg",
+      "url": "http://127.0.0.1:8852/contact/",
+      "viewport": "390x844",
+      "state": "Scrolled to bottom; horizontal scroll remains at left edge",
+      "capturedAt": "2026-11-09T02:17:16.809Z",
+      "sha256": "9cf8d306080ff0d32f0531b895a14559653eda70307442716e837be581ec2f0d",
+      "originalPixels": {
+        "width": 375,
+        "height": 812
+      }
+    }
+  ]
+}

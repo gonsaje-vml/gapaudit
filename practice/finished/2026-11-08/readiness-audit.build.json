@@ -1,0 +1,325 @@
+{
+  "rendererVersion": "1.4.0",
+  "assessmentSha256": "2d37fb58b876144a822ed8d978c6a7a2528308710354f17f0caa1e0e3623e817",
+  "sourceEvidenceSha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+  "pdfSha256": "6a5fd09ed8e3d3548b1ad5ce2aef14f7d3c1f0be32afceeac108a6563c293bf4",
+  "pageCount": 31,
+  "counts": {
+    "pages": 4,
+    "bodyFamilies": 6,
+    "exactVariants": 6,
+    "bodyInstances": 9,
+    "sharedFamilies": 2
+  },
+  "outline": [
+    {
+      "key": "summary",
+      "title": "Northstar practice migration audit",
+      "page": 1
+    },
+    {
+      "key": "contents",
+      "title": "Find the detail you need",
+      "page": 2
+    },
+    {
+      "key": "method",
+      "title": "Reading the assessments",
+      "page": 3
+    },
+    {
+      "key": "scope",
+      "title": "Scope and page mappings",
+      "page": 4
+    },
+    {
+      "key": "page-PAGE-94d251729fdb",
+      "title": "Page breakdown: Home",
+      "page": 5
+    },
+    {
+      "key": "page-blocks-PAGE-94d251729fdb-0",
+      "title": "Blocks on Home",
+      "page": 6
+    },
+    {
+      "key": "page-PAGE-8d7d68e3faf1",
+      "title": "Page breakdown: Resources",
+      "page": 7
+    },
+    {
+      "key": "page-blocks-PAGE-8d7d68e3faf1-0",
+      "title": "Blocks on Resources",
+      "page": 8
+    },
+    {
+      "key": "page-PAGE-3c32be8e5d4f",
+      "title": "Page breakdown: Contact",
+      "page": 9
+    },
+    {
+      "key": "page-blocks-PAGE-3c32be8e5d4f-0",
+      "title": "Blocks on Contact",
+      "page": 10
+    },
+    {
+      "key": "page-PAGE-eedf4cc7bddc",
+      "title": "Page breakdown: Guide",
+      "page": 11
+    },
+    {
+      "key": "page-blocks-PAGE-eedf4cc7bddc-0",
+      "title": "Blocks on Guide",
+      "page": 13
+    },
+    {
+      "key": "family-matrix-0-0",
+      "title": "Block usage by page",
+      "page": 14
+    },
+    {
+      "key": "variant-matrix-0-0",
+      "title": "Exact authored variants",
+      "page": 15
+    },
+    {
+      "key": "shared-usage",
+      "title": "Shared usage and source-to-block mapping",
+      "page": 16
+    },
+    {
+      "key": "component-B01",
+      "title": "Block assessment: hero",
+      "page": 17
+    },
+    {
+      "key": "component-B02",
+      "title": "Block assessment: home preparation",
+      "page": 18
+    },
+    {
+      "key": "component-B03",
+      "title": "Block assessment: introductory content",
+      "page": 19
+    },
+    {
+      "key": "component-B04",
+      "title": "Block assessment: preparation kit",
+      "page": 20
+    },
+    {
+      "key": "component-B05",
+      "title": "Block assessment: contact-panel",
+      "page": 21
+    },
+    {
+      "key": "component-B06",
+      "title": "Block assessment: disclosure",
+      "page": 22
+    },
+    {
+      "key": "component-S01",
+      "title": "Block assessment: header",
+      "page": 23
+    },
+    {
+      "key": "component-S02",
+      "title": "Block assessment: footer",
+      "page": 24
+    },
+    {
+      "key": "capabilities",
+      "title": "Retained and missing capabilities",
+      "page": 25
+    },
+    {
+      "key": "quality-0",
+      "title": "Responsive visual parity",
+      "page": 26
+    },
+    {
+      "key": "quality-1",
+      "title": "Scoped accessibility",
+      "page": 27
+    },
+    {
+      "key": "quality-2",
+      "title": "Local SEO and environment",
+      "page": 28
+    },
+    {
+      "key": "quality-3",
+      "title": "Evidence and reproducibility",
+      "page": 29
+    },
+    {
+      "key": "work-0",
+      "title": "Final work board",
+      "page": 30
+    },
+    {
+      "key": "records",
+      "title": "Technical evidence and original outcomes",
+      "page": 31
+    }
+  ],
+  "recordFiles": {
+    "evidence.json": {
+      "path": "evidence.json",
+      "sha256": "dab6e380fb5bc7e0b4686429fed8547ac71a1be503ea4f61f15716ccef077c78",
+      "label": "Frozen static HTTP observations"
+    },
+    "baseline-analysis.json": {
+      "path": "baseline-analysis.json",
+      "sha256": "c5f073a2c3412d350ea4784a31488fa3ed485ad7c6f61791bb3e93eb5cd5edad",
+      "label": "Initial automated baseline before review"
+    },
+    "analysis.json": {
+      "path": "analysis.json",
+      "sha256": "ea8200f930064a211c24e29122be2d693933699883fe683c47d21773daac60a8",
+      "label": "Recomputed measured totals with findings"
+    },
+    "report.md": {
+      "path": "report.md",
+      "sha256": "f3f21cd161d5c0e98231029bed70da75d14f6e2a1de8443c1b9884dce7bf06df",
+      "label": "Reviewed measured supporting report"
+    },
+    "reviews.json": {
+      "path": "reviews.json",
+      "sha256": "3aa83a2ee3f041232dbef13669a67409af4ac2f617463e89345d90088454474b",
+      "label": "All three supported findings"
+    },
+    "browser-review.json": {
+      "path": "browser-review.json",
+      "sha256": "6cf7f9f3ff33afbcf83f1bfa049b7d76622a8d8e8919792b70025136874617c2",
+      "label": "Individual checks and screenshot bindings"
+    },
+    "browser-actions.json": {
+      "path": "browser-actions.json",
+      "sha256": "53e9d4f0ab66834734397f9961d37fb27a0d982bce4658d9034aa80129fba786",
+      "label": "Actual navigation/download/disclosure state sequences"
+    },
+    "browser-observations.json": {
+      "path": "browser-observations.json",
+      "sha256": "371827857e4cfa01608cc6fbe1a3640aedec785a95ec18a0abec105eee483994",
+      "label": "DOM readings and original capture metadata"
+    },
+    "quality-observations.json": {
+      "path": "quality-observations.json",
+      "sha256": "674a210535407bb025aee4ff34d64b74da849ce92a625085fe28bdd099f51a64",
+      "label": "Observed document metadata and authored identifiers"
+    },
+    "asset-checks.json": {
+      "path": "asset-checks.json",
+      "sha256": "e2f2f8e452342fac2484f0c2d0c3249df5c978247e67b9aeba6bc41635329996",
+      "label": "Served CSS/checklist bytes and scoped contrast calculations"
+    },
+    "census.json": {
+      "path": "census.json",
+      "sha256": "f3933726618c26eab4e40634dae1acc6ed605f384f48e2816cd8bb3aee834eec",
+      "label": "Non-overlapping native region census and target exceptions"
+    },
+    "scope.md": {
+      "path": "scope.md",
+      "sha256": "75b8a206d8582eae39e455f94cd0e1485b80666a64e0a0f712db6e4442c910a2",
+      "label": "Agreed fictional exercise scope"
+    },
+    "capture-archive.zip": {
+      "path": "capture-archive.zip",
+      "sha256": "63dc2e357439cc03f45077d084aaf50169d60ef7236ecfc214dc6ed335fb3338",
+      "label": "Original screenshots, HTTP snapshots, inputs and matching fixture code"
+    }
+  },
+  "attachmentSha256": "72327e016be3a2cb8f1117b929732c0a00839c3e6520bd9bbf8c20bc0fa64cb6",
+  "builderSha256": "2ad54d4f7125e42eaf6ffb1bb670e70d465e001381e232102a4546f4feeb2a6b",
+  "fontSha256": {
+    "regular": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d",
+    "bold": "cc037385e4d55bfde89b13e03091ee93bf40c0c52ddd391ff031ab276f13b8e9"
+  },
+  "componentReadiness": {
+    "Ready": 2,
+    "Capability missing": 2,
+    "Minor work": 2
+  },
+  "pythonVersion": "3.14.5",
+  "platform": "darwin",
+  "dependencies": {
+    "reportlab": "4.4.9",
+    "Pillow": "12.3.0",
+    "pypdf": "6.10.0"
+  },
+  "openingSummary": {
+    "unit": "block types",
+    "total": 6,
+    "counts": {
+      "Ready": 2,
+      "Minor work": 2,
+      "Substantial work": 0,
+      "Capability missing": 2,
+      "Unverified": 0
+    },
+    "style": "flat",
+    "chartRendered": true,
+    "comparison": null,
+    "evidenceDate": "2026-11-08",
+    "reportRevisionDate": null,
+    "pageReadiness": [
+      {
+        "pageId": "PAGE-94d251729fdb",
+        "name": "Home",
+        "unit": "block uses",
+        "total": 2,
+        "counts": {
+          "Ready": 1,
+          "Minor work": 0,
+          "Substantial work": 0,
+          "Capability missing": 1,
+          "Unverified": 0
+        },
+        "visualStatus": "Close"
+      },
+      {
+        "pageId": "PAGE-8d7d68e3faf1",
+        "name": "Resources",
+        "unit": "block uses",
+        "total": 2,
+        "counts": {
+          "Ready": 0,
+          "Minor work": 1,
+          "Substantial work": 0,
+          "Capability missing": 1,
+          "Unverified": 0
+        },
+        "visualStatus": "Partial"
+      },
+      {
+        "pageId": "PAGE-3c32be8e5d4f",
+        "name": "Contact",
+        "unit": "block uses",
+        "total": 2,
+        "counts": {
+          "Ready": 1,
+          "Minor work": 1,
+          "Substantial work": 0,
+          "Capability missing": 0,
+          "Unverified": 0
+        },
+        "visualStatus": "Partial"
+      },
+      {
+        "pageId": "PAGE-eedf4cc7bddc",
+        "name": "Guide",
+        "unit": "block uses",
+        "total": 3,
+        "counts": {
+          "Ready": 3,
+          "Minor work": 0,
+          "Substantial work": 0,
+          "Capability missing": 0,
+          "Unverified": 0
+        },
+        "visualStatus": "Close"
+      }
+    ]
+  }
+}

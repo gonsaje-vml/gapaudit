@@ -1,0 +1,514 @@
+{
+  "browser": "Chrome 156.0.8078.81",
+  "reviewer": "Codex",
+  "actions": [
+    {
+      "kind": "disclosures",
+      "side": "source",
+      "size": "desktop",
+      "at": "2026-11-09T02:15:39.747Z",
+      "checks": [
+        {
+          "action": "Tab from final navigation link",
+          "focus": {
+            "tag": "SUMMARY",
+            "text": "What should I bring?"
+          }
+        },
+        {
+          "action": "Enter on disclosure 1",
+          "open": [
+            true,
+            false
+          ]
+        },
+        {
+          "action": "Space on disclosure 1",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Enter on disclosure 2",
+          "open": [
+            false,
+            true
+          ]
+        },
+        {
+          "action": "Space on disclosure 2",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Mouse close both disclosures",
+          "open": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "disclosures",
+      "side": "target",
+      "size": "desktop",
+      "at": "2026-11-09T02:15:44.737Z",
+      "checks": [
+        {
+          "action": "Tab from final navigation link",
+          "focus": {
+            "tag": "SUMMARY",
+            "text": "What should I bring?"
+          }
+        },
+        {
+          "action": "Enter on disclosure 1",
+          "open": [
+            true,
+            false
+          ]
+        },
+        {
+          "action": "Space on disclosure 1",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Enter on disclosure 2",
+          "open": [
+            false,
+            true
+          ]
+        },
+        {
+          "action": "Space on disclosure 2",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Mouse close both disclosures",
+          "open": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "disclosures",
+      "side": "source",
+      "size": "mobile",
+      "at": "2026-11-09T02:15:54.975Z",
+      "checks": [
+        {
+          "action": "Tab from final navigation link",
+          "focus": {
+            "tag": "SUMMARY",
+            "text": "What should I bring?"
+          }
+        },
+        {
+          "action": "Enter on disclosure 1",
+          "open": [
+            true,
+            false
+          ]
+        },
+        {
+          "action": "Space on disclosure 1",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Enter on disclosure 2",
+          "open": [
+            false,
+            true
+          ]
+        },
+        {
+          "action": "Space on disclosure 2",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Mouse close both disclosures",
+          "open": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "disclosures",
+      "side": "target",
+      "size": "mobile",
+      "at": "2026-11-09T02:15:56.955Z",
+      "checks": [
+        {
+          "action": "Tab from final navigation link",
+          "focus": {
+            "tag": "SUMMARY",
+            "text": "What should I bring?"
+          }
+        },
+        {
+          "action": "Enter on disclosure 1",
+          "open": [
+            true,
+            false
+          ]
+        },
+        {
+          "action": "Space on disclosure 1",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Enter on disclosure 2",
+          "open": [
+            false,
+            true
+          ]
+        },
+        {
+          "action": "Space on disclosure 2",
+          "open": [
+            false,
+            false
+          ]
+        },
+        {
+          "action": "Mouse close both disclosures",
+          "open": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "navigation",
+      "side": "source",
+      "size": "mobile",
+      "at": "2026-11-09T02:16:36.728Z",
+      "checks": [
+        {
+          "action": "Follow Resources",
+          "url": "http://127.0.0.1:8851/resources/",
+          "h1": [
+            "Learning resources"
+          ]
+        },
+        {
+          "action": "Follow Contact",
+          "url": "http://127.0.0.1:8851/contact/",
+          "h1": [
+            "Contact the learning team"
+          ]
+        },
+        {
+          "action": "Follow Session guide",
+          "url": "http://127.0.0.1:8851/guide/",
+          "h1": [
+            "Session guide"
+          ]
+        },
+        {
+          "action": "Follow Home",
+          "url": "http://127.0.0.1:8851/",
+          "h1": [
+            "Learn something new"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "download",
+      "side": "source",
+      "size": "mobile",
+      "fromRoute": "/",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "actual": "Northstar practice checklist\n1. Choose a learning goal.\n2. Bring a notebook.\n3. Prepare a quiet workspace.\n",
+      "at": "2026-11-09T02:16:36.902Z"
+    },
+    {
+      "kind": "download",
+      "side": "source",
+      "size": "mobile",
+      "fromRoute": "/resources/",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "actual": "Northstar practice checklist\n1. Choose a learning goal.\n2. Bring a notebook.\n3. Prepare a quiet workspace.\n",
+      "at": "2026-11-09T02:16:37.391Z"
+    },
+    {
+      "kind": "navigation",
+      "side": "target",
+      "size": "mobile",
+      "at": "2026-11-09T02:16:38.299Z",
+      "checks": [
+        {
+          "action": "Follow Resources",
+          "url": "http://127.0.0.1:8852/resources/",
+          "h1": []
+        },
+        {
+          "action": "Follow Contact",
+          "url": "http://127.0.0.1:8852/contact/",
+          "h1": [
+            "Contact the learning team"
+          ]
+        },
+        {
+          "action": "Follow Session guide",
+          "url": "http://127.0.0.1:8852/help/",
+          "h1": [
+            "Session guide"
+          ]
+        },
+        {
+          "action": "Follow Home",
+          "url": "http://127.0.0.1:8852/",
+          "h1": [
+            "Learn something new"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "download",
+      "side": "target",
+      "size": "mobile",
+      "fromRoute": "/",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "actual": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+      "at": "2026-11-09T02:16:38.542Z"
+    },
+    {
+      "kind": "download",
+      "side": "target",
+      "size": "mobile",
+      "fromRoute": "/resources/",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "actual": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+      "at": "2026-11-09T02:16:39.268Z"
+    },
+    {
+      "kind": "navigation",
+      "side": "source",
+      "size": "desktop",
+      "at": "2026-11-09T02:16:40.617Z",
+      "checks": [
+        {
+          "action": "Follow Resources",
+          "url": "http://127.0.0.1:8851/resources/",
+          "h1": [
+            "Learning resources"
+          ]
+        },
+        {
+          "action": "Follow Contact",
+          "url": "http://127.0.0.1:8851/contact/",
+          "h1": [
+            "Contact the learning team"
+          ]
+        },
+        {
+          "action": "Follow Session guide",
+          "url": "http://127.0.0.1:8851/guide/",
+          "h1": [
+            "Session guide"
+          ]
+        },
+        {
+          "action": "Follow Home",
+          "url": "http://127.0.0.1:8851/",
+          "h1": [
+            "Learn something new"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "download",
+      "side": "source",
+      "size": "desktop",
+      "fromRoute": "/",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "actual": "Northstar practice checklist\n1. Choose a learning goal.\n2. Bring a notebook.\n3. Prepare a quiet workspace.\n",
+      "at": "2026-11-09T02:16:40.791Z"
+    },
+    {
+      "kind": "download",
+      "side": "source",
+      "size": "desktop",
+      "fromRoute": "/resources/",
+      "url": "http://127.0.0.1:8851/downloads/checklist.txt",
+      "actual": "Northstar practice checklist\n1. Choose a learning goal.\n2. Bring a notebook.\n3. Prepare a quiet workspace.\n",
+      "at": "2026-11-09T02:16:41.303Z"
+    },
+    {
+      "kind": "navigation",
+      "side": "target",
+      "size": "desktop",
+      "at": "2026-11-09T02:16:42.224Z",
+      "checks": [
+        {
+          "action": "Follow Resources",
+          "url": "http://127.0.0.1:8852/resources/",
+          "h1": []
+        },
+        {
+          "action": "Follow Contact",
+          "url": "http://127.0.0.1:8852/contact/",
+          "h1": [
+            "Contact the learning team"
+          ]
+        },
+        {
+          "action": "Follow Session guide",
+          "url": "http://127.0.0.1:8852/help/",
+          "h1": [
+            "Session guide"
+          ]
+        },
+        {
+          "action": "Follow Home",
+          "url": "http://127.0.0.1:8852/",
+          "h1": [
+            "Learn something new"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "download",
+      "side": "target",
+      "size": "desktop",
+      "fromRoute": "/",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "actual": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+      "at": "2026-11-09T02:16:42.389Z"
+    },
+    {
+      "kind": "download",
+      "side": "target",
+      "size": "desktop",
+      "fromRoute": "/resources/",
+      "url": "http://127.0.0.1:8852/downloads/checklist.txt",
+      "actual": "Error response\n\nError code: 404\n\nMessage: File not found.\n\nError code explanation: 404 - Nothing matches the given URI.",
+      "at": "2026-11-09T02:16:42.874Z"
+    },
+    {
+      "kind": "focus-order",
+      "side": "source",
+      "size": "desktop",
+      "at": "2026-11-09T02:17:15.814Z",
+      "focus": [
+        {
+          "tag": "A",
+          "text": "Resources"
+        },
+        {
+          "tag": "A",
+          "text": "Contact"
+        },
+        {
+          "tag": "A",
+          "text": "Session guide"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What should I bring?"
+        }
+      ]
+    },
+    {
+      "kind": "focus-order",
+      "side": "target",
+      "size": "desktop",
+      "at": "2026-11-09T02:17:16.030Z",
+      "focus": [
+        {
+          "tag": "A",
+          "text": "Resources"
+        },
+        {
+          "tag": "A",
+          "text": "Contact"
+        },
+        {
+          "tag": "A",
+          "text": "Session guide"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What should I bring?"
+        }
+      ]
+    },
+    {
+      "kind": "focus-order",
+      "side": "source",
+      "size": "mobile",
+      "at": "2026-11-09T02:17:16.259Z",
+      "focus": [
+        {
+          "tag": "A",
+          "text": "Resources"
+        },
+        {
+          "tag": "A",
+          "text": "Contact"
+        },
+        {
+          "tag": "A",
+          "text": "Session guide"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What should I bring?"
+        }
+      ]
+    },
+    {
+      "kind": "focus-order",
+      "side": "target",
+      "size": "mobile",
+      "at": "2026-11-09T02:17:16.638Z",
+      "focus": [
+        {
+          "tag": "A",
+          "text": "Resources"
+        },
+        {
+          "tag": "A",
+          "text": "Contact"
+        },
+        {
+          "tag": "A",
+          "text": "Session guide"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What should I bring?"
+        }
+      ]
+    }
+  ]
+}

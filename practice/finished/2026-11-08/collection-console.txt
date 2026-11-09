@@ -1,0 +1,16 @@
+Captured console output (local report folder shortened to its repository-relative path):
+
+Source: http://127.0.0.1:8851/
+Target: http://127.0.0.1:8852/
+Collected 1/4: /
+Collected 2/4: /contact/
+Collected 3/4: /guide/
+Collected 4/4: /resources/
+Checking destination 1/2: http://127.0.0.1:8852/downloads/checklist.txt
+Checking destination 2/2: http://127.0.0.1:8852/resources/
+Wrote practice/finished/2026-11-08/report.md
+
+Open report: practice/finished/2026-11-08/report.md
+Next: compare the sites using practice/README.md.
+This is fictional practice data; browser checks are not performed automatically.
+One-shot collection finished; sample sites are stopping.
