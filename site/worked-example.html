@@ -13,9 +13,9 @@
 <header class="site-header wrap"><a class="brand" href="./index.html"><img src="./mind-the-gap.png" alt="" width="92" height="69"><span>Mind the Gap<small>The finished example</small></span></a><a class="repo-link" href="./practice.html">Practice walkthrough ↗</a></header>
 <main id="main" class="wrap lab worked-example">
   <section class="intro" aria-labelledby="title">
-    <p class="eyebrow">Actually collected, reviewed and rendered</p>
+    <p class="eyebrow">Completed collection, browser review and PDF inspection</p>
     <h1 id="title">See the finished audit.<br>Follow the outputs.</h1>
-    <p class="lede">Here is the complete Northstar practice audit: the finished PDF, original screenshots, and the actual files produced at each step, with an explanation of what you are looking at.</p>
+    <p class="lede">Explore the complete Northstar practice audit: the finished PDF, original screenshots, and the files produced at each step, with an explanation of what you are looking at.</p>
     <div class="actions"><a class="button" href="./practice-output/readiness-audit.pdf">Open the finished PDF ↗</a><a class="text-link" href="./downloads/gap-audit-worked-example.zip" download>Download the complete example ↓</a></div>
     <p class="intro-note">Report date: November 8, 2026, America/New_York · Chrome 156 · Fictional local sites · Matched desktop and mobile review</p>
     <p class="resource-link"><a href="./retest.html">Next: see the three repairs and the before-and-after retest →</a></p>
@@ -62,7 +62,7 @@
     <p>Every page was reviewed at <strong>1440×900</strong> and <strong>390×844</strong> CSS viewports. Navigation, both referring download journeys, and mouse/Enter/Space disclosure states were exercised on each side. Click any image to inspect the full original capture.</p>
     <h3>Resources: a heading and instructions are gone</h3>
     <div class="comparison-pair mobile-pair"><figure><a href="./practice-output/browser/resources-source-mobile.jpg"><img src="./practice-output/browser/resources-source-mobile.jpg" alt="Source resources page with Learning resources H1 and preparation guidance above the kit." loading="lazy"></a><figcaption>Source · main heading and guidance present.</figcaption></figure><figure><a href="./practice-output/browser/resources-target-mobile.jpg"><img src="./practice-output/browser/resources-target-mobile.jpg" alt="Target resources page starts with Your preparation kit; the H1 and introductory instructions are absent." loading="lazy"></a><figcaption>Target · the kit remains; context is omitted.</figcaption></figure></div>
-    <p><strong>What you are looking at:</strong> HTTP 200 on both sides concealed an omitted content region. The browser comparison confirms the visible consequence and supports finding F-002.</p>
+    <p><strong>What you are looking at:</strong> the target omits a content region even though both pages return HTTP 200. The browser comparison confirms the visible consequence and supports finding F-002.</p>
     <h3>Contact: identical text can still overflow</h3>
     <div class="comparison-pair mobile-pair"><figure><a href="./practice-output/browser/contact-source-mobile.jpg"><img src="./practice-output/browser/contact-source-mobile.jpg" alt="Source contact panel fits its narrow viewport and wraps text naturally." loading="lazy"></a><figcaption>Source · panel fits and text wraps.</figcaption></figure><figure><a href="./practice-output/browser/contact-target-mobile.jpg"><img src="./practice-output/browser/contact-target-mobile.jpg" alt="Target contact panel extends beyond the right edge, clipping sentences at the same mobile viewport." loading="lazy"></a><figcaption>Target · fixed 760px width clips mobile text.</figcaption></figure></div>
     <p><strong>What you are looking at:</strong> target’s panel is 760 CSS pixels wide inside a 390px viewport. The static contact text matches source, so its content label remains Good; the visual review fails. Some mobile capture originals are 375×812 image pixels even though the measured CSS viewport is 390×844. Their original dimensions/hashes are recorded; PDF crops use image pixels.</p>
@@ -79,7 +79,7 @@
     <p><strong>What to notice:</strong> the finding lists both affected page IDs, impact, a concrete repair and an observable acceptance test. P0 comes from the practice scope’s required download journey, not from an arbitrary similarity threshold. The owner remains TBD; no real owner or approval is invented.</p>
     <h3>Render again from saved evidence</h3><pre><code>python3 tools/gap_audit.py render --evidence practice/finished/2026-11-08/evidence.json --reviews practice/finished/2026-11-08/reviews.json --out practice/finished/2026-11-08</code></pre>
     <details class="explain"><summary>Compare the reviewed summary with the initial one</summary><pre><code>{{REVIEWED_SUMMARY}}</code></pre></details>
-    <p>Static counts stay evidence-bound. The confirmed finding count becomes three after supported review. F-002 explains the missing resources context; F-003 explains contact overflow. The same broken URL appearing on two pages remains one shared finding.</p><p><a href="./practice-output/report.md">Read the measured Markdown report</a> · <a href="./practice-output/reviews.json">Read all three findings</a></p>
+    <p>Static counts still come from the saved evidence. The confirmed finding count becomes three after supported review. F-002 explains the missing resources context; F-003 explains contact overflow. The same broken URL appearing on two pages remains one shared finding.</p><p><a href="./practice-output/report.md">Read the measured Markdown report</a> · <a href="./practice-output/reviews.json">Read all three findings</a></p>
   </section>
 
   <section id="assessment" class="guide-section" aria-labelledby="assessment-title">

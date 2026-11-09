@@ -1,6 +1,6 @@
 # Browser and journey review record
 
-Copy this file into a run directory. Complete it with actual observations; blank cells mean unverified. Apply SOP section 12 to every audit. Every check ends as Pass, Fail, Unverified or Not applicable, with evidence or a reason. Not applicable is not a pass.
+Copy this file into a run directory. Complete it with actual observations; blank cells mean unverified. Use the bundled review protocol and audit coverage checklist. Every check ends as Pass, Fail, Unverified or Not applicable, with evidence or a reason. Not applicable is not a pass.
 
 Run ID:  
 Evidence SHA-256:  
@@ -64,6 +64,19 @@ Split these areas into individual checks in the run ledger. Preserve success, em
 | Open check or decision | Why unresolved | Evidence/action needed | Owner/TBD |
 |---|---|---|---|
 | | | | |
+
+## Verification and retest log
+
+Before issuing the report, confirm suspected findings and check the coverage
+record for missed routes, states and journeys. Record additional checks and
+inconsistent results here. After fixes, use a new run and repeat acceptance tests
+plus affected shared components and nearby journeys. Preserve the original
+findings and their evidence references; matching repeated scans alone do not
+prove complete coverage.
+
+| Pass / new run ID if collected | Purpose and reason to repeat | Check/finding IDs | Result and evidence | Remaining limits |
+|---|---|---|---|---|
+| | | | | |
 
 ## Release review
 

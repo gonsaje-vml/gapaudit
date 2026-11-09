@@ -2,7 +2,7 @@
 
 Use this contract for new page/component readiness reports. It supplements the unchanged collector evidence and check/finding contracts. A new assessment is not a retest of old checks; state the lineage and distinguish retained evidence from fresh observations.
 
-Run `scripts/build_readiness_pdf.py --assessment readiness.json --validate-only` before rendering. Relative paths resolve beside the assessment file; absolute paths are accepted and recorded. Screenshot crops use **original PNG pixels**, not CSS viewport coordinates. Preserve each original screenshot and its full-file SHA-256.
+Run `scripts/build_readiness_pdf.py --assessment readiness.json --validate-only` before rendering. Relative paths resolve beside the assessment file; absolute paths are accepted and recorded. Screenshot crops use **original-image pixels**, not CSS viewport coordinates. Preserve each original screenshot and its full-file SHA-256.
 
 ## Required object shape
 

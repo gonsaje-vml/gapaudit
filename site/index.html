@@ -51,7 +51,7 @@
       <h3>See the finished output</h3>
       <p>The <a href="./worked-example.html">completed practice audit</a> shows the actual PDF, matched screenshots, and annotated examples from every step: configuration, collection log, baseline measurements, browser checks, reviewed findings, readiness data and PDF verification.</p>
       <div class="actions"><a class="button" href="./practice-output/readiness-audit.pdf">Open the finished PDF <span aria-hidden="true">↗</span></a><a class="text-link" href="./worked-example.html">Explore the worked example →</a></div>
-      <h3>See how retesting closes the findings</h3><p>The <a href="./retest.html">before-and-after retest lesson</a> repairs a separate copy, repeats the same checks with fresh evidence, and shows the screenshot comparisons, exact file changes and finding-by-finding closure. Download both audits and run the repaired copy yourself.</p>
+      <h3>Compare the original and repaired copies</h3><p>The <a href="./retest.html">before-and-after retest lesson</a> shows the repairs to a separate copy and the repeated checks with fresh evidence. Compare screenshots, exact file changes and the recorded outcome for each finding. Download both audits and run the repaired copy yourself.</p>
     </section>
 
     <section id="python" class="guide-section" aria-labelledby="python-title">
@@ -122,14 +122,15 @@ cp urls.example.txt urls.txt</code></pre>
           <p>This updates <code>analysis.json</code> and <code>report.md</code> offline. The same saved evidence, review file and toolkit version produce the same report bytes. Preserve those inputs; a fresh crawl or new AI wording may produce different output.</p>
         </li>
       </ol>
+      <aside id="verification-passes" class="note"><strong>When should I run another pass?</strong><p>Start with collection and browser review, then make a verification pass through the findings and coverage checklist before issuing the report. Recheck inconsistent results and missed states. After fixes, collect a new run and repeat the acceptance tests, including checks for regressions. Repeating the same scan can repeat the same blind spots; there is no fixed number of runs that guarantees accuracy. <a href="./practice.html#verification-passes">Follow the audit-pass guide</a>.</p></aside>
       <p class="resource-link"><a href="./downloads/reproduce-audit.md" download>Download the full reproduction guide <span aria-hidden="true">↗</span></a></p>
     </section>
 
     <section id="pdf-skill" class="guide-section" aria-labelledby="skill-title">
       <div class="section-heading"><p class="eyebrow">03 / Review &amp; presentation</p><h2 id="skill-title">The AI skill for a PDF audit</h2></div>
-      <p>The custom skill is <strong>pdf-gap-audit</strong>, version 1.4.0. Its <a href="./downloads/SKILL.md" download>SKILL.md instructions</a> and supporting files are available as a <a href="./downloads/pdf-gap-audit-skill.zip" download>complete skill package</a>. The full audit kit includes the same skill.</p>
+      <p>The custom skill is <strong>pdf-gap-audit</strong>, version 1.4.1. Its <a href="./downloads/SKILL.md" download>SKILL.md instructions</a> and supporting files are available as a <a href="./downloads/pdf-gap-audit-skill.zip" download>complete skill package</a>. The full audit kit includes the same skill.</p>
       <p>Use it with any capable agent that can read local files, run Python, access the websites, operate a browser and save screenshots. The workflow uses portable files and commands. Your agent does not need a particular vendor's skill system: ask it to read <code>SKILL.md</code> and follow the referenced protocol.</p>
-      <h3>What the actual skill contains</h3>
+      <h3>Files in the audit skill</h3>
       <div class="table-scroll" role="region" aria-label="Skill package contents" tabindex="0">
         <table><thead><tr><th scope="col">File</th><th scope="col">Purpose</th></tr></thead><tbody>
           <tr><th scope="row"><code>SKILL.md</code></th><td>The complete collection → browser review → findings → PDF → verification workflow.</td></tr>

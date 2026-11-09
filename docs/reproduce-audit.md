@@ -63,6 +63,26 @@ Use the actual denominator for each measurement: inventoried pages, usable targe
 
 Copy `docs/gap-audit/review-checklist.md` into the run. Compare source/target at matching viewports; review shared navigation, each template family, automated outliers and required journeys. Record actions, expected/actual results, screenshots, reviewer and time. Keep inaccessible or untested behavior unverified. Preserve screenshot originals and cite them in findings.
 
+### When to make another pass
+
+Use an initial audit, a verification pass before issuing the report, and a retest
+after repairs. These stages do not require three identical collections.
+
+- **Initial audit:** collect the scoped pages and perform the planned browser checks.
+- **Verification pass:** confirm suspected findings and check the coverage record
+  for missed routes, viewports, states and journeys. Recheck inconsistent behavior.
+  Add actions, capture times and evidence to the current unissued run. Collect into
+  a new folder if the site or collection conditions changed, or evidence is incomplete.
+- **Retest:** after fixes, collect a new run, repeat the original acceptance tests
+  and check affected shared components and nearby journeys for regressions.
+
+Repeat checks for intermittent behavior, late-loading content or earlier access
+failures. Record changes to browser, viewport, session and test data. An identical
+scan can repeat the same blind spots; no fixed run count guarantees accuracy.
+Required checks without evidence remain Unverified and make the audit partial.
+Preserve issued runs. Rebuilding a saved report verifies reproduction, not current
+website behavior.
+
 ## 4. Record findings and render offline
 
 Add supported findings to `audit-run-01/reviews.json`, preserving its root `evidenceSha256`. Use actual page IDs, evidence references and reviewer information. The AI skill contains the finding schema, categories and priority rubric. Every finding needs an observation, impact, corrective action, owner or TBD and observable acceptance test.
@@ -75,7 +95,7 @@ This recalculates `analysis.json` and `report.md` without network requests. A mi
 
 ## 5. Use the complete AI skill
 
-The custom `pdf-gap-audit` skill, version 1.4.0, includes instructions, an eleven-area audit checklist, a review protocol, browser-manifest schema, fixed PDF builder, verification helper, blank templates and pinned dependencies. It is supplied under `skills/pdf-gap-audit/` in the full kit and as a standalone skill ZIP. It uses portable Python and files and can be read by any capable agent; no particular vendor's skill loader is required. New main reports use readiness contract 2 and the readiness builder; the legacy measured builder remains available for supporting records and frozen reproduction.
+The custom `pdf-gap-audit` skill, version 1.4.1, includes instructions, an eleven-area audit checklist, a review protocol, browser-manifest schema, fixed PDF builder, verification helper, blank templates and pinned dependencies. It is supplied under `skills/pdf-gap-audit/` in the full kit and as a standalone skill ZIP. It uses portable Python and files and can be read by any capable agent; no particular vendor's skill loader is required. New main reports use readiness contract 2 and the readiness builder; the legacy measured builder remains available for supporting records and frozen reproduction.
 
 For an agent to perform the whole fresh audit, give it the extracted kit and this request with actual inputs:
 
@@ -122,7 +142,7 @@ python3 -m venv .venv
 .venv/bin/python skills/pdf-gap-audit/scripts/build_readiness_pdf.py --assessment audit-run-01/readiness.json --out audit-run-01/readiness-audit.pdf
 ```
 
-On Windows use `.venv\Scripts\python.exe`. In the standalone skill folder, use `requirements.txt`, `scripts/gap_audit.py`, `scripts/build_readiness_pdf.py`, `scripts/build_pdf.py`, `scripts/verify_pdf.py` and the starter files under `assets/` instead of the full-kit paths. Agents may simply read the standalone `SKILL.md` and adapt these documented paths.
+On Windows use `.venv\Scripts\python.exe`. In the standalone skill folder, use `requirements.txt`, `scripts/gap_audit.py`, `scripts/build_readiness_pdf.py`, `scripts/build_pdf.py`, `scripts/verify_pdf.py` and the starter files under `assets/` instead of the full-kit paths. Agents may read the standalone `SKILL.md` and adapt these documented paths.
 
 The readiness builder validates counts/references and screenshot hashes/crops, then generates readiness charts, page breakdowns, block-type and exact-variant matrices, capabilities, quality and the work board. It embeds supplied supporting records byte for byte. Preserve the measured report unchanged. The legacy `scripts/build_pdf.py --run audit-run-01 --browser-review audit-run-01/browser-review.json --out audit-run-01/gap-audit.pdf` remains available for a measured supporting PDF or frozen reproduction; without a browser manifest that report explicitly retains unverified coverage.
 

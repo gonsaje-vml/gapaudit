@@ -15,6 +15,9 @@ context, contact overflow and both help disclosures with mouse/keyboard.
 Record actual actions, expected/actual results, reviewer, browser and times.
 Save original matched screenshots inside the run and hash them. Keep unperformed
 or unavailable checks Unverified. Do not claim observations from the answer key.
+Before issuing the report, confirm suspected findings and revisit the coverage
+checklist for missed routes, states and interactions. Recheck inconsistent
+results; matching repeated scans alone do not establish complete coverage.
 
 Record supported findings in reviews.json, bound to this run's evidenceSha256,
 and browser coverage in browser-review.json. Regenerate the measured report.

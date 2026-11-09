@@ -63,6 +63,20 @@ Use `docs/gap-audit/review-checklist.md` and the skill's
 folder, preserving originals. The fictional contact address has no service behind
 it; this exercise never asks you to send messages.
 
+### Review in passes
+
+Before issuing your report, make a verification pass through suspected findings
+and the coverage checklist. Revisit missed pages, mobile and keyboard states,
+downloads and inconsistent results. Add the observed actions, times and captures
+to the current unissued run. If the site or collection conditions changed, or
+captured evidence is incomplete, collect into a new folder.
+
+After repairs, collect a fresh retest and repeat the acceptance tests, including
+affected shared components and nearby journeys. Preserve both runs. Repeating an
+identical scan can repeat the same blind spots; there is no fixed number of runs
+that guarantees accuracy. Required checks that remain Unverified make the audit
+partial. Rebuilding a report from saved files does not retest the site.
+
 ## 4. Record and reproduce
 
 Follow the illustrated guide's finding example and the skill's review protocol.

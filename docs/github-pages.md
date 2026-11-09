@@ -11,7 +11,7 @@ python3 tools/build_ui.py
 python3 -m http.server 8847 --bind 127.0.0.1 --directory dist
 ```
 
-Open [the local guide](http://127.0.0.1:8847/). The build is also available as `npm run build`. Node dependencies are needed for the retained development checks, not to build or view the static guide.
+Open [the local guide](http://127.0.0.1:8847/). Building and viewing the static guide requires no Node dependencies.
 
 ## Published files
 
@@ -44,7 +44,7 @@ The Python-only workflow is `.github/workflows/pages.yml`, targeting [gonsaje-vm
 3. The Pages workflow validates and builds the project, then uploads only `dist/`. Pull requests validate without deployment. A manual workflow run is also available.
 4. Check the completed deployment for its URL. The configured project address is [the GitHub Pages site](https://gonsaje-vml.github.io/gapaudit/).
 
-No historical run package is needed to build this guide. Repository visibility is independent of the Pages asset allowlist; excluding files from the site does not change repository access.
+The build requires the two frozen fictional practice runs checked into this repository. Historical client packages remain excluded. Repository visibility is independent of the Pages asset allowlist; excluding files from the site does not change repository access.
 
 ## Validation
 
@@ -55,6 +55,6 @@ python3 -m unittest discover -s tools -p 'test_practice_kit.py' -v
 python3 tools/build_ui.py
 ```
 
-Build tests verify local links and both download packages, exclusion of previous results, stale-asset removal and collection/offline rendering against temporary test sites. PDF tests validate fixed-input byte reproduction, page/finding coverage, rejection of stale measurements and changed screenshots, and execution from the standalone skill package.
+Build tests verify local links and the starter and completed-example downloads, exclusion of unrelated results, stale-asset removal and collection/offline rendering against temporary test sites. PDF tests validate fixed-input byte reproduction, page/finding coverage, rejection of stale measurements and changed screenshots, and execution from the standalone skill package.
 
 The workflow installs the pinned PDF packages and runs `test_pdf_skill.py` and the readiness/chart checks in `test_readiness_pdf.py` as well. Those chart checks also need pdfplumber as a test-only dependency. To run PDF checks locally, use a Python environment with `skills/pdf-gap-audit/requirements.txt` installed and pdfplumber for the readiness suite. The guide build itself still uses only the standard library.
